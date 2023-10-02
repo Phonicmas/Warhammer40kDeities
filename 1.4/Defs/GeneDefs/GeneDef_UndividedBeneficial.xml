@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--===== Additional Eye =====-->
+    <GeneDef ParentName="BEWH_BeneficialMutationBase">
+        <defName>BEWH_MutationAdditionalEye</defName>
+        <label>mutation: Additional eye</label>
+        <description>This pawn has mutated an extra eye.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>140</displayOrderInCategory>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+        <!--<graphicData>
+            <layer>PostTattoo</layer>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
+            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
+        </graphicData>-->
+    </GeneDef>
+
+
+    <!--===== Animalistic Legs =====-->
+    <GeneDef ParentName="BEWH_UndividedBeneficialMutationBase">
+        <defName>BEWH_MutationAnimalisticLegs</defName>
+        <label>mutation: Animalistic legs</label>
+        <description>Your legs undergo a startling transformation, assuming the look and feel of a deer's hind legs. Though deer legs are common, the legs of any animal will do. These animalistic legs merge with existing legs potentially forming animalistic bionic leg.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>141</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!--===== Prehensile Tail =====-->
+    <GeneDef ParentName="BEWH_UndividedBeneficialMutationBase">
+        <defName>BEWH_MutationPrehensileTail</defName>
+        <label>mutation: Prehensile tail</label>
+        <description>This pawn has mutated a tail that can be used an an extra arm and hand, albiet a little less effective.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>142</displayOrderInCategory>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+        <!--<graphicData>
+            <layer>PostTattoo</layer>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
+            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
+        </graphicData>-->
+    </GeneDef>
+
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Daemonic Horn Attack -->
+
+    <!--<HediffDef>
+        <defName>BEWH_DaemonicHornAttack</defName>
+        <label>daemonic horns</label>
+        <description>These daemonic horns are not only for show, they can be used as a deadly weapon should the daemon need it.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>daemonic horns</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>19</power>
+                        <cooldownTime>1.8</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>-->
+
+</Defs>

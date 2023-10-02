@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Undivided -->
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_UndividedGeneralRitual</defName>
+        <label>Undivided ritual</label>
+        <description>Ask the great undivided for help</description>
+        <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>3</Melee>
+            <Shooting>3</Shooting>
+            <Intellectual>3</Intellectual>
+            <Crafting>3</Crafting>
+            <Social>3</Social>
+            <Artistic>3</Artistic>
+            <Plants>3</Plants>
+            <Mining>3</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_UndividedMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Khorne -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_KhorneGeneralRitual</defName>
+        <label>Khorne ritual</label>
+        <description>Ask Khorne for help</description>
+        <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Melee>5</Melee>
+            <Shooting>5</Shooting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_KhorneMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Tzeentch -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_TzeentchGeneralRitual</defName>
+        <label>Tzeentch ritual</label>
+        <description>Ask Tzeentch for help</description>
+        <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Intellectual>5</Intellectual>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_TzeentchMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Nurgle -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_NurgleGeneralRitual</defName>
+        <label>Nurgle ritual</label>
+        <description>Ask Nurgle for help</description>
+        <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Plants>5</Plants>
+            <Mining>5</Mining>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_NurgleMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Slaanesh -->
+
+    <RecipeDef ParentName="RitualRecipeBase">
+        <defName>BEWH_SlaaneshGeneralRitual</defName>
+        <label>Slaanesh ritual</label>
+        <description>Ask Slaanesh for help</description>
+        <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Social>5</Social>
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <givesGenes>
+                    <li>BEWH_SlaaneshMark</li>
+                </givesGenes>
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_KhorneMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                </forbiddenGenes>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

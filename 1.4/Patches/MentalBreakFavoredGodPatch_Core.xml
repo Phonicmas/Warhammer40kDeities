@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Beserk -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Berserk"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>99999</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- FireStartingSpree -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "FireStartingSpree"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>2</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>0.5</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Binging_DrugExtreme -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Binging_DrugExtreme"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>99999</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Binging_DrugMajor -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Binging_DrugMajor"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>99999</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Jailbreaker -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Jailbreaker"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>10</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Slaughterer -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Slaughterer"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>99999</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- MurderousRage -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "MurderousRage"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>99999</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>0</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- GiveUpExit -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "GiveUpExit"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>99999</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Wander_Psychotic -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Wander_Psychotic"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>99999</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Tantrum -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Tantrum"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>5</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- TargetedTantrum -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "TargetedTantrum"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>5</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- BedroomTantrum -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "BedroomTantrum"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>5</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- SadisticRage -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "SadisticRage"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>5</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- CorpseObsession -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "CorpseObsession"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>99999</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Binging_Food -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Binging_Food"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>0</khorneChance>
+                        <tzeentchChance>0</tzeentchChance>
+                        <nurgleChance>99999</nurgleChance>
+                        <slaaneshChance>0</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Wander_Sad -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Wander_Sad"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>5</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Wander_OwnRoom -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "Wander_OwnRoom"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>5</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- InsultingSpree -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "InsultingSpree"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>5</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- TargetedInsultingSpree -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "TargetedInsultingSpree"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>5</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+            <!-- WanderConfused -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/MentalStateDef[defName = "WanderConfused"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>5</tzeentchChance>
+                        <nurgleChance>1</nurgleChance>
+                        <slaaneshChance>1</slaaneshChance>
+                        <undividedChance>1</undividedChance>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

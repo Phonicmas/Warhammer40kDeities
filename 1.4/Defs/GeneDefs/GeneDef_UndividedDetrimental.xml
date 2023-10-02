@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--===== Extra Leg =====-->
+    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+        <defName>BEWH_MutationExtraLeg</defName>
+        <label>mutation: Extra leg</label>
+        <description>This pawn has mutated an extra leg. It always seems to be a hinderence</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>40</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>0.8</MoveSpeed>
+        </statFactors>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!--===== Extra Arm =====-->
+    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+        <defName>BEWH_MutationExtraArm</defName>
+        <label>mutation: Extra arm</label>
+        <description>This pawn has mutated an extra Arm. It always seems to be a hinderence</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>41</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.2</offset>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!--===== Tentacle on Whole Body =====-->
+    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+        <defName>BEWH_MutationTentacles</defName>
+        <label>mutation: Tentacles</label>
+        <description>This pawn has mutated an useless tentacles on their body.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>42</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.15</offset>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+        <!--<graphicData>
+            <layer>PostTattoo</layer>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
+            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
+        </graphicData>-->
+    </GeneDef>
+
+
+    <!--===== Tentacle replace body part (make own heddif to body part mod extension that randomly applies to given part, just like heddiff does, otherwise check hediff) =====-->
+
+
+    <!--===== Rotting Flesh =====-->
+    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+        <defName>BEWH_MutationRottingFlesh</defName>
+        <label>mutation: Rotting flesh</label>
+        <description>Every now and then, rancid meat sloughs from your body, exposing newly rotting areas beneath.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>43</displayOrderInCategory>
+        <statOffsets>
+            <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
+            <ArmorRating_Sharp>-0.3</ArmorRating_Sharp>
+            <ArmorRating_Heat>-0.3</ArmorRating_Heat>
+
+            <PawnBeauty>-2</PawnBeauty>
+            <SocialImpact>-0.5</SocialImpact>
+            <NegotiationAbility>-0.5</NegotiationAbility>
+        </statOffsets>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+        </modExtensions>
+        <!--<graphicData>
+            <layer>PostTattoo</layer>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
+            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
+        </graphicData>-->
+    </GeneDef>
+
+</Defs>
