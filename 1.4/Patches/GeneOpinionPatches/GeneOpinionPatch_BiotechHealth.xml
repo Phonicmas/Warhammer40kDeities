@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== IMMUNITY =====-->
+            <!--===== WEAK IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_Weak"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== STRONG IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_Strong"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SUPER IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_SuperStrong"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== REPRODUCTION =====-->
+            <!--===== STERILE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Sterile"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godWontGift>
+                            <li>Slaanesh</li>
+                        </godWontGift>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== FERTILE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Fertile"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Slaanesh</li>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.05</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== SUPERCLOTTING =====-->
+            <!--===== SUPERCLOTTING =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Superclotting"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

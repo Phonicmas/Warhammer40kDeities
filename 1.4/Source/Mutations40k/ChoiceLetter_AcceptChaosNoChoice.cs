@@ -31,11 +31,11 @@ namespace Mutations40k
                 {
                     if (acceptedChaos)
                     {
-                        ModifyPawnForChaos.modifyPawnGenes(genesToAdd, targetedPawn);
+                        ModifyPawnForChaos.ModifyPawnGenes(genesToAdd, targetedPawn);
                     }
                     else
                     {
-                        ModifyPawnForChaos.curseAndSmitePawn(targetedPawn);
+                        ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn);
                     }
                     Find.LetterStack.RemoveLetter(this);
                 };

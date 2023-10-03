@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Flaming Arm Blast-->
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>BEWH_FlamingArmBlast_A</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.4</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>GlowAnimated</shaderType>
+            <texPath>Things/Mote/FlamingArmBlast_A</texPath>
+            <shaderParameters>
+                <_NumFrames>5</_NumFrames>
+                <_FramesPerSec>7</_FramesPerSec>
+            </shaderParameters>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+    </FleckDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>BEWH_FlamingArmBlast_Base</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.2</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <texPath>Things/Mote/FlamingArmBlast_Base</texPath>
+            <drawSize>(1.25, 2.5)</drawSize>
+            <color>(1, 1, 1, 0.75)</color>
+        </graphicData>
+    </FleckDef>
+
+
+    <!-- Unfathomable Gaze -->
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>BEWH_UnfathomableGaze_A</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.4</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>GlowAnimated</shaderType>
+            <texPath>Things/Mote/UnfathomableGaze_A</texPath>
+            <shaderParameters>
+                <_NumFrames>5</_NumFrames>
+                <_FramesPerSec>7</_FramesPerSec>
+            </shaderParameters>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+    </FleckDef>
+
+</Defs>

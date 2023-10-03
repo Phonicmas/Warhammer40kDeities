@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== DRUGS =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "DrugDesire"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>-1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== MOOD =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "NaturalMood"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>-2</key>
+                                    <value>-1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== PSYCHIC SENS =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "PsychicSensitivity"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>-2</key>
+                                    <value>-1</value>
+                                </li>
+                            </li>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-2</key>
+                                    <value>1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== SHOOTING ACCURACY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "ShootingAccuracy"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>1</key>
+                                    <value>0</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== BEAUTY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Beauty"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>-2</key>
+                                    <value>-1</value>
+                                </li>
+                            </li>
+                            <li>
+                                <li>
+                                    <key>2</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>1</key>
+                                    <value>-1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-2</key>
+                                    <value>1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Immunity"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegreeForTraitDegrees>
+                            <li>
+                                <li>
+                                    <key>1</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>-1</key>
+                                    <value>1</value>
+                                </li>
+                            </li>
+                        </opinionDegreeForTraitDegrees>
+                    </li>
+                </value>
+            </li>
+
+
+        </operations>
+    </Operation>
+
+</Patch>

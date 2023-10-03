@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== PSYCHIC =====-->
+            <!--===== PSYCHIC DEAF =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "PsychicAbility_Deaf"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Tzeentch</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                        </givenBy>
+                        <selectionWeight>0.4</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== PSYCHIC DULL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "PsychicAbility_Dull"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.25</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== PSYCHIC ENHANCED =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "PsychicAbility_Enhanced"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.2</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== PSYCHIC EXTREME =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "PsychicAbility_Extreme"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== MOVE SPEED =====-->
+            <!--===== MOVE SPEED SLOW =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "MoveSpeed_Slow"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== MOVE SPEED QUICK =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "MoveSpeed_Quick"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== MOVE SPEED VERY QUICK =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "MoveSpeed_VeryQuick"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== BEAUTY =====-->
+            <!--===== VERY UGLY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Beauty_VeryUgly"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== UGLY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Beauty_Ugly"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== PRETTY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Beauty_Pretty"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== BEAUTIFUL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Beauty_Beautiful"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== LEARNING =====-->
+            <!--===== SLOW STUDY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Learning_Slow"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== QUICK STUDY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Learning_Fast"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== MOOD =====-->
+            <!--===== VERY UNHAPPY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Mood_Depressive"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== UNHAPPY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Mood_Pessimist"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== HAPPY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Mood_Optimist"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== VERY HAPPY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Mood_Sanguine"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== PAIN =====-->
+            <!--===== REDUCED PAIN =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Pain_Reduced"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== EXTRA PAIN =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Pain_Extra"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== AGGRESION =====-->
+            <!--===== DEAD CALM =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Aggression_DeadCalm"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== AGGRESIVE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Aggression_Aggressive"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== HYPER-AGGRESIVE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Aggression_HyperAggressive"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                        </givenBy>
+                        <selectionWeight>0.15</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== MELEE DAMAGE =====-->
+            <!--===== WEAK MELEE DAMAGE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "MeleeDamage_Weak"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== WEAK MELEE DAMAGE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "MeleeDamage_Strong"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== LIBIDO =====-->
+            <!--===== LOW LIBIDO =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Libido_Low"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== HIGH LIBIDO =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Libido_High"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>-1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Slaanesh</li>
+                        </givenBy>
+                        <selectionWeight>0.3</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

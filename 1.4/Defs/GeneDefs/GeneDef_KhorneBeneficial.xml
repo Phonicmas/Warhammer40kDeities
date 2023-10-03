@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-
+    <GeneDef ParentName="BEWH_BeneficialMutationBase">
+        <defName>BEWH_KhorneBronzeSkin</defName>
+        <label>mutation: Bronze skin</label>
+        <description>The pawns body is gilded in bronze, giving them extra resistance against weaponry.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>240</displayOrderInCategory>
+        <skinColorOverride>(80, 50, 20)</skinColorOverride>
+        <statOffsets>
+            <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.25</ArmorRating_Heat>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Khorne</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Khorne</li>
+                </givenBy>
+                <selectionWeight>0.6</selectionWeight>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Slaanesh</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>-1</li>
+                    <li>-1</li>
+                </opinionDegree>
+            </li>
+        </modExtensions>
+    </GeneDef>
 
 </Defs>

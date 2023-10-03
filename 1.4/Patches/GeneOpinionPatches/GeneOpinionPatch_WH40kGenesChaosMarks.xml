@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== UNDIVIDED =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UndividedMark"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Undivided</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>2</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+            
+            <!--===== KHORNE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_KhorneMark"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>2</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                            <li>Undivided</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== NURGLE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_NurgleMark"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>2</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Tzeentch</li>
+                            <li>Khorne</li>
+                            <li>Slaanesh</li>
+                            <li>Undivided</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Nurgle</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TZEENTCH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_TzeentchMark"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>2</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                            <li>Undivided</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SLAANESH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshMark"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Slaanesh</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>2</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Khorne</li>
+                            <li>Undivided</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Slaanesh</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

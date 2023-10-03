@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace Mutations40k
@@ -9,9 +11,12 @@ namespace Mutations40k
 
         public Pawn targetedPawn;
 
-        public static void modifyPawnGenes(List<GeneDef> genesToAdd, Pawn pawn)
+        public static void ModifyPawnGenes(List<GeneDef> genesToAdd, Pawn pawn)
         {
-            //Remove mental state here and give them some temp boost in power
+            pawn.MentalState.RecoverFromState();
+
+            pawn.health.AddHediff(Mutations40kDefOf.BEWH_GodsTemporaryPower, null);
+
             if (pawn.genes == null)
             {
                 return;
@@ -26,10 +31,17 @@ namespace Mutations40k
             return;
         }
 
-        public static void curseAndSmitePawn(Pawn pawn)
+        public static void CurseAndSmitePawn(Pawn pawn)
         {
+            Mesh boltMesh = LightningBoltMeshPool.RandomBoltMesh;
+            Material LightningMat = MatLoader.LoadMat("Weather/LightningBolt");
 
+            WeatherEvent_LightningStrike.DoStrike(pawn.Position, pawn.Map, ref boltMesh);
+            Graphics.DrawMesh(boltMesh, pawn.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Weather), Quaternion.identity, FadedMaterialPool.FadedVersionOf(LightningMat, 1), 0);
+
+            pawn.health.AddHediff(Mutations40kDefOf.BEWH_GodsTemporaryCurse, null);
         }
+
     }
 
 }

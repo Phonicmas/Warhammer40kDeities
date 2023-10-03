@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="BEWH_BeneficialMutationBase">
+        <defName>BEWH_NurgleBitingTongue</defName>
+        <label>mutation: Biting tongue</label>
+        <description>The pawns tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>440</displayOrderInCategory>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_NurgleBitingTongueAttack</hediff>
+                        <bodyparts>
+                            <li>Jaw</li>
+                        </bodyparts>
+                    </li>
+                    <li>
+                        <hediff>BEWH_BitingTongue</hediff>
+                        <bodyparts>
+                            <li>Jaw</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Nurgle</li>
+                </givenBy>
+                <selectionWeight>0.6</selectionWeight>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Nurgle</li>
+                    <li>Tzeentch</li>
+                    <li>Slaanesh</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>-1</li>
+                    <li>-1</li>
+                </opinionDegree>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

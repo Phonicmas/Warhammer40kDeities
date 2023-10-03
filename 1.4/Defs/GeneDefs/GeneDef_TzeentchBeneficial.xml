@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="BEWH_BeneficialMutationBase">
+        <defName>BEWH_TzeentchFlamingArm</defName>
+        <label>mutation: Flaming arm</label>
+        <description>The pawns arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
+        <iconPath>UI/Icons/Genes/FlamingArm</iconPath>        <!-- Make icon of flaming arm shooting flame thingy -->
+        <displayOrderInCategory>340</displayOrderInCategory>
+        <abilities>
+            <li>BEWH_FlamingArmBlast</li>
+        </abilities>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Tzeentch</backgroundPathXenogenes>
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>BEWH_TzeentchFlamingArmAttack</hediff>
+                        <bodyparts>
+                            <li>Arm</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Tzeentch</li>
+                </givenBy>
+                <selectionWeight>0.6</selectionWeight>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Tzeentch</li>
+                    <li>Slaanesh</li>
+                    <li>Nurgle</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>-1</li>
+                    <li>-1</li>
+                </opinionDegree>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

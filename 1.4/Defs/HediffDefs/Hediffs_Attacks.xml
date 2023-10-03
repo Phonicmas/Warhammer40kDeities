@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- Daemonic Horn Attack -->
-
-    <!--<HediffDef>
-        <defName>BEWH_DaemonicHornAttack</defName>
-        <label>daemonic horns</label>
-        <description>These daemonic horns are not only for show, they can be used as a deadly weapon should the daemon need it.</description>
+    <!-- Flaming Arm -->
+    <HediffDef>
+        <defName>BEWH_TzeentchFlamingArmAttack</defName>
+        <label>flaming arm</label>
+        <description>The arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
+        <defaultLabelColor>(0.28, 0.32, 0.76)</defaultLabelColor>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
                     <li>
-                        <label>daemonic horns</label>
+                        <label>flaming arm</label>
                         <capacities>
-                            <li>Stab</li>
+                            <li>BEWH_FlamingArmBurn</li>
                         </capacities>
-                        <power>19</power>
-                        <cooldownTime>1.8</cooldownTime>
+                        <power>8</power>
+                        <cooldownTime>1.2</cooldownTime>
                     </li>
                 </tools>
             </li>
         </comps>
-    </HediffDef>-->
+    </HediffDef>
+
+
+    <!-- Biting Tongue -->
+    <HediffDef>
+        <defName>BEWH_NurgleBitingTongueAttack</defName>
+        <label>biting tongue attack</label>
+        <description>The tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.55, 0.55, 0.05)</defaultLabelColor>
+        <stages>
+            <li>
+                <becomeVisible>False</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>maw bite</label>
+                        <capacities>
+                            <li>Bite</li>
+                        </capacities>
+                        <power>14</power>
+                        <cooldownTime>1.0</cooldownTime>
+                    </li>
+                    <li>
+                        <label>tongue lash</label>
+                        <capacities>
+                            <li>BEWH_BitingTongueInfect</li>
+                        </capacities>
+                        <power>7</power>
+                        <cooldownTime>1.2</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
 
 </Defs>

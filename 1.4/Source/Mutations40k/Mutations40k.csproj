@@ -61,9 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect_UnfathomableGaze.cs" />
+    <Compile Include="CompAbilityEffect_FlamingArmBlast.cs" />
+    <Compile Include="CompProperties_UnfathomableGaze.cs" />
     <Compile Include="ModifyPawnForChaos.cs" />
     <Compile Include="ChoiceLetter_AcceptChaosNoChoice.cs" />
-    <Compile Include="WeightedSelection.cs" />
+    <Compile Include="CompProperties_AbilityFlamingArmBlast.cs" />
     <Compile Include="Mutations40kModSettings.cs" />
     <Compile Include="ChoiceLetter_AcceptChaos.cs" />
     <Compile Include="DefModExtension_MentalBreakFavoredGod.cs" />

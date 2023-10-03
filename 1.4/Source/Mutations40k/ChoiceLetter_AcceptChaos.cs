@@ -28,13 +28,13 @@ namespace Mutations40k
                 DiaOption optionReject = new DiaOption("RejectMutation".Translate());
                 diaOption.action = delegate
                 {
-                    ModifyPawnForChaos.modifyPawnGenes(genesToAdd, targetedPawn);
+                    ModifyPawnForChaos.ModifyPawnGenes(genesToAdd, targetedPawn);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 diaOption.resolveTree = true;
                 optionReject.action = delegate
                 {
-                    ModifyPawnForChaos.curseAndSmitePawn(targetedPawn);
+                    ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 optionReject.resolveTree = true;

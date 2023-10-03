@@ -2,7 +2,7 @@
 <Defs>
 
     <!--===== Extra Leg =====-->
-    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationExtraLeg</defName>
         <label>mutation: Extra leg</label>
         <description>This pawn has mutated an extra leg. It always seems to be a hinderence</description>
@@ -15,12 +15,29 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
             </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Undivided</li>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                </givenBy>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Undivided</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                </opinionDegree>
+            </li>
         </modExtensions>
     </GeneDef>
 
 
     <!--===== Extra Arm =====-->
-    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationExtraArm</defName>
         <label>mutation: Extra arm</label>
         <description>This pawn has mutated an extra Arm. It always seems to be a hinderence</description>
@@ -36,12 +53,29 @@
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
             </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Undivided</li>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Nurgle</li>
+                    <li>Slaanesh</li>
+                </givenBy>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Undivided</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                </opinionDegree>
+            </li>
         </modExtensions>
     </GeneDef>
 
 
     <!--===== Tentacle on Whole Body =====-->
-    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationTentacles</defName>
         <label>mutation: Tentacles</label>
         <description>This pawn has mutated an useless tentacles on their body.</description>
@@ -55,7 +89,24 @@
         </capMods>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Tzeentch</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Undivided</li>
+                    <li>Tzeentch</li>
+                </givenBy>
+                <selectionWeight>1.2</selectionWeight>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Tzeentch</li>
+                    <li>Undivided</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>1</li>
+                </opinionDegree>
             </li>
         </modExtensions>
         <!--<graphicData>
@@ -65,12 +116,8 @@
         </graphicData>-->
     </GeneDef>
 
-
-    <!--===== Tentacle replace body part (make own heddif to body part mod extension that randomly applies to given part, just like heddiff does, otherwise check hediff) =====-->
-
-
     <!--===== Rotting Flesh =====-->
-    <GeneDef ParentName="BEWH_UndividedDetrimentalMutationBase">
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationRottingFlesh</defName>
         <label>mutation: Rotting flesh</label>
         <description>Every now and then, rancid meat sloughs from your body, exposing newly rotting areas beneath.</description>
@@ -80,14 +127,32 @@
             <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
             <ArmorRating_Sharp>-0.3</ArmorRating_Sharp>
             <ArmorRating_Heat>-0.3</ArmorRating_Heat>
-
             <PawnBeauty>-2</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
             <NegotiationAbility>-0.5</NegotiationAbility>
         </statOffsets>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
-                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Undivided</li>
+                    <li>Nurgle</li>
+                </givenBy>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Nurgle</li>
+                    <li>Undivided</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>1</li>
+                </opinionDegree>
+            </li>
+            <li Class="Genes40k.DefModExtension_MaxHealth">
+                <increaseMultiplier>-0.5</increaseMultiplier>
             </li>
         </modExtensions>
         <!--<graphicData>

@@ -1,40 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Daemonic Flight -->
-
-  <!--<AbilityGroupDef>
-    <defName>BEWH_CFlight</defName>
-    <cooldownTicks>240</cooldownTicks>
-  </AbilityGroupDef>
-
+  <!-- Flaming Arm Blast -->
   <AbilityDef>
-    <defName>BEWH_DaemonicFlight</defName>
-    <label>daemonic flight</label>
-    <description>This pawn is granted flight by their wings.</description>
-    <iconPath>UI/Abilities/DaemonicFlightIcon</iconPath>
-    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-    <groupDef>BEWH_CFlight</groupDef>
+    <defName>BEWH_FlamingArmBlast</defName>
+    <label>flaming arm blast</label>
+    <description>...</description>
+    <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
     <category>Chaos</category>
-    <uiOrder>1</uiOrder>
-    <cooldownTicksRange>200</cooldownTicksRange>
+    <cooldownTicksRange>100000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
     <verbProperties>
-      <verbClass>Verb_CastAbilityJump</verbClass>
-      <label>daemonic flight</label>
-      <violent>false</violent>
-      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12.9</range>
       <warmupTime>1</warmupTime>
-      <range>80</range>
-      <requireLineOfSight>true</requireLineOfSight>
-      <soundCast>Longjump_Jump</soundCast>
-      <soundLanding>Longjump_Land</soundLanding>
+      <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
       </targetParams>
     </verbProperties>
-  </AbilityDef>-->
+    <comps>
+      <li Class="Mutations40k.CompProperties_AbilityFlamingArmBlast">
+        <range>12.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <effecterDef>BEWH_FlamingArmBlast</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+  <!-- Unfathomable Gaze -->
+  <AbilityDef>
+    <defName>BEWH_UnfathomableGaze</defName>
+    <label>unfathomable gaze</label>
+    <description>...</description>
+    <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
+    <category>Chaos</category>
+    <cooldownTicksRange>100000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>9.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Mutations40k.CompProperties_UnfathomableGaze">
+        <range>9.9</range>
+        <lineWidthEnd>14</lineWidthEnd>
+        <stunTicks>1000</stunTicks>
+        <effecterDef>BEWH_UnfathomableGaze</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
 
 </Defs>

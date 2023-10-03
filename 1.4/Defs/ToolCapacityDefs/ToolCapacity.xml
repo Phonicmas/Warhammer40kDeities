@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <!-- Flaming Arm-->
+  <ToolCapacityDef>
+    <defName>BEWH_FlamingArmBurn</defName>
+    <label>burn</label>
+  </ToolCapacityDef>
+
+  <!-- Biting Tongue-->
+  <ToolCapacityDef>
+    <defName>BEWH_BitingTongueInfect</defName>
+    <label>burn</label>
+  </ToolCapacityDef>
+</Defs>

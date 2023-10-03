@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="BEWH_BeneficialMutationBase">
+        <defName>BEWH_SlaaneshUnfathomableGaze</defName>
+        <label>mutation: Unfathomable gaze</label>
+        <description>...</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>440</displayOrderInCategory>
+        <abilities>
+            <li>BEWH_UnfathomableGaze</li>
+        </abilities>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Slaanesh</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Slaanesh</li>
+                </givenBy>
+                <selectionWeight>0.6</selectionWeight>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>Slaanesh</li>
+                    <li>Khorne</li>
+                    <li>Nurgle</li>
+                </godOpinion>
+                <opinionDegree>
+                    <li>1</li>
+                    <li>-1</li>
+                    <li>-1</li>
+                </opinionDegree>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

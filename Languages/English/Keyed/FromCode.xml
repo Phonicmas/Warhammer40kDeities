@@ -4,21 +4,25 @@
   <ModSettingsNameChaos>Warhammer 40k - Chaos</ModSettingsNameChaos>
 
   <HasMutationChoice>Disabling this removes the option to select whether a pawn should accept the deal, instead it is calculated internally whether the pawn will accept.</HasMutationChoice>
+  <baseChanceForGiftAcceptance>Base chance that any pawn will accept a gift upon having a mental break: {0} (Only relevant if above setting is disabled)</baseChanceForGiftAcceptance>
   <baseChanceForGiftOffer>Base chance that any god will offer a gift upon having a mental break: {0}</baseChanceForGiftOffer>
 
   <AcceptMutation>Accept deal</AcceptMutation>
   <RejectMutation>Reject deal</RejectMutation>
   <OkChaos>Ok.</OkChaos>
 
-  <PawnAcceptedMutation>{0} accepted {1}'s offer</PawnAcceptedMutation>
-  <PawnRejectedMutation>{0} rejected {1}'s offer</PawnRejectedMutation>
+  <ChaosAttraction>{0}'s mental breakdown have attracted {1} attention.
+      \n{1} have offered {0} "solutions" to their problems in exchange for their acceptance of chaos.</ChaosAttraction>
 
-  <ChaosAttraction>{0}'s mental breakdown have attracted {1} attention. \n\n{1} have offered {0} "solutions" to their problems in exchange for their acceptance of chaos. \n\nWill {0} accept this deal, whatever the cost may be...?</ChaosAttraction>
+  <QueryAcceptance>\n\nWill {0} accept this deal, whatever the cost may be...?</QueryAcceptance>
 
-  <TzeentchLetterTitle>Changer of Ways</TzeentchLetterTitle>
-  <KhorneLetterTitle>Blood God</KhorneLetterTitle>
-  <NurgleLetterTitle>Pleague Lord</NurgleLetterTitle>
-  <SlaaneshLetterTitle>Dark Prince</SlaaneshLetterTitle>
+  <PawnAcceptedMutation>\n\n{0} accepted {1}'s offer</PawnAcceptedMutation>
+  <PawnRejectedMutation>\n\n{0} rejected {1}'s offer</PawnRejectedMutation>
+
+  <TzeentchLetterTitle>The Changer of Ways</TzeentchLetterTitle>
+  <KhorneLetterTitle>The Blood God</KhorneLetterTitle>
+  <NurgleLetterTitle>The Pleague Lord</NurgleLetterTitle>
+  <SlaaneshLetterTitle>The Dark Prince</SlaaneshLetterTitle>
   <UndividedLetterTitle>The Great Chaos Undivided</UndividedLetterTitle>
 
 </LanguageData>

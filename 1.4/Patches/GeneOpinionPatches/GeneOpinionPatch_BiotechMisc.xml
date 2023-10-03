@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== VIOLENCE DISABLED =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "ViolenceDisabled"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== STRONG STOMACH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "StrongStomach"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Nurgle</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== KILL THIRST =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "KillThirst"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Khorne</li>
+                        </givenBy>
+                        <selectionWeight>0.4</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== MILD CELL INSTABILITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Instability_Mild"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Undivided</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.35</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== MAJOR CELL INSTABILITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Instability_Major"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Undivided</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <selectionWeight>0.25</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== UNSTOPPABLE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Unstoppable"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Khorne</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

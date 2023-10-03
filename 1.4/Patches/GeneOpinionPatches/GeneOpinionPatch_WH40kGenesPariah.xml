@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== SIGMA PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_SigmaPariah"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <purity>True</purity>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== UPSILON PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UpsilonPariah"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <purity>True</purity>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== OMEGA PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_OmegaPariah"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <purity>True</purity>
+                    </li>
+                </value>
+            </li>
+
+
+        </operations>
+    </Operation>
+
+</Patch>

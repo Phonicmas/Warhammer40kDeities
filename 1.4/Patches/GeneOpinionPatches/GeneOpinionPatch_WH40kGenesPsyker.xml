@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== IOTA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                        </givenBy>
+                        <selectionWeight>0.1</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== EPSILON PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_Psyker"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                        </givenBy>
+                        <selectionWeight>0.05</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== DELTA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DeltaPsyker"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                        </givenBy>
+                        <selectionWeight>0.025</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== BETA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_BetaPsyker"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>Tzeentch</li>
+                        </godOpinion>
+                        <opinionDegree>
+                            <li>1</li>
+                        </opinionDegree>
+                        <godWontGift>
+                            <li>Khorne</li>
+                        </godWontGift>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Tzeentch</li>
+                        </givenBy>
+                        <selectionWeight>0.005</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>
