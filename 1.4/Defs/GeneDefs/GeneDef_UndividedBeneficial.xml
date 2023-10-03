@@ -8,6 +8,12 @@
         <description>This pawn has mutated an extra eye.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>0.5</offset>
+            </li>
+        </capMods>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Tzeentch</backgroundPathXenogenes>
