@@ -38,7 +38,7 @@ namespace Mutations40k
 
         public override string SettingsCategory()
         {
-            return "ModSettingsNameChaos".Translate();
+            return "ModSettingsNameMutations".Translate();
         }
 
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <ModSettingsNameChaos>Warhammer 40k - Chaos</ModSettingsNameChaos>
+  <ModSettingsNameMutations>Warhammer 40k - Mutations</ModSettingsNameMutations>
 
   <HasMutationChoice>Disabling this removes the option to select whether a pawn should accept the deal, instead it is calculated internally whether the pawn will accept.</HasMutationChoice>
   <baseChanceForGiftAcceptance>Base chance that any pawn will accept a gift upon having a mental break: {0} (Only relevant if above setting is disabled)</baseChanceForGiftAcceptance>
