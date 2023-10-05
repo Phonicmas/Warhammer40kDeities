@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!-- Outlander Civil - Hates Chaos -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/FactionDef[defName = "OutlanderCivil"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_ChaosEnjoyer">
+                        <makeEnemy>True</makeEnemy>
+                    </li>
+                </value>
+            </li>
+
+
+            <!-- Tribe Civil - Hates Chaos -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/FactionDef[defName = "TribeCivil"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_ChaosEnjoyer">
+                        <makeEnemy>True</makeEnemy>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

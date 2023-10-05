@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!-- Tribe Savage Impid - Likes Chaos -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/FactionDef[defName = "TribeSavageImpid"]</xpath>
+                <value>
+                    <li Class="Mutations40k.DefModExtension_ChaosEnjoyer" />
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

@@ -10,21 +10,13 @@
                 <xpath>Defs/GeneDef[defName = "PsychicAbility_Deaf"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
-                        <godOpinion>
-                            <li>Khorne</li>
-                        </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                         <godWontGift>
-                            <li>Tzeentch</li>
-                        </godWontGift>
-                    </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
                             <li>Khorne</li>
-                        </givenBy>
-                        <selectionWeight>0.4</selectionWeight>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                            <li>Undivided</li>
+                        </godWontGift>
                     </li>
                 </value>
             </li>
@@ -35,13 +27,27 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
@@ -59,19 +65,32 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
                             <li>Undivided</li>
                         </givenBy>
+                        <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.2</selectionWeight>
                     </li>
                 </value>
@@ -83,19 +102,32 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
                             <li>Undivided</li>
                         </givenBy>
+                        <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.1</selectionWeight>
                     </li>
                 </value>
@@ -109,11 +141,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -124,11 +156,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -139,11 +171,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -156,13 +188,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -173,13 +207,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -190,13 +226,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -207,13 +245,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -226,11 +266,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -241,11 +281,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -258,11 +298,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -273,11 +313,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -288,11 +328,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -303,11 +343,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -320,11 +360,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -335,11 +375,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -364,11 +404,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -379,11 +419,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
@@ -402,11 +442,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -417,16 +457,17 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Khorne</li>
                         </givenBy>
+                        <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.1</selectionWeight>
                     </li>
                 </value>
@@ -440,11 +481,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -455,16 +496,17 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Slaanesh</li>
                         </givenBy>
+                        <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.3</selectionWeight>
                     </li>
                 </value>

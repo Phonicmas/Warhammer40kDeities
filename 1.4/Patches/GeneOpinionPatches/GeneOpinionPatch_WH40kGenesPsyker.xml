@@ -10,11 +10,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                         <godWontGift>
                             <li>Khorne</li>
                         </godWontGift>
@@ -34,11 +34,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                         <godWontGift>
                             <li>Khorne</li>
                         </godWontGift>
@@ -58,11 +58,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                         <godWontGift>
                             <li>Khorne</li>
                         </godWontGift>
@@ -82,11 +82,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                         <godWontGift>
                             <li>Khorne</li>
                         </godWontGift>

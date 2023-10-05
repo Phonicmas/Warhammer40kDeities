@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== EVERCHOSEN =====-->
+    <TraitDef>
+        <defName>BEWH_Everchosen</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>everchosen</label>
+                <description>{PAWN_nameDef} is the Everchosen of the gods, blessed by each of the four gods to carry out their will and invade the mortal world on behalf of chaos.</description>
+                <statOffsets>
+                    <GlobalLearningFactor>0.5</GlobalLearningFactor>
+                </statOffsets>
+                <statFactors>
+                    <MentalBreakThreshold>0</MentalBreakThreshold>
+                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>5</opinion>
+                    </li>
+                    <li>
+                        <god>Khorne</god>
+                        <opinion>5</opinion>
+                    </li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>5</opinion>
+                    </li>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>5</opinion>
+                    </li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>5</opinion>
+                    </li>
+                </godOpinion>
+                <makesGodGiveBeneficial>
+                    <li>Khorne</li>
+                    <li>Tzeentch</li>
+                    <li>Slaanesh</li>
+                    <li>Nurgle</li>
+                    <li>Undivided</li>
+                </makesGodGiveBeneficial>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Undivided</li>
+                </givenBy>
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.01</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+    <!--===== BLESSING OF KHORNE =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfKhorne</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Shooting</li>
+            <li>Melee</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Khorne</label>
+                <description>{PAWN_nameDef} is blessed by Khorne.</description>
+                <statOffsets>
+                    <MeleeHitChance>0.15</MeleeHitChance>
+                    <MeleeWeapon_CooldownMultiplier>-0.05</MeleeWeapon_CooldownMultiplier>
+                    <RangedCooldownFactor>-0.05</RangedCooldownFactor>
+                    <AimingDelayFactor>-0.05</AimingDelayFactor>
+                    <MeleeDamageFactor>0.05</MeleeDamageFactor>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Shooting</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Melee</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Khorne</god>
+                        <opinion>2</opinion>
+                    </li>
+                </godOpinion>
+                <makesGodGiveBeneficial>
+                    <li>Khorne</li>
+                </makesGodGiveBeneficial>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Khorne</li>
+                </givenBy>
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+    <!--===== BLESSING OF NURGLE =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfNurgle</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Plants</li>
+            <li>Cooking</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Nurgle</label>
+                <description>{PAWN_nameDef} is blessed by Nurgle.</description>
+                <statOffsets>
+                    <StaggerDurationFactor>-0.1</StaggerDurationFactor>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+                <skillGains>
+                    <li>
+                        <key>Plants</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Cooking</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>2</opinion>
+                    </li>
+                </godOpinion>
+                <makesGodGiveBeneficial>
+                    <li>Nurgle</li>
+                </makesGodGiveBeneficial>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Nurgle</li>
+                </givenBy>
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+    <!--===== BLESSING OF TZEENTCH =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfTzeentch</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Intellectual</li>
+            <li>Crafting</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Tzeentch</label>
+                <description>{PAWN_nameDef} is blessed by Tzeentch.</description>
+                <statOffsets>
+                    <PsychicSensitivity>0.3</PsychicSensitivity>
+                    <MeditationFocusGain>0.15</MeditationFocusGain>
+                    <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Intellectual</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Crafting</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>2</opinion>
+                    </li>
+                </godOpinion>
+                <makesGodGiveBeneficial>
+                    <li>Tzeentch</li>
+                </makesGodGiveBeneficial>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Tzeentch</li>
+                </givenBy>
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+    <!--===== BLESSING OF SLAANESH =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfSlaanesh</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Social</li>
+            <li>Artistic</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Slaanesh</label>
+                <description>{PAWN_nameDef} is blessed by Slaanesh.</description>
+                <statOffsets>
+                    <MeleeDodgeChance>5</MeleeDodgeChance>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                    <MoveSpeed>0.2</MoveSpeed>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Social</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Artistic</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>2</opinion>
+                    </li>
+                </godOpinion>
+                <makesGodGiveBeneficial>
+                    <li>Slaanesh</li>
+                </makesGodGiveBeneficial>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Slaanesh</li>
+                </givenBy>
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

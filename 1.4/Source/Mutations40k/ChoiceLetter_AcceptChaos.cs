@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using Core40k;
+using RimWorld;
 using System.Collections.Generic;
 using Verse;
 
@@ -6,9 +7,11 @@ namespace Mutations40k
 {
     public class ChoiceLetter_AcceptChaos : ChoiceLetter
     {
-        public List<GeneDef> genesToAdd;
+        public List<Def> giftsToAdd;
 
         public Pawn targetedPawn;
+
+        public ChaosGods chosenGod;
 
         public override bool CanDismissWithRightClick => false;
 
@@ -28,13 +31,13 @@ namespace Mutations40k
                 DiaOption optionReject = new DiaOption("RejectMutation".Translate());
                 diaOption.action = delegate
                 {
-                    ModifyPawnForChaos.ModifyPawnGenes(genesToAdd, targetedPawn);
+                    ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 diaOption.resolveTree = true;
                 optionReject.action = delegate
                 {
-                    ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn);
+                    ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 optionReject.resolveTree = true;

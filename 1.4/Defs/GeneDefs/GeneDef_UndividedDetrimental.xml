@@ -26,11 +26,11 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>
@@ -64,11 +64,11 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>
@@ -100,13 +100,15 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Tzeentch</li>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
         <!--<graphicData>
@@ -123,6 +125,9 @@
         <description>Every now and then, rancid meat sloughs from your body, exposing newly rotting areas beneath.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>43</displayOrderInCategory>
+        <statFactors>
+            <IncomingDamageFactor>1.9</IncomingDamageFactor>
+        </statFactors>
         <statOffsets>
             <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
             <ArmorRating_Sharp>-0.3</ArmorRating_Sharp>
@@ -143,16 +148,15 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Nurgle</li>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>1</li>
-                </opinionDegree>
-            </li>
-            <li Class="Genes40k.DefModExtension_MaxHealth">
-                <increaseMultiplier>-0.5</increaseMultiplier>
             </li>
         </modExtensions>
         <!--<graphicData>

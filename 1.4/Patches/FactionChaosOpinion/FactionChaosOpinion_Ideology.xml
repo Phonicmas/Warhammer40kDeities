@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Cannibal Tribe - Likes Chaos -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "TribeCannibal"]</xpath>
+                    <value>
+                        <li Class="Mutations40k.DefModExtension_ChaosEnjoyer" />
+                    </value>
+                </li>
+
+                <!-- Nudist Tribe - Likes Chaos -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "NudistTribe"]</xpath>
+                    <value>
+                        <li Class="Mutations40k.DefModExtension_ChaosEnjoyer" />
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+    
+</Patch>

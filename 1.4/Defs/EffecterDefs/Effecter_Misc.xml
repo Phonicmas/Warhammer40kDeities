@@ -55,6 +55,7 @@
     <children>
       <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <burstCount>3~5</burstCount>
         <positionRadius>0.15</positionRadius>
         <fleckDef>BEWH_UnfathomableGaze_A</fleckDef>
         <chancePerTick>0.9</chancePerTick>

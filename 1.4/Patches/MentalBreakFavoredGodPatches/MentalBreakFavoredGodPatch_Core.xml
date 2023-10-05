@@ -137,7 +137,7 @@
                         <khorneChance>5</khorneChance>
                         <tzeentchChance>1</tzeentchChance>
                         <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
+                        <slaaneshChance>5</slaaneshChance>
                         <undividedChance>1</undividedChance>
                     </li>
                 </value>
@@ -151,7 +151,7 @@
                         <khorneChance>5</khorneChance>
                         <tzeentchChance>1</tzeentchChance>
                         <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
+                        <slaaneshChance>5</slaaneshChance>
                         <undividedChance>1</undividedChance>
                     </li>
                 </value>
@@ -165,7 +165,7 @@
                         <khorneChance>5</khorneChance>
                         <tzeentchChance>1</tzeentchChance>
                         <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
+                        <slaaneshChance>5</slaaneshChance>
                         <undividedChance>1</undividedChance>
                     </li>
                 </value>
@@ -204,10 +204,10 @@
                 <xpath>Defs/MentalStateDef[defName = "Binging_Food"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>99999</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
+                        <khorneChance>1</khorneChance>
+                        <tzeentchChance>1</tzeentchChance>
+                        <nurgleChance>10</nurgleChance>
+                        <slaaneshChance>10</slaaneshChance>
                         <undividedChance>1</undividedChance>
                     </li>
                 </value>

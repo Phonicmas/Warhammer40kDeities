@@ -9,9 +9,9 @@
         <displayOrderInCategory>240</displayOrderInCategory>
         <skinColorOverride>(80, 50, 20)</skinColorOverride>
         <statOffsets>
-            <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-            <ArmorRating_Heat>0.25</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.2</ArmorRating_Heat>
         </statOffsets>
         <statFactors>
             <IncomingDamageFactor>0.9</IncomingDamageFactor>
@@ -28,15 +28,19 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Khorne</li>
-                    <li>Tzeentch</li>
-                    <li>Slaanesh</li>
+                    <li>
+                        <god>Khorne</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>-1</opinion>
+                    </li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>-1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>-1</li>
-                    <li>-1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>

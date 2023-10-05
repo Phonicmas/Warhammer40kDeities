@@ -27,13 +27,15 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Tzeentch</li>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>
@@ -62,13 +64,15 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Khorne</li>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Khorne</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>
@@ -100,13 +104,15 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Slaanesh</li>
-                    <li>Undivided</li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Undivided</god>
+                        <opinion>1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
         <graphicData>

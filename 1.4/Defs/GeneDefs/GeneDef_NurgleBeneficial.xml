@@ -33,15 +33,19 @@
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
-                    <li>Nurgle</li>
-                    <li>Tzeentch</li>
-                    <li>Slaanesh</li>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>-1</opinion>
+                    </li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>-1</opinion>
+                    </li>
                 </godOpinion>
-                <opinionDegree>
-                    <li>1</li>
-                    <li>-1</li>
-                    <li>-1</li>
-                </opinionDegree>
             </li>
         </modExtensions>
     </GeneDef>

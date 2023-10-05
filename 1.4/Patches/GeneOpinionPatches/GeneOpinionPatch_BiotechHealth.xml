@@ -11,13 +11,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -28,13 +30,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -45,13 +49,15 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -74,15 +80,13 @@
             <li Class="PatchOperationAddModExtension">
                 <xpath>Defs/GeneDef[defName = "Fertile"]</xpath>
                 <value>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Slaanesh</li>
-                            <li>Khorne</li>
-                            <li>Tzeentch</li>
-                            <li>Nurgle</li>
-                            <li>Undivided</li>
-                        </givenBy>
-                        <selectionWeight>0.05</selectionWeight>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>1</opinion>
+                            </li>
+                        </godOpinion>
                     </li>
                 </value>
             </li>
@@ -93,13 +97,16 @@
             <li Class="PatchOperationAddModExtension">
                 <xpath>Defs/GeneDef[defName = "Superclotting"]</xpath>
                 <value>
-                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
-                        <godOpinion>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
                             <li>Slaanesh</li>
-                        </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Undivided</li>
+                        </givenBy>
+                        <isBeneficial>True</isBeneficial>
+                        <selectionWeight>0.05</selectionWeight>
                     </li>
                 </value>
             </li>

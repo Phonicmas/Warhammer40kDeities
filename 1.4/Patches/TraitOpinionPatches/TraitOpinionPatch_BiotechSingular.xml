@@ -10,11 +10,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>-1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>-1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>

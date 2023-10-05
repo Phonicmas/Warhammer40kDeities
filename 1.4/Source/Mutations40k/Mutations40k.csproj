@@ -43,6 +43,10 @@
       <HintPath>..\..\..\..\Warhammer40kCore\1.4\Assemblies\Core40k.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Genes40k">
+      <HintPath>..\..\..\..\Warhammer40kGenes\1.4\Assemblies\Genes40k.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,9 +68,12 @@
     <Compile Include="CompAbilityEffect_UnfathomableGaze.cs" />
     <Compile Include="CompAbilityEffect_FlamingArmBlast.cs" />
     <Compile Include="CompProperties_UnfathomableGaze.cs" />
+    <Compile Include="DefModExtension_ChaosEnjoyer.cs" />
     <Compile Include="ModifyPawnForChaos.cs" />
     <Compile Include="ChoiceLetter_AcceptChaosNoChoice.cs" />
     <Compile Include="CompProperties_AbilityFlamingArmBlast.cs" />
+    <Compile Include="Mutation40kUtils.cs" />
+    <Compile Include="RecipeWorkerClass_Ritual.cs" />
     <Compile Include="Mutations40kModSettings.cs" />
     <Compile Include="ChoiceLetter_AcceptChaos.cs" />
     <Compile Include="DefModExtension_MentalBreakFavoredGod.cs" />

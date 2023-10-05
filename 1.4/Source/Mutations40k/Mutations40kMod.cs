@@ -27,10 +27,16 @@ namespace Mutations40k
             listingStandard.CheckboxLabeled("HasMutationChoice".Translate(), ref settings.hasMutationChoice);
 
             listingStandard.Label("baseChanceForGiftAcceptance".Translate(settings.baseChanceForGiftAcceptance));
-            settings.baseChanceForGiftAcceptance = (int)listingStandard.Slider(settings.baseChanceForGiftAcceptance, 0f, 100f);
+            settings.baseChanceForGiftAcceptance = (int)listingStandard.Slider(settings.baseChanceForGiftAcceptance, 0, 100);
 
             listingStandard.Label("baseChanceForGiftOffer".Translate(settings.baseChanceForGiftOffer));
-            settings.baseChanceForGiftOffer = (int)listingStandard.Slider(settings.baseChanceForGiftOffer, 0f, 100f);
+            settings.baseChanceForGiftOffer = (int)listingStandard.Slider(settings.baseChanceForGiftOffer, 0, 100);
+
+            listingStandard.Label("maxGiftsWhenGiven".Translate(settings.maxGiftsWhenGiven));
+            settings.maxGiftsWhenGiven = (int)listingStandard.Slider(settings.maxGiftsWhenGiven, 0, 10);
+
+            listingStandard.Label("opinionGainAndLossOnGift".Translate(settings.opinionGainAndLossOnGift));
+            settings.opinionGainAndLossOnGift = (int)listingStandard.Slider(settings.opinionGainAndLossOnGift, 0, 100);
 
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);

@@ -23,11 +23,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>
@@ -39,11 +39,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
@@ -61,11 +61,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Undivided</li>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
@@ -83,11 +83,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Undivided</li>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
@@ -106,11 +106,11 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>1</opinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegree>
-                            <li>1</li>
-                        </opinionDegree>
                     </li>
                 </value>
             </li>

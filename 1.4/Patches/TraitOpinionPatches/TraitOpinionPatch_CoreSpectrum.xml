@@ -10,24 +10,24 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
-                        </godOpinion>
-                        <opinionDegreeForTraitDegrees>
                             <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>-1</value>
-                                </li>
+                                <god>Slaanesh</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>-1</value>
+                                    </li>
+                                </degreeOpinion>
                             </li>
-                        </opinionDegreeForTraitDegrees>
+                        </godOpinion>
                     </li>
                 </value>
             </li>
@@ -39,28 +39,28 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                        </godOpinion>
-                        <opinionDegreeForTraitDegrees>
                             <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>-2</key>
-                                    <value>-1</value>
-                                </li>
+                                <god>Nurgle</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>-2</key>
+                                        <value>-1</value>
+                                    </li>   
+                                </degreeOpinion>
                             </li>
-                        </opinionDegreeForTraitDegrees>
+                        </godOpinion>
                     </li>
                 </value>
             </li>
@@ -72,47 +72,49 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Tzeentch</li>
-                            <li>Khorne</li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>-2</key>
+                                        <value>-1</value>
+                                    </li>
+                                </degreeOpinion>
+                            </li>
+                            <li>
+                                <god>Khorne</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-2</key>
+                                        <value>1</value>
+                                    </li>
+                                </degreeOpinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegreeForTraitDegrees>
-                            <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>-2</key>
-                                    <value>-1</value>
-                                </li>
-                            </li>
-                            <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-2</key>
-                                    <value>1</value>
-                                </li>
-                            </li>
-                        </opinionDegreeForTraitDegrees>
                     </li>
                 </value>
             </li>
@@ -124,20 +126,20 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Khorne</li>
-                        </godOpinion>
-                        <opinionDegreeForTraitDegrees>
                             <li>
-                                <li>
-                                    <key>1</key>
-                                    <value>0</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>1</value>
-                                </li>
+                                <god>Khorne</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>1</key>
+                                        <value>0</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>1</value>
+                                    </li>
+                                </degreeOpinion>
                             </li>
-                        </opinionDegreeForTraitDegrees>
+                        </godOpinion>
                     </li>
                 </value>
             </li>
@@ -149,47 +151,49 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Slaanesh</li>
-                            <li>Nurgle</li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>-2</key>
+                                        <value>-1</value>
+                                    </li>
+                                </degreeOpinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>2</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>1</key>
+                                        <value>-1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-2</key>
+                                        <value>1</value>
+                                    </li>
+                                </degreeOpinion>
+                            </li>
                         </godOpinion>
-                        <opinionDegreeForTraitDegrees>
-                            <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>-2</key>
-                                    <value>-1</value>
-                                </li>
-                            </li>
-                            <li>
-                                <li>
-                                    <key>2</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>1</key>
-                                    <value>-1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-2</key>
-                                    <value>1</value>
-                                </li>
-                            </li>
-                        </opinionDegreeForTraitDegrees>
                     </li>
                 </value>
             </li>
@@ -201,20 +205,20 @@
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
-                            <li>Nurgle</li>
-                        </godOpinion>
-                        <opinionDegreeForTraitDegrees>
                             <li>
-                                <li>
-                                    <key>1</key>
-                                    <value>1</value>
-                                </li>
-                                <li>
-                                    <key>-1</key>
-                                    <value>1</value>
-                                </li>
+                                <god>Nurgle</god>
+                                <degreeOpinion>
+                                    <li>
+                                        <key>1</key>
+                                        <value>1</value>
+                                    </li>
+                                    <li>
+                                        <key>-1</key>
+                                        <value>1</value>
+                                    </li>
+                                </degreeOpinion>
                             </li>
-                        </opinionDegreeForTraitDegrees>
+                        </godOpinion>
                     </li>
                 </value>
             </li>

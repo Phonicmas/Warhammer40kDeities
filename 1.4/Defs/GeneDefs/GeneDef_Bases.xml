@@ -11,6 +11,7 @@
         <canGenerateInGeneSet>false</canGenerateInGeneSet>
         <painOffset>0.02</painOffset>
     </GeneDef>
+    
     <!-- Beneficial Base -->
     <GeneDef Name="BEWH_BeneficialMutationBase" Abstract="True">
         <displayCategory>BEWHChaos</displayCategory>

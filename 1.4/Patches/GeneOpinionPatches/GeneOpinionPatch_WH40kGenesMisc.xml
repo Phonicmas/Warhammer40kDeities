@@ -4,9 +4,51 @@
     <Operation Class="PatchOperationSequence">
         <operations>
 
-            <!--===== UNDIVIDED =====-->
+            <!--===== DAEMON MUTATION =====-->
             <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/GeneDef[defName = "BEWH_UndividedMark"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]</xpath>
+                <value>
+                    <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                        <godOpinion>
+                            <li>
+                                <god>Undivided</god>
+                                <opinion>2</opinion>
+                            </li>
+                            <li>
+                                <god>Khorne</god>
+                                <opinion>2</opinion>
+                            </li>
+                            <li>
+                                <god>Tzeentch</god>
+                                <opinion>2</opinion>
+                            </li>
+                            <li>
+                                <god>Nurgle</god>
+                                <opinion>2</opinion>
+                            </li>
+                            <li>
+                                <god>Slaanesh</god>
+                                <opinion>2</opinion>
+                            </li>
+                        </godOpinion>
+                    </li>
+                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                        <givenBy>
+                            <li>Undivided</li>
+                            <li>Khorne</li>
+                            <li>Tzeentch</li>
+                            <li>Nurgle</li>
+                            <li>Slaanesh</li>
+                        </givenBy>
+                        <selectionWeight>0.01</selectionWeight>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== UNDIVIDED COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UndividedColor"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
@@ -19,18 +61,13 @@
                             <li>Undivided</li>
                         </makesGodGiveBeneficial>
                     </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Undivided</li>
-                        </givenBy>
-                        <selectionWeight>0.1</selectionWeight>
-                    </li>
                 </value>
             </li>
-            
-            <!--===== KHORNE =====-->
+
+
+            <!--===== KHORNE COLOR =====-->
             <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/GeneDef[defName = "BEWH_KhorneMark"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_KhorneColor"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
@@ -39,28 +76,17 @@
                                 <opinion>2</opinion>
                             </li>
                         </godOpinion>
-                        <godWontGift>
-                            <li>Tzeentch</li>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
-                            <li>Undivided</li>
-                        </godWontGift>
                         <makesGodGiveBeneficial>
                             <li>Khorne</li>
                         </makesGodGiveBeneficial>
                     </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Khorne</li>
-                        </givenBy>
-                        <selectionWeight>0.1</selectionWeight>
-                    </li>
                 </value>
             </li>
 
-            <!--===== NURGLE =====-->
+
+            <!--===== NURGLE COLOR =====-->
             <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/GeneDef[defName = "BEWH_NurgleMark"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_NurgleColor"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
@@ -69,28 +95,17 @@
                                 <opinion>2</opinion>
                             </li>
                         </godOpinion>
-                        <godWontGift>
-                            <li>Tzeentch</li>
-                            <li>Khorne</li>
-                            <li>Slaanesh</li>
-                            <li>Undivided</li>
-                        </godWontGift>
                         <makesGodGiveBeneficial>
                             <li>Nurgle</li>
                         </makesGodGiveBeneficial>
                     </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Nurgle</li>
-                        </givenBy>
-                        <selectionWeight>0.1</selectionWeight>
-                    </li>
                 </value>
             </li>
 
-            <!--===== TZEENTCH =====-->
+
+            <!--===== TZEENTCH COLOR =====-->
             <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/GeneDef[defName = "BEWH_TzeentchMark"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_TzeencthColor"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
@@ -99,28 +114,17 @@
                                 <opinion>2</opinion>
                             </li>
                         </godOpinion>
-                        <godWontGift>
-                            <li>Khorne</li>
-                            <li>Nurgle</li>
-                            <li>Slaanesh</li>
-                            <li>Undivided</li>
-                        </godWontGift>
                         <makesGodGiveBeneficial>
                             <li>Tzeentch</li>
                         </makesGodGiveBeneficial>
                     </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Tzeentch</li>
-                        </givenBy>
-                        <selectionWeight>0.1</selectionWeight>
-                    </li>
                 </value>
             </li>
 
-            <!--===== SLAANESH =====-->
+
+            <!--===== SLAANESH COLOR =====-->
             <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshMark"]</xpath>
+                <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshColor"]</xpath>
                 <value>
                     <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                         <godOpinion>
@@ -129,21 +133,9 @@
                                 <opinion>2</opinion>
                             </li>
                         </godOpinion>
-                        <godWontGift>
-                            <li>Tzeentch</li>
-                            <li>Nurgle</li>
-                            <li>Khorne</li>
-                            <li>Undivided</li>
-                        </godWontGift>
                         <makesGodGiveBeneficial>
                             <li>Slaanesh</li>
                         </makesGodGiveBeneficial>
-                    </li>
-                    <li Class="Mutations40k.DefModExtension_ChaosMutation">
-                        <givenBy>
-                            <li>Slaanesh</li>
-                        </givenBy>
-                        <selectionWeight>0.1</selectionWeight>
                     </li>
                 </value>
             </li>

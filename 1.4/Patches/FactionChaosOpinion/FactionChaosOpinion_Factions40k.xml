@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Warhammer 40k - Factions</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Imperium - Hates Chaos -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ImperiumFaction"]</xpath>
+                    <value>
+                        <li Class="Mutations40k.DefModExtension_ChaosEnjoyer">
+                            <makeEnemy>True</makeEnemy>
+                        </li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

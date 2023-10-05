@@ -3,8 +3,10 @@ using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using Verse.AI;
+using static Core40k.Core40kUtils;
 
 namespace Mutations40k
 {
@@ -21,91 +23,46 @@ namespace Mutations40k
 
             Pawn pawn = __instance.CurState.pawn;
 
-            foreach (Trait trait in pawn.story.traits.allTraits)
-            {
-                if (trait.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                {
-                    if (trait.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>().purity)
-                    {
-                        return;
-                    }
-
-                }
-            }
-
-            Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
-
-            Random rand = new Random();
-
-            //Base chance for gift 
-            if (rand.Next(0, 100) > modSettings.baseChanceForGiftOffer)
+            if (pawn.genes == null || pawn.story == null)
             {
                 return;
             }
 
-            ChaosGods chosenGod = GetGodForDealOffer(pawn, stateDef);
+            (Dictionary<ChaosGods, GeneAndTraitInfo>, bool) geneAndTraitInfo = GetGeneAndTraitInfo(pawn);
+
+            if (geneAndTraitInfo.Item2)
+            {
+                return;
+            }
+
+            Random rand = new Random();
+
+            //Base chance for gift 
+            if (rand.Next(0, 100) > Mutation40kUtils.ModSettings.baseChanceForGiftOffer)
+            {
+                return;
+            }
+
+
+            ChaosGods chosenGod = GetGodForDealOffer(geneAndTraitInfo.Item1, stateDef, pawn);
+
+
             if (chosenGod == ChaosGods.None)
             {
                 return;
             }
 
-            GeneDef geneToAdd = GetGeneBasedOfGod(chosenGod, pawn);
-            if (geneToAdd == null && chosenGod != ChaosGods.Undivided)
+            List<Def> giftsToAdd = Mutation40kUtils.GetGiftBasedOfGod(chosenGod, pawn, geneAndTraitInfo.Item1.TryGetValue(chosenGod).willGiveBeneficial);
+            if (giftsToAdd.NullOrEmpty())
             {
-                chosenGod = ChaosGods.Undivided;
-                geneToAdd = GetGeneBasedOfGod(chosenGod, pawn);
-                if (geneToAdd == null)
-                {
-                    return;
-                }
+                return;
             }
 
-            string letterTitle = ChaosEnumToString.GetLetterTitle(chosenGod);
-            string letterMessage = "ChaosAttraction".Translate(pawn.NameShortColored, ChaosEnumToString.Convert(chosenGod));
-
-            if (!modSettings.hasMutationChoice)
-            {
-                bool acceptedChaos = WillPawnAcceptChaos(pawn, modSettings.baseChanceForGiftAcceptance, chosenGod);
-                if (acceptedChaos)
-                {
-                    letterMessage += "PawnAcceptedMutation".Translate(pawn, ChaosEnumToString.Convert(chosenGod));
-                }
-                else
-                {
-                    letterMessage += "PawnRejectedMutation".Translate(pawn, ChaosEnumToString.Convert(chosenGod));
-                }
-                HasNoChoiceMutate(pawn, geneToAdd, letterTitle, letterMessage, acceptedChaos);
-            }
-            else 
-            {
-                letterMessage += "QueryAcceptance".Translate(pawn, ChaosEnumToString.Convert(chosenGod));
-                HasChoiceMutate(pawn, geneToAdd, letterTitle, letterMessage);
-            }
-
-            return;
+            Mutation40kUtils.SendMutationLetter(pawn, giftsToAdd, chosenGod, geneAndTraitInfo.Item1);
         }
 
-        private static void HasNoChoiceMutate(Pawn pawn, GeneDef geneToAdd, string letterTitle, string letterMessage, bool acceptedChaos)
+        private static ChaosGods GetGodForDealOffer(Dictionary<ChaosGods, GeneAndTraitInfo> opinion, MentalStateDef stateDef, Pawn pawn)
         {
-            ChoiceLetter_AcceptChaosNoChoice letter = new ChoiceLetter_AcceptChaosNoChoice() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, genesToAdd = new List<GeneDef> { geneToAdd }, acceptedChaos = acceptedChaos };
-            
-            letter.OpenLetter();
-        }
-
-        private static void HasChoiceMutate(Pawn pawn, GeneDef geneToAdd, string letterTitle, string letterMessage)
-        {
-            ChoiceLetter_AcceptChaos letter = new ChoiceLetter_AcceptChaos() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, genesToAdd = new List<GeneDef>{ geneToAdd } };
-
-            letter.OpenLetter();
-        }
-    
-        private static ChaosGods GetGodForDealOffer(Pawn pawn, MentalStateDef stateDef)
-        {
-            //Checking traits
-            if (pawn.story.traits == null || pawn.genes == null)
-            {
-                return ChaosGods.None;
-            }
             //Standard assignment of values are 0, this way i don't have to patch every MentalStateDef, only those i want to be able to cause god attraction.
             DefModExtension_MentalBreakFavoredGod defModExtension = stateDef?.GetModExtension<DefModExtension_MentalBreakFavoredGod>();
 
@@ -128,64 +85,22 @@ namespace Mutations40k
                 { ChaosGods.Slaanesh, 1 },
                 { ChaosGods.Undivided, 1 }
             };
-            
-            List<Trait> pawnTraits = pawn.story.traits.allTraits;
-            foreach (Trait trait in pawnTraits)
-            {
-                if (trait.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                {
-                    DefModExtension_TraitAndGeneOpinion temp = trait.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>();
-                    if (temp.purity)
-                    {
-                        return ChaosGods.None;
-                    }
-                    for (int i = 0; i < temp.godWontGift.Count; i++)
-                    {
-                        allGods.SetOrAdd(temp.godWontGift[i], -99999);
-                    }
-                    for (int i = 0; i < temp.godOpinion.Count; i++)
-                    {
-                        int a = 0;
-                        if (trait.Degree != 0)
-                        {
-                            a = temp.opinionDegreeForTraitDegrees[i].TryGetValue(trait.Degree);
-                        }
-                        else
-                        {
-                            a = temp.opinionDegree[i];
-                        }
-                        allGods.SetOrAdd(temp.godOpinion[i], allGods.TryGetValue(temp.godOpinion[i]) + a);
-                    }
-                }
-            }
-            //Checking genes
-            List<Gene> pawnGenes = pawn.genes.GenesListForReading;
-            foreach (Gene gene in pawnGenes)
-            {
-                if (gene.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                {
-                    DefModExtension_TraitAndGeneOpinion temp = gene.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>();
-                    if (temp.purity)
-                    {
-                        return ChaosGods.None;
-                    }
-                    for (int i = 0; i < temp.godWontGift.Count; i++)
-                    {
-                        allGods.SetOrAdd(temp.godWontGift[i], -99999);
-                    }
-                    for (int i = 0; i < temp.godOpinion.Count; i++)
-                    {
-                        allGods.SetOrAdd(temp.godOpinion[i], allGods.TryGetValue(temp.godOpinion[i]) + temp.opinionDegree[i]);
-                    }
-                }
-            }
-            //Checks genes and traits here and then multiply the collective by multiplyer above.
 
-            /*Log.Message("Khorne: " + allGods.TryGetValue(ChaosGods.Khorne) + " / " + khorneMultiplier);
-            Log.Message("Slaanesh: " + allGods.TryGetValue(ChaosGods.Slaanesh) + " / " + slaaneshMultiplier);
-            Log.Message("Tzeentch: " + allGods.TryGetValue(ChaosGods.Tzeentch) + " / " + tzeentchMultiplier);
-            Log.Message("Nurgle: " + allGods.TryGetValue(ChaosGods.Nurgle) + " / " + nurgleMultiplier);
-            Log.Message("Undivided: " + allGods.TryGetValue(ChaosGods.Undivided) + " / " + undividedMultiplier);*/
+            foreach (KeyValuePair<ChaosGods, GeneAndTraitInfo> dict in opinion)
+            {
+                if (dict.Value.wontGiveGift)
+                {
+                    allGods.SetOrAdd(dict.Key, -99999);
+                }
+                else
+                {
+                    int combinedOpinion = dict.Value.opinionTrait + dict.Value.opinionGene;
+
+                    combinedOpinion = (int)GetOpinionBasedOnSkills(combinedOpinion, pawn, ChaosEnumUtils.GetGodAssociatedSkills(dict.Key), 1);
+
+                    allGods.SetOrAdd(dict.Key, combinedOpinion);
+                }
+            }
 
             WeightedSelection<ChaosGods> godSelection = new WeightedSelection<ChaosGods>();
 
@@ -195,99 +110,10 @@ namespace Mutations40k
             godSelection.AddEntry(ChaosGods.Nurgle, (double)(allGods.TryGetValue(ChaosGods.Nurgle) * nurgleMultiplier));
             godSelection.AddEntry(ChaosGods.Undivided, (double)(allGods.TryGetValue(ChaosGods.Undivided) * undividedMultiplier));
 
-            return godSelection.GetRandom();
+            ChaosGods chosenGod = godSelection.GetRandom();
+
+            return chosenGod;
         }
 
-        private static GeneDef GetGeneBasedOfGod(ChaosGods chosenGod, Pawn pawn)
-        {
-            List<GeneDef> allGenes = (List<GeneDef>)DefDatabase<GeneDef>.AllDefs;
-            List<GeneDef> possibleGenesToGive = new List<GeneDef>();
-
-            foreach (GeneDef geneDef in allGenes)
-            {
-                if (geneDef.HasModExtension<DefModExtension_ChaosMutation>() && geneDef.GetModExtension<DefModExtension_ChaosMutation>().givenBy.Contains(chosenGod) && !pawn.genes.HasGene(geneDef))
-                {
-                    possibleGenesToGive.Add(geneDef);
-                }
-            }
-
-            if (possibleGenesToGive.NullOrEmpty())
-            {
-                return null;
-            }
-
-            WeightedSelection<GeneDef> geneSelection = new WeightedSelection<GeneDef>();
-
-            foreach (GeneDef geneDef in possibleGenesToGive)
-            {
-                if (!pawn.genes.HasGene(geneDef))
-                {
-                    geneSelection.AddEntry(geneDef, geneDef.GetModExtension<DefModExtension_ChaosMutation>().selectionWeight);
-                }
-            }
-
-            return geneSelection.GetRandom();
-        }
-
-        private static bool WillPawnAcceptChaos(Pawn pawn, float baseAcceptance, ChaosGods chosenGod)
-        {
-            int addedChance = 0;
-            //Checking traits
-            List<Trait> pawnTraits = pawn.story.traits.allTraits;
-            foreach (Trait trait in pawnTraits)
-            {
-                if (trait.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                {
-                    DefModExtension_TraitAndGeneOpinion temp = trait.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>();
-                    for (int i = 0; i < temp.godOpinion.Count; i++)
-                    {
-                        if (temp.godOpinion[i] == chosenGod)
-                        {
-                            int a = 0;
-                            if (trait.Degree != 0)
-                            {
-                                a = temp.opinionDegreeForTraitDegrees[i].TryGetValue(trait.Degree);
-                            }
-                            else
-                            {
-                                a = temp.opinionDegree[i];
-                            }
-                            addedChance += a;
-                            break;
-                        }
-                    }
-                }
-            }
-            //Checking Genes
-            List<Gene> pawnGenes = pawn.genes.GenesListForReading;
-            foreach (Gene gene in pawnGenes)
-            {
-                if (gene.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                {
-                    DefModExtension_TraitAndGeneOpinion temp = gene.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>();
-                    for (int i = 0; i < temp.godOpinion.Count; i++)
-                    {
-                        if (temp.godOpinion[i] == chosenGod)
-                        {
-                            addedChance += temp.opinionDegree[i];
-                            break;
-                        }
-                    }
-                }
-            }
-
-            addedChance *= 4;
-            baseAcceptance += addedChance;
-
-            Random rand = new Random();
-            int randInt = rand.Next(0, 100);
-
-            if (randInt <= baseAcceptance)
-            {
-                return true;
-            }
-
-            return false;
-        }
     }
 }

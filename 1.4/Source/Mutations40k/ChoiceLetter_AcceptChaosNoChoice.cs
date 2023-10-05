@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using Core40k;
+using RimWorld;
 using System.Collections.Generic;
 using Verse;
 
@@ -6,9 +7,11 @@ namespace Mutations40k
 {
     public class ChoiceLetter_AcceptChaosNoChoice : ChoiceLetter
     {
-        public List<GeneDef> genesToAdd;
+        public List<Def> giftsToAdd;
 
         public Pawn targetedPawn;
+
+        public ChaosGods chosenGod;
 
         public bool acceptedChaos;
 
@@ -31,11 +34,11 @@ namespace Mutations40k
                 {
                     if (acceptedChaos)
                     {
-                        ModifyPawnForChaos.ModifyPawnGenes(genesToAdd, targetedPawn);
+                        ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
                     }
                     else
                     {
-                        ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn);
+                        ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                     }
                     Find.LetterStack.RemoveLetter(this);
                 };

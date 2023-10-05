@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Warhammer 40k - Genes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Undivided -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_UndividedRitual"]/recipeUsers</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_DPUndividedRitual"]/recipeUsers</xpath>
+                </li>
+
+                <!-- Khorne -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_KhorneRitual"]/recipeUsers</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_DPKhorneRitual"]/recipeUsers</xpath>
+                </li>
+
+                <!-- Tzeentch -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_TzeentchRitual"]/recipeUsers</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_DPTzeentchRitual"]/recipeUsers</xpath>
+                </li>
+
+                <!-- Nurgle -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_NurgleRitual"]/recipeUsers</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_DPNurgleRitual"]/recipeUsers</xpath>
+                </li>
+
+                <!-- Slaanesh -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_SlaaneshRitual"]/recipeUsers</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/RecipeDef[defName = "BEWH_DPSlaaneshRitual"]/recipeUsers</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
