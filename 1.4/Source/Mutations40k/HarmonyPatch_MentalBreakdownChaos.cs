@@ -58,6 +58,11 @@ namespace Mutations40k
                 return;
             }
 
+            if (pawn.IsColonist && Mutation40kUtils.WillPawnAcceptChaos(geneAndTraitInfo.Item1, Mutation40kUtils.ModSettings.baseChanceForGiftOffer, chosenGod, pawn))
+            {
+                ModifyPawnForChaos.ModifyPawn(giftsToAdd, pawn, chosenGod);
+            }
+
             Mutation40kUtils.SendMutationLetter(pawn, giftsToAdd, chosenGod, geneAndTraitInfo.Item1);
         }
 

@@ -50,7 +50,7 @@ namespace Mutations40k
             string letterText = "MutationGivenLetter".Translate();
             string messageText = "MutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + mutation;
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_GiftGiven);
-            ChangeFactionOpinion(true);
+            ChangeFactionOpinion(true, pawn);
         }
 
         public static void CurseAndSmitePawn(Pawn pawn, ChaosGods chosenGod)
@@ -66,10 +66,10 @@ namespace Mutations40k
             string letterText = "NoMutationGivenLetter".Translate();
             string messageText = "NoMutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod));
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_NoGiftGiven);
-            ChangeFactionOpinion(false);
+            ChangeFactionOpinion(false ,pawn);
         }
 
-        private static void ChangeFactionOpinion(bool acceptedChaos)
+        private static void ChangeFactionOpinion(bool acceptedChaos, Pawn pawn)
         {
             Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
 
@@ -78,7 +78,12 @@ namespace Mutations40k
                 return;
             }
             FactionManager factionManager = Find.FactionManager;
-            Faction playerFaction = factionManager.OfPlayer;
+            Faction pawnFaction = pawn.Faction;
+
+            if (pawnFaction == null)
+            {
+                return;
+            }
 
             int goodwillChange = modSettings.opinionGainAndLossOnGift;
             HistoryEventDef chaosHistory = Mutations40kDefOf.BEWH_RejectedChaos;
@@ -101,7 +106,7 @@ namespace Mutations40k
                     }
                     else if (faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
                     {
-                        goodwillChange = -100 + faction.GoodwillToMakeHostile(playerFaction);
+                        goodwillChange = -100 + faction.GoodwillToMakeHostile(pawnFaction);
                     }
                 }
                 else
@@ -111,7 +116,7 @@ namespace Mutations40k
                         goodwillChange *= -1;
                     }
                 }
-                faction.TryAffectGoodwillWith(playerFaction, goodwillChange, false, true, chaosHistory);
+                faction.TryAffectGoodwillWith(pawnFaction, goodwillChange, false, true, chaosHistory);
                 goodwillChange = modSettings.opinionGainAndLossOnGift;
             }
 
