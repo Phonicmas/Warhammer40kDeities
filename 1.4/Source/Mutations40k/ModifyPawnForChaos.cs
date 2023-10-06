@@ -103,7 +103,7 @@ namespace Mutations40k
 
             foreach (Faction faction in factionManager.AllFactionsVisible)
             {
-                if (faction.Equals(pawnFaction))
+                if (faction.Equals(pawnFaction) || faction.IsPlayer)
                 {
                     continue;
                 }
