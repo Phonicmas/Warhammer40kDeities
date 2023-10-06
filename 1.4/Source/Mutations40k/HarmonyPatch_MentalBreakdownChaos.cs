@@ -58,9 +58,32 @@ namespace Mutations40k
                 return;
             }
 
-            if (pawn.IsColonist && Mutation40kUtils.WillPawnAcceptChaos(geneAndTraitInfo.Item1, Mutation40kUtils.ModSettings.baseChanceForGiftOffer, chosenGod, pawn))
+            //If pawn is not colonis, do it autonomous.
+            if (!pawn.IsColonist)
             {
-                ModifyPawnForChaos.ModifyPawn(giftsToAdd, pawn, chosenGod);
+                float nonColonistChance = 0;
+                if (pawn.Faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
+                {
+                    if (pawn.Faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                    {
+                        nonColonistChance = -60;
+                    }
+                    else
+                    {
+                        nonColonistChance = 15;
+                    }
+                }
+
+                if (Mutation40kUtils.WillPawnAcceptChaos(geneAndTraitInfo.Item1, Mutation40kUtils.ModSettings.baseChanceForGiftOffer + nonColonistChance, chosenGod, pawn))
+                {
+                    ModifyPawnForChaos.ModifyPawn(giftsToAdd, pawn, chosenGod);
+
+                }
+                else
+                {
+                    ModifyPawnForChaos.CurseAndSmitePawn(pawn, chosenGod);
+                }
+                return;
             }
 
             Mutation40kUtils.SendMutationLetter(pawn, giftsToAdd, chosenGod, geneAndTraitInfo.Item1);

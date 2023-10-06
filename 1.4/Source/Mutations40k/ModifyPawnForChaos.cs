@@ -4,7 +4,6 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using Verse.Noise;
 
 namespace Mutations40k
 {
@@ -47,6 +46,11 @@ namespace Mutations40k
                 }
             }
 
+            if (!pawn.IsColonist)
+            {
+                return;
+            }
+
             string letterText = "MutationGivenLetter".Translate();
             string messageText = "MutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + mutation;
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_GiftGiven);
@@ -62,6 +66,11 @@ namespace Mutations40k
             Graphics.DrawMesh(boltMesh, pawn.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Weather), Quaternion.identity, FadedMaterialPool.FadedVersionOf(LightningMat, 1), 0);
 
             pawn.health.AddHediff(Mutations40kDefOf.BEWH_GodsTemporaryCurse, null);
+
+            if (!pawn.IsColonist)
+            {
+                return;
+            }
 
             string letterText = "NoMutationGivenLetter".Translate();
             string messageText = "NoMutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod));
@@ -94,7 +103,7 @@ namespace Mutations40k
 
             foreach (Faction faction in factionManager.AllFactionsVisible)
             {
-                if (faction.IsPlayer)
+                if (faction.Equals(pawnFaction))
                 {
                     continue;
                 }
