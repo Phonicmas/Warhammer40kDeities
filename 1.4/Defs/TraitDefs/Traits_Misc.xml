@@ -19,12 +19,6 @@
                     <MentalBreakThreshold>0</MentalBreakThreshold>
                     <IncomingDamageFactor>0.5</IncomingDamageFactor>
                 </statFactors>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <postFactor>2</postFactor>
-                    </li>
-                </capMods>
             </li>
         </degreeDatas>
         <modExtensions>
