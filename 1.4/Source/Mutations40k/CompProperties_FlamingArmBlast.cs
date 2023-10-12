@@ -3,7 +3,7 @@ using Verse;
 
 namespace Mutations40k
 {
-    public class CompProperties_AbilityFlamingArmBlast : CompProperties_AbilityEffect
+    public class CompProperties_FlamingArmBlast : CompProperties_AbilityEffect
     {
         public float range;
 
@@ -11,7 +11,7 @@ namespace Mutations40k
 
         public EffecterDef effecterDef;
 
-        public CompProperties_AbilityFlamingArmBlast()
+        public CompProperties_FlamingArmBlast()
         {
             compClass = typeof(CompAbilityEffect_FlamingArmBlast);
         }

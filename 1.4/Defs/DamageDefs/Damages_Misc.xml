@@ -2,7 +2,6 @@
 <Defs>
 
     <!-- Biting Tongue -->
-
     <DamageDef>
         <defName>BEWH_BitingTongueDamage</defName>
         <label>stab</label>

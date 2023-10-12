@@ -3,22 +3,29 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace Mutations40k
 {
-    public class CompAbilityEffect_FlamingArmBlast : CompAbilityEffect
+    public class CompAbilityEffect_BileSpew : CompAbilityEffect
     {
         private List<IntVec3> tmpCells = new List<IntVec3>();
 
-        private new CompProperties_FlamingArmBlast Props => (CompProperties_FlamingArmBlast)props;
+        private new CompProperties_BileSpew Props => (CompProperties_BileSpew)props;
 
         private Pawn Pawn => parent.pawn;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            IntVec3 position = parent.pawn.Position;
-            float num = Mathf.Atan2(-(target.Cell.z - position.z), target.Cell.x - position.x) * 57.29578f;
-            GenExplosion.DoExplosion(affectedAngle: new FloatRange(num - 10f, num + 10f), center: position, map: parent.pawn.MapHeld, radius: Props.range, damType: Core40kDefOf.BEWH_WarpFlame, instigator: Pawn, damAmount: -1, armorPenetration: -1f, explosionSound: null, weapon: null, projectile: null, intendedTarget: null, postExplosionSpawnThingDef: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null, applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1, chanceToStartFire: 1f, damageFalloff: false, direction: null, ignoredThings: null, doVisualEffects: false, propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false);
+            List<IntVec3> affectedCells = AffectedCells(target);
+
+            foreach (IntVec3 vec3 in affectedCells)
+            {
+                if (vec3.GetFirstPawn(parent.pawn.MapHeld) != null)
+                {
+                    vec3.GetFirstPawn(parent.pawn.MapHeld).jobs.StartJob(JobMaker.MakeJob(JobDefOf.Vomit, 2000), JobCondition.InterruptForced, null, resumeCurJobAfterwards: true);
+                }
+            }
             base.Apply(target, dest);
         }
 

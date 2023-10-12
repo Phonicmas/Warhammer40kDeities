@@ -41,6 +41,8 @@
                             <li>Slaanesh</li>
                         </givenBy>
                         <selectionWeight>0.01</selectionWeight>
+                        <removesDetrimentalGifts>True</removesDetrimentalGifts>
+                        <isBeneficial>True</isBeneficial>
                     </li>
                 </value>
             </li>

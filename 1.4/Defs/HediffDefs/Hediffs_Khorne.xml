@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Monsterous Hands Attack -->
+    <HediffDef>
+        <defName>BEWH_KhorneMonstrousHandsAttack</defName>
+        <label>monstrous hands</label>
+        <description>The hands are replaced with large monstrous hand, which are capable of ravaging but unable to do fine manipulation.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.5, 0.03, 0.03)</defaultLabelColor>        <!-- Khorne Color -->
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>monstrous hands</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <power>25</power>
+                        <cooldownTime>1.2</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

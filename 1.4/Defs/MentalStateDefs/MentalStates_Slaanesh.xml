@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MentalBreakDef>
+    <defName>BEWH_JealousVisageWander</defName>
+    <mentalState>BEWH_JealousVisageWander</mentalState>
+    <baseCommonality>0</baseCommonality>
+    <intensity>Minor</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>BEWH_JealousVisageWander</defName>
+    <stateClass>MentalState_WanderSad</stateClass>
+    <label>jealous wander</label>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <minTicksBeforeRecovery>1250</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>2500</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.02</recoveryMtbDays>
+    <recoverFromSleep>true</recoverFromSleep>
+    <nameColor>(0.63, 0.04, 0.53)</nameColor>
+    <recoveryMessage>{0} is no longer wandering.</recoveryMessage>
+    <beginLetterLabel>jealous wander</beginLetterLabel>
+    <beginLetter>{0} has broken down and is wandering around thinking about everything they don't have.</beginLetter>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <baseInspectLine>Mental state: Jealous wandering</baseInspectLine>
+    <allowBeatfire>true</allowBeatfire>
+    <escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+  </MentalStateDef>
+
+</Defs>

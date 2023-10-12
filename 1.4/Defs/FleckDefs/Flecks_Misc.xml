@@ -60,4 +60,26 @@
         </graphicData>
     </FleckDef>
 
+
+    <!-- Bile Spew -->
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>BEWH_BileSpew_A</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.05</fadeInTime>
+        <solidTime>0.7</solidTime>
+        <fadeOutTime>0.05</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>GlowAnimated</shaderType>
+            <texPath>Things/Mote/BileSpew_A</texPath>
+            <shaderParameters>
+                <_NumFrames>5</_NumFrames>
+                <_FramesPerSec>7</_FramesPerSec>
+            </shaderParameters>
+            <drawSize>0.7</drawSize>
+        </graphicData>
+    </FleckDef>
+
 </Defs>

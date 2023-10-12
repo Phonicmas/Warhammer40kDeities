@@ -49,7 +49,7 @@
   </EffecterDef>
 
 
-  <!-- Flaming Arm Blast-->
+  <!-- Unfathomable Gaze-->
   <EffecterDef>
     <defName>BEWH_UnfathomableGaze</defName>
     <children>
@@ -59,9 +59,9 @@
         <positionRadius>0.15</positionRadius>
         <fleckDef>BEWH_UnfathomableGaze_A</fleckDef>
         <chancePerTick>0.9</chancePerTick>
-        <speed>9.5</speed>
+        <speed>14.5</speed>
         <scale>0.8~1.2</scale>
-        <angle>-15~15</angle>
+        <angle>-25~25</angle>
         <positionLerpFactor>0.85</positionLerpFactor>
         <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
       </li>
@@ -90,6 +90,44 @@
       <li>
         <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
         <positionRadius>0.2</positionRadius>
+        <fleckDef>FireSpew_Glow</fleckDef>
+        <chancePerTick>0.16</chancePerTick>
+        <positionLerpFactor>0.65</positionLerpFactor>
+      </li>
+    </children>
+  </EffecterDef>
+
+
+  <!-- Bile Spew -->
+  <EffecterDef>
+    <defName>BEWH_BileSpew</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <burstCount>2~4</burstCount>
+        <positionRadius>0.4</positionRadius>
+        <fleckDef>BEWH_BileSpew_A</fleckDef>
+        <chancePerTick>0.9</chancePerTick>
+        <speed>11.5</speed>
+        <scale>1~1.4</scale>
+        <angle>-50~50</angle>
+        <positionLerpFactor>0.85</positionLerpFactor>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.35</positionRadius>
+        <moteDef>Mote_SparkThrownFast</moteDef>
+        <chancePerTick>0.5</chancePerTick>
+        <speed>3.3~5</speed>
+        <scale>0.1~0.2</scale>
+        <angle>-12~12</angle>
+        <positionLerpFactor>0.8</positionLerpFactor>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.3</positionRadius>
         <fleckDef>FireSpew_Glow</fleckDef>
         <chancePerTick>0.16</chancePerTick>
         <positionLerpFactor>0.65</positionLerpFactor>

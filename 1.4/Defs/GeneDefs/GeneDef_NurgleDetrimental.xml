@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+    <!-- Grossly Fat -->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_NurgleGrosslyFat</defName>
+        <label>mutation: Grossly fat</label>
+        <description>This pawns body have mutated lumps of excess fat all over the body, severely</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>340</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>0.75</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+            <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+        <bodyType>Fat</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Nurgle</li>
+                </givenBy>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>-1</opinion>
+                    </li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>-1</opinion>
+                    </li>
+                </godOpinion>
+            </li>
+        </modExtensions>
+    </GeneDef>
 
+
+    <!-- Foul Stench -->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_NurgleFoulStench</defName>
+        <label>mutation: Foul stench</label>
+        <description>This pawns body has mutated to emit a foul stench, so foul that other nearby pawns may vomits if they get too close.</description>
+        <iconPath>Placeholder</iconPath>
+        <displayOrderInCategory>340</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Other pawns think less of carriers of this gene</li>
+        </customEffectDescriptions>
+        <geneClass>Mutations40k.Gene_FoulStench</geneClass>
+        <aptitudes>
+            <Social>-5</Social>
+        </aptitudes>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Mutations40k.DefModExtension_ChaosMutation">
+                <givenBy>
+                    <li>Nurgle</li>
+                </givenBy>
+            </li>
+            <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                <godOpinion>
+                    <li>
+                        <god>Nurgle</god>
+                        <opinion>1</opinion>
+                    </li>
+                    <li>
+                        <god>Tzeentch</god>
+                        <opinion>-1</opinion>
+                    </li>
+                    <li>
+                        <god>Slaanesh</god>
+                        <opinion>-1</opinion>
+                    </li>
+                </godOpinion>
+            </li>
+            <li Class="Mutations40k.DefModExtension_SituationalThought" />
+        </modExtensions>
+    </GeneDef>
 
 </Defs>

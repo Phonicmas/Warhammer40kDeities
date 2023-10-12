@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Flaming Arm Blast -->
+  <AbilityDef>
+    <defName>BEWH_FlamingArmBlast</defName>
+    <label>flaming arm blast</label>
+    <description>...</description>
+    <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
+    <category>Chaos</category>
+    <cooldownTicksRange>100000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Mutations40k.CompProperties_FlamingArmBlast">
+        <range>12.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <effecterDef>BEWH_FlamingArmBlast</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <!-- Flaming Arm -->
-    <HediffDef>
-        <defName>BEWH_TzeentchFlamingArmAttack</defName>
-        <label>flaming arm</label>
-        <description>The arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <maxSeverity>1.0</maxSeverity>
-        <isBad>false</isBad>
-        <defaultLabelColor>(0.28, 0.32, 0.76)</defaultLabelColor>
-        <comps>
-            <li Class="HediffCompProperties_VerbGiver">
-                <tools>
-                    <li>
-                        <label>flaming arm</label>
-                        <capacities>
-                            <li>BEWH_FlamingArmBurn</li>
-                        </capacities>
-                        <power>8</power>
-                        <cooldownTime>1.2</cooldownTime>
-                    </li>
-                </tools>
-            </li>
-        </comps>
-    </HediffDef>
-
-
-    <!-- Biting Tongue -->
+    <!-- Biting Tongue Attack -->
     <HediffDef>
         <defName>BEWH_NurgleBitingTongueAttack</defName>
         <label>biting tongue attack</label>
         <description>The tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
-        <defaultLabelColor>(0.55, 0.55, 0.05)</defaultLabelColor>
+        <defaultLabelColor>(0.55, 0.55, 0.05)</defaultLabelColor> <!-- Nurgle Color -->
         <stages>
             <li>
                 <becomeVisible>False</becomeVisible>
@@ -65,6 +39,20 @@
                 </tools>
             </li>
         </comps>
+    </HediffDef>
+
+
+    <!-- Biting Tongue Part -->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>BEWH_BitingTongue</defName>
+        <label>biting tongue</label>
+        <description>The tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
+        <defaultLabelColor>(0.55, 0.55, 0.05)</defaultLabelColor>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
     </HediffDef>
 
 </Defs>

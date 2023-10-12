@@ -451,7 +451,7 @@
                 </value>
             </li>
 
-            <!--===== WEAK MELEE DAMAGE =====-->
+            <!--===== STRONG MELEE DAMAGE =====-->
             <li Class="PatchOperationAddModExtension">
                 <xpath>Defs/GeneDef[defName = "MeleeDamage_Strong"]</xpath>
                 <value>

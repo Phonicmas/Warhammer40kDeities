@@ -22,8 +22,10 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
                     </li>
                 </value>
             </li>
@@ -46,8 +48,10 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.05</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
                     </li>
                 </value>
             </li>
@@ -70,8 +74,10 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.025</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
                     </li>
                 </value>
             </li>
@@ -94,8 +100,10 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.005</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
                     </li>
                 </value>
             </li>

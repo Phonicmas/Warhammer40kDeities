@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationAdditionalEye</defName>
         <label>mutation: Additional eye</label>
-        <description>This pawn has mutated an extra eye.</description>
+        <description>The pawn has mutated an extra eye.</description>
         <iconPath>Placeholder</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
@@ -24,6 +24,7 @@
                     <li>Tzeentch</li>
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
+                <isBeneficial>True</isBeneficial>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
@@ -45,9 +46,9 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationAnimalisticLegs</defName>
         <label>mutation: Animalistic legs</label>
-        <description>Your legs undergo a startling transformation, assuming the look and feel of a deer's hind legs. Though deer legs are common, the legs of any animal will do. These animalistic legs merge with existing legs potentially forming animalistic bionic leg.</description>
+        <description>The pawns legs has mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs potentially forming animalistic bionic leg.</description>
         <iconPath>Placeholder</iconPath>
-        <displayOrderInCategory>141</displayOrderInCategory>
+        <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
@@ -61,6 +62,7 @@
                     <li>Khorne</li>
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
+                <isBeneficial>True</isBeneficial>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
@@ -82,9 +84,9 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationPrehensileTail</defName>
         <label>mutation: Prehensile tail</label>
-        <description>This pawn has mutated a tail that can be used an an extra arm and hand, albiet a little less effective.</description>
+        <description>The pawn has mutated a tail that can be used an an extra arm and hand, albiet a little less effective.</description>
         <iconPath>Placeholder</iconPath>
-        <displayOrderInCategory>142</displayOrderInCategory>
+        <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
@@ -101,6 +103,7 @@
                     <li>Slaanesh</li>
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
+                <isBeneficial>True</isBeneficial>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>

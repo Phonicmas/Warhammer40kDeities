@@ -7,9 +7,18 @@ namespace Mutations40k
     public static class Mutations40kDefOf
     {
 
+        public static DamageDef BEWH_BitingTongueDamage;
+
+        public static GeneDef BEWH_KhorneBoilingBlood;
+
+        public static GeneDef BEWH_KhorneMonstrousHands;
+
         public static HediffDef BEWH_GodsTemporaryPower;
         public static HediffDef BEWH_GodsTemporaryCurse;
 
+        public static HediffDef BEWH_TzeentchEverchangingDeficiancies;
+
+        public static MentalStateDef BEWH_KhornateHungerBeserk;
 
         public static TraitDef BEWH_Everchosen;
         public static TraitDef BEWH_BlessingOfKhorne;

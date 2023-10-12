@@ -2,6 +2,7 @@
 using Genes40k;
 using RimWorld;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -32,8 +33,13 @@ namespace Mutations40k
                 giftToAdd.AddRange(AddDaemonParts(chosenGod, pawn));
             }
 
+            bool removeDetrimentalAfter = false;
             foreach (Def def in giftToAdd)
             {
+                if (def.HasModExtension<DefModExtension_ChaosMutation>() && def.GetModExtension<DefModExtension_ChaosMutation>().removesDetrimentalGifts)
+                {
+                    removeDetrimentalAfter = true;
+                }
                 if (def.GetType() == typeof(GeneDef))
                 {
                     mutation += "- " + (def as GeneDef).label.CapitalizeFirst() + "\n";
@@ -43,6 +49,15 @@ namespace Mutations40k
                 {
                     pawn.story.traits.GainTrait(new Trait((TraitDef)def));
                     mutation += "- " + (def as TraitDef).degreeDatas[0].label.CapitalizeFirst() + "\n";
+                }
+            }
+
+            if (removeDetrimentalAfter)
+            {
+                List<Gene> genesToRemove = pawn.genes.GenesListForReading.FindAll(x => x.def.HasModExtension<DefModExtension_ChaosMutation>() && !x.def.GetModExtension<DefModExtension_ChaosMutation>().isBeneficial);
+                foreach (Gene gene in genesToRemove)
+                {
+                    pawn.genes.RemoveGene(gene);
                 }
             }
 

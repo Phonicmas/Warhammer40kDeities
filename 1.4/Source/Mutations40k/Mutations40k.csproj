@@ -65,13 +65,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect_BileSpew.cs" />
+    <Compile Include="CompProperties_BileSpew.cs" />
+    <Compile Include="HediffComp_EverchangingDeficiancies.cs" />
+    <Compile Include="HediffCompProperties_EverchangingDeficiancies.cs" />
+    <Compile Include="MentalState_KhornateHungerBerserk.cs" />
+    <Compile Include="HarmonyPatch_KhornateHunger.cs" />
+    <Compile Include="Need_KhornateHunger.cs" />
+    <Compile Include="Gene_FoulStench.cs" />
     <Compile Include="CompAbilityEffect_UnfathomableGaze.cs" />
     <Compile Include="CompAbilityEffect_FlamingArmBlast.cs" />
     <Compile Include="CompProperties_UnfathomableGaze.cs" />
+    <Compile Include="HarmonyPatch_BoilingBlood.cs" />
+    <Compile Include="HarmonyPatch_MonsterousHands.cs" />
+    <Compile Include="ThoughtWorker_SituationalThoughtMutation.cs" />
+    <Compile Include="DefModExtension_SituationalThought.cs" />
     <Compile Include="DefModExtension_ChaosEnjoyer.cs" />
     <Compile Include="ModifyPawnForChaos.cs" />
     <Compile Include="ChoiceLetter_AcceptChaosNoChoice.cs" />
-    <Compile Include="CompProperties_AbilityFlamingArmBlast.cs" />
+    <Compile Include="CompProperties_FlamingArmBlast.cs" />
     <Compile Include="Mutation40kUtils.cs" />
     <Compile Include="RecipeWorkerClass_Ritual.cs" />
     <Compile Include="Mutations40kModSettings.cs" />

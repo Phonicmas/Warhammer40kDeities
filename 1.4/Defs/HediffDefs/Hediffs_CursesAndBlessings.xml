@@ -8,6 +8,7 @@
         <description>This pawn has been filled with power from the gods.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
         <defaultLabelColor>(0.85, 0.85, 0.85)</defaultLabelColor>
@@ -49,6 +50,7 @@
         <description>This pawn has been curse by the gods.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
         <defaultLabelColor>(0.85, 0.85, 0.85)</defaultLabelColor>
