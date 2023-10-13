@@ -6,7 +6,7 @@
         <defName>BEWH_SlaaneshJealousVisage</defName>
         <label>mutation: Jealous visage</label>
         <description>This pawn has been mutated and is instilled with the idea that they're owed everything and should have whatever they want, however they often find this to not be the case.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/JealousVisage</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <forcedTraits>
             <li>
@@ -52,7 +52,7 @@
         <defName>BEWH_SlaaneshDeadenedSenses</defName>
         <label>mutation: Deadened senses</label>
         <description>This pawns sense has been mutated to such a degree that they're now barely functioning.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/DeadenedSenses</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <capMods>
             <li>

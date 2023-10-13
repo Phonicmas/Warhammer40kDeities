@@ -6,9 +6,9 @@
         <defName>BEWH_KhorneBronzeSkin</defName>
         <label>mutation: Bronze skin</label>
         <description>The pawns body has mutated to be gilded in bronze, giving them extra resistance against weaponry.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/BronzeSkin</iconPath>
         <displayOrderInCategory>240</displayOrderInCategory>
-        <skinColorOverride>(80, 50, 20)</skinColorOverride>
+        <skinColorOverride>(43, 30, 14)</skinColorOverride>
         <statOffsets>
             <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -53,7 +53,7 @@
         <defName>BEWH_KhorneBoilingBlood</defName>
         <label>mutation: Boiling blood</label>
         <description>The pawns blood has mutated to be constantly boiling, miraculously this does not hurt the pawn, however anyone melee attacking the pawn will be burned from the boiling blood.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/BoilingBlood</iconPath>
         <displayOrderInCategory>240</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Spews boiling blod on melee attackers, damaging them.</li>

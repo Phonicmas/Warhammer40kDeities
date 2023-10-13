@@ -6,7 +6,7 @@
         <defName>BEWH_MutationAdditionalEye</defName>
         <label>mutation: Additional eye</label>
         <description>The pawn has mutated an extra eye.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/AdditionalEye</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
             <li>
@@ -47,7 +47,7 @@
         <defName>BEWH_MutationAnimalisticLegs</defName>
         <label>mutation: Animalistic legs</label>
         <description>The pawns legs has mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs potentially forming animalistic bionic leg.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/AnimalisticLegs</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>1.2</MoveSpeed>
@@ -85,7 +85,7 @@
         <defName>BEWH_MutationPrehensileTail</defName>
         <label>mutation: Prehensile tail</label>
         <description>The pawn has mutated a tail that can be used an an extra arm and hand, albiet a little less effective.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/PrehensileTail</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
             <li>
@@ -121,7 +121,6 @@
         <graphicData>
             <drawLoc>Tailbone</drawLoc>
             <graphicPath>Things/Pawn/Humanlike/BodyAttachments/PrehensileTail/PrehensileTail</graphicPath>
-            <color>(255, 255, 255)</color>
             <colorType>Skin</colorType>
             <drawOffsetNorth>(0.05, 0.2, -0.2)</drawOffsetNorth>
             <drawOffsetEast>(-0.5, -0.11, -0.05)</drawOffsetEast>

@@ -6,7 +6,7 @@
         <defName>BEWH_NurgleGrosslyFat</defName>
         <label>mutation: Grossly fat</label>
         <description>This pawns body have mutated lumps of excess fat all over the body, severely</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/GrosslyFat</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>0.75</MoveSpeed>
@@ -49,7 +49,7 @@
         <defName>BEWH_NurgleFoulStench</defName>
         <label>mutation: Foul stench</label>
         <description>This pawns body has mutated to emit a foul stench, so foul that other nearby pawns may vomits if they get too close.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/FoulStench</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Other pawns think less of carriers of this gene</li>

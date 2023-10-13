@@ -6,7 +6,7 @@
         <defName>BEWH_KhorneMonstrousHands</defName>
         <label>mutation: Monstrous hands</label>
         <description>The pawns hands have mutated into giant monstrous hands, while a formiddable weapon these hands cannot carry any weapons.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/MonstrousHands</iconPath>
         <displayOrderInCategory>240</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Gives carriers of this gene have giant monstrous hands, which makes it impossible to carry weapons.</li>
@@ -60,7 +60,7 @@
         <defName>BEWH_KhornateHunger</defName>
         <label>mutation: Khornate hunger</label>
         <description>The pawns senses has mutated, given them a thirst for killing other beings. If not satiated the pawn will go into a berserk rage.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/KhornateHunger</iconPath>
         <displayOrderInCategory>240</displayOrderInCategory>
         <causesNeed>BEWH_KhornateHunger</causesNeed>
         <modExtensions>

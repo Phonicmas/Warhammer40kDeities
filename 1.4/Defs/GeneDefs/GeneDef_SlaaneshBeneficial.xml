@@ -6,7 +6,7 @@
         <defName>BEWH_SlaaneshUnfathomableGaze</defName>
         <label>mutation: Unfathomable gaze</label>
         <description>This pawn eyes has mutated, giving them the ability to temporay stun anyone looking at them as their mesmerized by the pawns eyes.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/UnfathomableGaze</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <abilities>
             <li>BEWH_UnfathomableGaze</li>
@@ -47,7 +47,7 @@
         <defName>BEWH_SlaaneshAlluringPresence</defName>
         <label>mutation: Alluring presence</label>
         <description>This pawn has mutated aesthetically pleasing features and been instilled with great charm.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/AlluringPresence</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Other pawns think highly of carriers of this gene</li>

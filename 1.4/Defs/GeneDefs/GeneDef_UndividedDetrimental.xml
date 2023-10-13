@@ -6,7 +6,7 @@
         <defName>BEWH_MutationExtraLeg</defName>
         <label>mutation: Extra leg</label>
         <description>The pawn has mutated an extra leg. It always seems to be a hinderence</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/ExtraLeg</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>
             <MoveSpeed>0.8</MoveSpeed>
@@ -41,7 +41,7 @@
         <defName>BEWH_MutationExtraArm</defName>
         <label>mutation: Extra arm</label>
         <description>The pawn has mutated an extra Arm. It always seems to be a hinderence</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/ExtraArm</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
             <li>
@@ -79,7 +79,7 @@
         <defName>BEWH_MutationTentacles</defName>
         <label>mutation: Tentacles</label>
         <description>The pawn has mutated useless tentacles on their body.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/TentaclesWholeBody</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
             <li>
@@ -111,11 +111,15 @@
                 </godOpinion>
             </li>
         </modExtensions>
-        <!--<graphicData>
-            <layer>PostTattoo</layer>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
-            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
-        </graphicData>-->
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tentacles/TentaclesWholeBody</graphicPath>
+            <drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+            <drawScale>1.7  </drawScale>
+			<drawLoc>Tailbone</drawLoc>
+            <colorType>Skin</colorType>
+        </graphicData>
     </GeneDef>
 
     <!--===== Rotting Flesh =====-->
@@ -123,7 +127,7 @@
         <defName>BEWH_MutationRottingFlesh</defName>
         <label>mutation: Rotting flesh</label>
         <description>The pawns body has mutated, every now and then, rancid meat sloughs from their body, exposing newly rotting areas beneath.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/RottingBody</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>
             <IncomingDamageFactor>1.9</IncomingDamageFactor>

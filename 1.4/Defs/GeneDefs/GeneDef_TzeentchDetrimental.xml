@@ -6,7 +6,7 @@
         <defName>BEWH_TzeentchEverchangingDeficiencies</defName>
         <label>mutation: Everchanging deficiencies</label>
         <description>The pawns has been mutated in such a way that constantly mutate them slightly. This has the adverse effect of harming their capacities randomly.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/EverchangingDeficiencies</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Pawns body constant mutates, causing detrimental changes that constantly shift</li>
@@ -46,7 +46,7 @@
         <defName>BEWH_TzeentchNeuronOverload</defName>
         <label>mutation: Neuron overload</label>
         <description>The pawns brains has been mutated, however the sheer overload that accompanied the mutation have left the pawn worse off.</description>
-        <iconPath>Placeholder</iconPath>
+        <iconPath>UI/Icons/Genes/NeuronOverload</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <aptitudes>
             <Intellectual>-2</Intellectual>
