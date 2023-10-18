@@ -5,14 +5,14 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_TzeentchFlamingArm</defName>
         <label>mutation: Flaming arm</label>
-        <description>The pawns arm has been mutated with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
+        <description>The pawn's arm has been mutated with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
         <iconPath>UI/Icons/Genes/FlamingArm</iconPath>        <!-- Make icon of flaming arm shooting flame thingy -->
         <displayOrderInCategory>540</displayOrderInCategory>
         <abilities>
             <li>BEWH_FlamingArmBlast</li>
         </abilities>
         <customEffectDescriptions>
-            <li>Gives carriers of this gene the ability to attack using their flaming arm</li>
+            <li>Gives carriers of this gene the ability to attack using their flaming arm.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
@@ -57,7 +57,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_TzeentchMassiveIntellect</defName>
         <label>mutation: Massive intellect</label>
-        <description>The pawns brain has mutated and as such the pawn is able to comprehend many more things, sometimes too many.</description>
+        <description>The pawn's brain has mutated and as such the pawn is able to comprehend many more things, sometimes too many.</description>
         <iconPath>UI/Icons/Genes/MassiveIntellect</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <aptitudes>

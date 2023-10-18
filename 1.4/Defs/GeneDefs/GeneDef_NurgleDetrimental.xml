@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_NurgleGrosslyFat</defName>
         <label>mutation: Grossly fat</label>
-        <description>This pawns body have mutated lumps of excess fat all over the body, severely hindering their movement.</description>
+        <description>The pawn's body have mutated lumps of excess fat all over the body, severely hindering their movement.</description>
         <iconPath>UI/Icons/Genes/GrosslyFat</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <statFactors>
@@ -48,11 +48,11 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_NurgleFoulStench</defName>
         <label>mutation: Foul stench</label>
-        <description>This pawns body has mutated to emit a foul stench, so foul that other nearby pawns may vomits if they get too close.</description>
+        <description>The pawn's body has mutated to emit a foul stench. It is so foul that other nearby pawns may vomit if they get too close.</description>
         <iconPath>UI/Icons/Genes/FoulStench</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <customEffectDescriptions>
-            <li>Other pawns think less of carriers of this gene</li>
+            <li>Other pawns think less of carriers of this gene.</li>
         </customEffectDescriptions>
         <geneClass>Mutations40k.Gene_FoulStench</geneClass>
         <aptitudes>

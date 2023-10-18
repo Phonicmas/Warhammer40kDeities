@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_SlaaneshJealousVisage</defName>
         <label>mutation: Jealous visage</label>
-        <description>This pawn has been mutated and is instilled with the idea that they're owed everything and should have whatever they want, however they often find this to not be the case.</description>
+        <description>This pawn has been mutated and is instilled with the idea, that they're owed everything and should have whatever they want, however they often find this to not be the case.</description>
         <iconPath>UI/Icons/Genes/JealousVisage</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <forcedTraits>
@@ -14,7 +14,7 @@
             </li>
         </forcedTraits>
         <customEffectDescriptions>
-            <li>May have severl mental breakdowns per day, wondering why they don't have everything they want.</li>
+            <li>May have several mental breakdowns per day, wondering why they don't have everything they want.</li>
         </customEffectDescriptions>
         <mentalBreakMtbDays>0.2</mentalBreakMtbDays>
         <mentalBreakDef>BEWH_JealousVisageWander</mentalBreakDef>
@@ -51,7 +51,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_SlaaneshDeadenedSenses</defName>
         <label>mutation: Deadened senses</label>
-        <description>This pawns sense has been mutated to such a degree that their senses are now barely functioning.</description>
+        <description>The pawn's sense has been mutated to such a degree that their senses are now barely functioning.</description>
         <iconPath>UI/Icons/Genes/DeadenedSenses</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <capMods>
