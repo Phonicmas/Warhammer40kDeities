@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_NurgleBitingTongue</defName>
         <label>mutation: Biting tongue</label>
-        <description>The pawns tongue has mutated to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
+        <description>The pawns tongue has mutated to be thick and cylindrical, with a maw of biting teeth, much like that of a Great Unclean One.</description>
         <iconPath>UI/Icons/Genes/BitingTongue</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <customEffectDescriptions>

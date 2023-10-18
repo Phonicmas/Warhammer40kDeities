@@ -4,7 +4,7 @@
     <!-- Everchanging Deficiencies -->
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_TzeentchEverchangingDeficiencies</defName>
-        <label>mutation: Everchanging deficiencies</label>
+        <label>mutation: Changing deficiencies</label>
         <description>The pawns has been mutated in such a way that constantly mutate them slightly. This has the adverse effect of harming their capacities randomly.</description>
         <iconPath>UI/Icons/Genes/EverchangingDeficiencies</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>

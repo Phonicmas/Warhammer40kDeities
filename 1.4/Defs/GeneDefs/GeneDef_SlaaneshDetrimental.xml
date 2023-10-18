@@ -51,7 +51,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_SlaaneshDeadenedSenses</defName>
         <label>mutation: Deadened senses</label>
-        <description>This pawns sense has been mutated to such a degree that they're now barely functioning.</description>
+        <description>This pawns sense has been mutated to such a degree that their senses are now barely functioning.</description>
         <iconPath>UI/Icons/Genes/DeadenedSenses</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <capMods>

@@ -3,7 +3,7 @@
 
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Warhammer 40k - Genes</li>
+            <li>Warhammer 40.000 - Genes</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>

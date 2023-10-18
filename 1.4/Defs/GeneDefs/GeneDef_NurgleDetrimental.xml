@@ -5,11 +5,11 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_NurgleGrosslyFat</defName>
         <label>mutation: Grossly fat</label>
-        <description>This pawns body have mutated lumps of excess fat all over the body, severely</description>
+        <description>This pawns body have mutated lumps of excess fat all over the body, severely hindering their movement.</description>
         <iconPath>UI/Icons/Genes/GrosslyFat</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <statFactors>
-            <MoveSpeed>0.75</MoveSpeed>
+            <MoveSpeed>0.5</MoveSpeed>
         </statFactors>
         <statOffsets>
             <PawnBeauty>-2</PawnBeauty>

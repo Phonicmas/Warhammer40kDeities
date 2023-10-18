@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_SlaaneshUnfathomableGaze</defName>
         <label>mutation: Unfathomable gaze</label>
-        <description>This pawn eyes has mutated, giving them the ability to temporay stun anyone looking at them as their mesmerized by the pawns eyes.</description>
+        <description>This pawn eyes has mutated, giving them the ability to temporay stun anyone looking at them as they're mesmerized by the pawns eyes.</description>
         <iconPath>UI/Icons/Genes/UnfathomableGaze</iconPath>
         <displayOrderInCategory>440</displayOrderInCategory>
         <abilities>

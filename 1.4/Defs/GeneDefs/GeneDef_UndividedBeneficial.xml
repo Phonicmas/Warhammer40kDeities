@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationAdditionalEye</defName>
         <label>mutation: Additional eye</label>
-        <description>The pawn has mutated an extra eye.</description>
+        <description>The pawn has mutated an extra eye, it seems to be fully functioning and gives the pawn some solid 20/20 vision.</description>
         <iconPath>UI/Icons/Genes/AdditionalEye</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
@@ -46,7 +46,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationAnimalisticLegs</defName>
         <label>mutation: Animalistic legs</label>
-        <description>The pawns legs has mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs potentially forming animalistic bionic leg.</description>
+        <description>The pawns legs has mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs be it flesh or metal.</description>
         <iconPath>UI/Icons/Genes/AnimalisticLegs</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>

@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationExtraLeg</defName>
         <label>mutation: Extra leg</label>
-        <description>The pawn has mutated an extra leg. It always seems to be a hinderence</description>
+        <description>The pawn has mutated an extra leg. It always seems to be a hinderence.</description>
         <iconPath>UI/Icons/Genes/ExtraLeg</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>
@@ -40,7 +40,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationExtraArm</defName>
         <label>mutation: Extra arm</label>
-        <description>The pawn has mutated an extra Arm. It always seems to be a hinderence</description>
+        <description>The pawn has mutated an extra Arm. It always seems to be a hinderence.</description>
         <iconPath>UI/Icons/Genes/ExtraArm</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
@@ -78,7 +78,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_MutationTentacles</defName>
         <label>mutation: Tentacles</label>
-        <description>The pawn has mutated useless tentacles on their body.</description>
+        <description>The pawn has mutated useless tentacles on their body, which always get in the way.</description>
         <iconPath>UI/Icons/Genes/TentaclesWholeBody</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <capMods>
@@ -87,6 +87,9 @@
                 <offset>-0.3</offset>
             </li>
         </capMods>
+        <statOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Tzeentch</backgroundPathXenogenes>
