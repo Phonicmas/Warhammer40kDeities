@@ -5,11 +5,11 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_TzeentchEverchangingDeficiencies</defName>
         <label>mutation: Changing deficiencies</label>
-        <description>The pawns has been mutated in such a way that constantly mutate them slightly. This has the adverse effect of harming their capacities randomly.</description>
+        <description>The pawn's body has been mutated in such a way that constantly mutate them slightly. This has the adverse effect of harming their capacities randomly.</description>
         <iconPath>UI/Icons/Genes/EverchangingDeficiencies</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <customEffectDescriptions>
-            <li>Pawns body constant mutates, causing detrimental changes that constantly shift</li>
+            <li>Pawns body constant mutates, causing detrimental changes that constantly shift.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
@@ -45,7 +45,7 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_TzeentchNeuronOverload</defName>
         <label>mutation: Neuron overload</label>
-        <description>The pawns brains has been mutated, however the sheer overload that accompanied the mutation have left the pawn worse off.</description>
+        <description>The pawn's brains has been mutated, however the sheer overload that accompanied the mutation have left the pawn worse off.</description>
         <iconPath>UI/Icons/Genes/NeuronOverload</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <aptitudes>

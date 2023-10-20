@@ -47,7 +47,7 @@
     <HediffDef>
         <defName>BEWH_GodsTemporaryCurse</defName>
         <label>cursed by gods</label>
-        <description>This pawn has been curse by the gods.</description>
+        <description>This pawn has been cursed by the gods.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <everCurableByItem>false</everCurableByItem>
