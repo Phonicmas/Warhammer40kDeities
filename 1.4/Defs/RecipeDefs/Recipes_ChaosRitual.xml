@@ -15,7 +15,7 @@
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_UndividedGeneralRitual</defName>
         <label>Undivided ritual</label>
-        <description>Ask the great undivided for help</description>
+        <description>Ask the great undivided for help.</description>
         <uiIconThing>BEWH_UndividedRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_UndividedRitualSpot</li>
@@ -74,7 +74,7 @@
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_KhorneGeneralRitual</defName>
         <label>Khorne ritual</label>
-        <description>Ask Khorne for help</description>
+        <description>Ask Khorne for help.</description>
         <uiIconThing>BEWH_KhorneRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_KhorneRitualSpot</li>
@@ -109,7 +109,7 @@
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_TzeentchGeneralRitual</defName>
         <label>Tzeentch ritual</label>
-        <description>Ask Tzeentch for help</description>
+        <description>Ask Tzeentch for help.</description>
         <uiIconThing>BEWH_TzeentchRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_TzeentchRitualSpot</li>
@@ -144,7 +144,7 @@
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_NurgleGeneralRitual</defName>
         <label>Nurgle ritual</label>
-        <description>Ask Nurgle for help</description>
+        <description>Ask Nurgle for help.</description>
         <uiIconThing>BEWH_NurgleRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_NurgleRitualSpot</li>
@@ -179,7 +179,7 @@
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_SlaaneshGeneralRitual</defName>
         <label>Slaanesh ritual</label>
-        <description>Ask Slaanesh for help</description>
+        <description>Ask Slaanesh for help.</description>
         <uiIconThing>BEWH_SlaaneshRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_SlaaneshRitualSpot</li>

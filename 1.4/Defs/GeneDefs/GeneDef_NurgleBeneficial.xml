@@ -5,11 +5,11 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_NurgleBitingTongue</defName>
         <label>mutation: Biting tongue</label>
-        <description>The pawns tongue has mutated to be thick and cylindrical, with a maw of biting teeth, much like that of a Great Unclean One.</description>
+        <description>The pawn's tongue has mutated to be thick and cylindrical, with a maw of biting teeth, much like that of a Great Unclean One.</description>
         <iconPath>UI/Icons/Genes/BitingTongue</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <customEffectDescriptions>
-            <li>Gives carriers of this gene the ability to attack using their tongue</li>
+            <li>Gives carriers of this gene the ability to attack using their tongue.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
@@ -60,7 +60,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_NurgleBileSpew</defName>
         <label>mutation: Bile spew</label>
-        <description>The pawn has mutated in such a way that allows them to spew forth a grotesque amount of vomit, anyone caught in this barrage of vomit, instantly starts vomiting.</description>
+        <description>The pawn has mutated in such a way that allows them to spew forth a grotesque amount of vomit. Anyone caught in this barrage of vomit, instantly starts vomiting.</description>
         <iconPath>UI/Icons/Genes/BileSpew</iconPath>
         <displayOrderInCategory>340</displayOrderInCategory>
         <abilities>

@@ -6,7 +6,7 @@
   <HasMutationChoice>Disabling this removes the option to select whether a pawn should accept the deal, instead it is calculated internally whether the pawn will accept.</HasMutationChoice>
   <baseChanceForGiftAcceptance>Base chance that any pawn will accept a gift upon having a mental break: {0} (Only relevant if above setting is disabled)</baseChanceForGiftAcceptance>
   <baseChanceForGiftOffer>Base chance that any god will offer a gift upon having a mental break: {0}</baseChanceForGiftOffer>
-  <maxGiftsWhenGiven>Max amount of gift that can be given at once when pawns recieves gift from gods, increasing this will give a chance to recieve more gifts up to the set amount. Currently: {0}</maxGiftsWhenGiven>
+  <maxGiftsWhenGiven>Max amount of gift that can be given at once when pawns receives gift from gods, increasing this will give a chance to receive more gifts up to the set amount. Currently: {0}</maxGiftsWhenGiven>
   <opinionGainAndLossOnGift>Goodwill loss and gain of other factions upon accepting chaos mutation (Set to 0 to disable): {0}</opinionGainAndLossOnGift>
 
   <MutationGivenLetter>Gift Accepted</MutationGivenLetter>
@@ -20,7 +20,7 @@
   <OkChaos>Ok.</OkChaos>
 
   <ChaosAttraction>{0}'s mental breakdown have attracted {1} attention.
-      \n{1} have offered {0} "solutions" to their problems in exchange for their acceptance of chaos.</ChaosAttraction>
+      \n{1} have offered {0} 'solutions' to their problems in exchange for their acceptance of Chaos.</ChaosAttraction>
 
   <QueryAcceptance>\n\nWill {0} accept this deal, whatever the cost may be...?</QueryAcceptance>
 
@@ -29,7 +29,7 @@
 
   <TzeentchLetterTitle>The Changer of Ways</TzeentchLetterTitle>
   <KhorneLetterTitle>The Blood God</KhorneLetterTitle>
-  <NurgleLetterTitle>The Pleague Lord</NurgleLetterTitle>
+  <NurgleLetterTitle>The Plague Lord</NurgleLetterTitle>
   <SlaaneshLetterTitle>The Dark Prince</SlaaneshLetterTitle>
   <UndividedLetterTitle>The Great Chaos Undivided</UndividedLetterTitle>
 
