@@ -5,16 +5,16 @@
     <GeneDef ParentName="BEWH_DetrimentalMutationBase">
         <defName>BEWH_KhorneMonstrousHands</defName>
         <label>mutation: Monstrous hands</label>
-        <description>The pawn's hands have mutated into giant monstrous hands. While a formidable weapon, these hands cannot carry any weapons.</description>
+        <description>The pawn's hands have mutated into giant monstrous hands. While a formidable weapon, these hands cannot carry any weapons and are a giant hinderance when working.</description>
         <iconPath>UI/Icons/Genes/MonstrousHands</iconPath>
         <displayOrderInCategory>240</displayOrderInCategory>
         <customEffectDescriptions>
-            <li>Gives carriers of this gene giant monstrous hands, which makes it impossible to carry weapons.</li>
+            <li>Gives carriers of this gene giant monstrous hands, which makes it impossible to carry weapons and are a giant hinderance when working.</li>
         </customEffectDescriptions>
         <capMods>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>0.15</postFactor>
+                <postFactor>0.35</postFactor>
             </li>
         </capMods>
         <modExtensions>
@@ -71,6 +71,9 @@
                 <givenBy>
                     <li>Khorne</li>
                 </givenBy>
+                <requiredWorkTags>
+                    <li>Violent</li>
+                </requiredWorkTags>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>

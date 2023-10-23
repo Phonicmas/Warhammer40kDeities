@@ -49,6 +49,9 @@
                         <givenBy>
                             <li>Khorne</li>
                         </givenBy>
+                        <requiredWorkTags>
+                            <li>Violent</li>
+                        </requiredWorkTags>
                         <selectionWeight>0.4</selectionWeight>
                     </li>
                 </value>

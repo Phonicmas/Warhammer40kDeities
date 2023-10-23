@@ -57,6 +57,16 @@ namespace Mutations40k
                 if (geneDef.HasModExtension<DefModExtension_ChaosMutation>())
                 {
                     DefModExtension_ChaosMutation temp = geneDef.GetModExtension<DefModExtension_ChaosMutation>();
+                    if (!temp.requiredWorkTags.NullOrEmpty())
+                    {
+                        foreach (WorkTags workTag in temp.requiredWorkTags)
+                        {
+                            if (pawn.WorkTagIsDisabled(workTag))
+                            {
+                                break;
+                            }
+                        }
+                    }
                     if (temp.givenBy.Contains(chosenGod) && !pawn.genes.HasGene(geneDef))
                     {
                         if (!onlyBeneficial)

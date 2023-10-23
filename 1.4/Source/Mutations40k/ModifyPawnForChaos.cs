@@ -31,6 +31,51 @@ namespace Mutations40k
             if (giftToAdd.Contains(Genes40kDefOf.BEWH_DaemonMutation))
             {
                 giftToAdd.AddRange(AddDaemonParts(chosenGod, pawn));
+                switch (chosenGod)
+                {
+                    case ChaosGods.Khorne:
+                        if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_KhorneMark))
+                        {
+                            pawn.genes.AddGene(Genes40kDefOf.BEWH_KhorneMark, true);
+                        }
+                        pawn.genes.iconDef = Genes40kDefOf.BEWH_DPKhorneIcon;
+                        pawn.genes.xenotypeName = "Daemon prince of Khorne";
+                        break;
+                    case ChaosGods.Tzeentch:
+                        if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_TzeentchMark))
+                        {
+                            pawn.genes.AddGene(Genes40kDefOf.BEWH_TzeentchMark, true);
+                        }
+                        pawn.genes.iconDef = Genes40kDefOf.BEWH_DPTzeentchIcon;
+                        pawn.genes.xenotypeName = "Daemon prince of Tzeentch";
+                        break;
+                    case ChaosGods.Slaanesh:
+                        if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_SlaaneshMark))
+                        {
+                            pawn.genes.AddGene(Genes40kDefOf.BEWH_SlaaneshMark, true);
+                        }
+                        pawn.genes.iconDef = Genes40kDefOf.BEWH_DPSlaaneshIcon;
+                        pawn.genes.xenotypeName = "Daemon prince of Slaanesh";
+                        break;
+                    case ChaosGods.Nurgle:
+                        if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_NurgleMark))
+                        {
+                            pawn.genes.AddGene(Genes40kDefOf.BEWH_NurgleMark, true);
+                        }
+                        pawn.genes.iconDef = Genes40kDefOf.BEWH_DPNurgleIcon;
+                        pawn.genes.xenotypeName = "Daemon prince of Nurgle";
+                        break;
+                    case ChaosGods.Undivided:
+                        if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_UndividedMark))
+                        {
+                            pawn.genes.AddGene(Genes40kDefOf.BEWH_UndividedMark, true);
+                        }
+                        pawn.genes.iconDef = Genes40kDefOf.BEWH_DPUndividedIcon;
+                        pawn.genes.xenotypeName = "Daemon prince of the Undivided";
+                        break;
+                    default:
+                        break;
+                }
             }
 
             bool removeDetrimentalAfter = false;
@@ -124,14 +169,15 @@ namespace Mutations40k
                 }
                 if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
                 {
-                    if (!acceptedChaos)
-                    {
-                        goodwillChange *= -1;
-                    }
-                    else if (faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                    if (faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
                     {
                         goodwillChange = -100 + faction.GoodwillToMakeHostile(pawnFaction);
                     }
+                    else if (!acceptedChaos)
+                    {
+                        goodwillChange *= -1;
+                    }
+                    
                 }
                 else
                 {

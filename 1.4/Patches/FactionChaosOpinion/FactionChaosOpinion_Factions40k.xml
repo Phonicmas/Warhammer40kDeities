@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    
+
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Warhammer 40.000 - Factions</li>
@@ -15,6 +15,14 @@
                         <li Class="Mutations40k.DefModExtension_ChaosEnjoyer">
                             <makeEnemy>True</makeEnemy>
                         </li>
+                    </value>
+                </li>
+
+                <!-- Chaos - Loves Chaos -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]</xpath>
+                    <value>
+                        <li Class="Mutations40k.DefModExtension_ChaosEnjoyer" />
                     </value>
                 </li>
 

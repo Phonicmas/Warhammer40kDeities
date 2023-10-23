@@ -67,19 +67,19 @@
                         <godOpinion>
                             <li>
                                 <god>Tzeentch</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Nurgle</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Slaanesh</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Undivided</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                         </godOpinion>
                     </li>
@@ -104,19 +104,19 @@
                         <godOpinion>
                             <li>
                                 <god>Tzeentch</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Nurgle</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Slaanesh</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                             <li>
                                 <god>Undivided</god>
-                                <opinion>-1</opinion>
+                                <opinion>1</opinion>
                             </li>
                         </godOpinion>
                     </li>
@@ -467,6 +467,9 @@
                         <givenBy>
                             <li>Khorne</li>
                         </givenBy>
+                        <requiredWorkTags>
+                            <li>Violent</li>
+                        </requiredWorkTags>
                         <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.1</selectionWeight>
                     </li>

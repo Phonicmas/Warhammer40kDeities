@@ -1,4 +1,5 @@
 ﻿using Core40k;
+using RimWorld;
 using System.Collections.Generic;
 using Verse;
 
@@ -19,6 +20,9 @@ namespace Mutations40k
 
         //Gene or trait that removes all current detrimental gifts
         public bool removesDetrimentalGifts = false;
+
+        //This should be used if the gene requires some sort of skill to be available.
+        public List<WorkTags> requiredWorkTags;
     }
 
 }

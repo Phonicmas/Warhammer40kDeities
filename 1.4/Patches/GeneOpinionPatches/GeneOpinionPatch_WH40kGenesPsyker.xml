@@ -22,6 +22,8 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Slaanesh</li>
+                            <li>Nurgle</li>
                             <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
@@ -48,6 +50,8 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Slaanesh</li>
+                            <li>Nurgle</li>
                             <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.05</selectionWeight>
@@ -74,6 +78,8 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Slaanesh</li>
+                            <li>Nurgle</li>
                             <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.025</selectionWeight>
@@ -100,6 +106,8 @@
                     <li Class="Mutations40k.DefModExtension_ChaosMutation">
                         <givenBy>
                             <li>Tzeentch</li>
+                            <li>Slaanesh</li>
+                            <li>Nurgle</li>
                             <li>Undivided</li>
                         </givenBy>
                         <selectionWeight>0.005</selectionWeight>

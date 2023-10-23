@@ -41,3 +41,5 @@ Make ideology meme that gives mood the more mutations a pawn has.
 Make it possible to use different messages for each mental breakdown by adding a string field where you insert the language keyed that can then be used alongside .Translate() in code.
 
 Other ways to trigger that the gods have shown interest. such a killing a lot of pawns then khorne notices, or researching a lot then tzeentch notices, banging a bunch the slaanesh or getting sick a lot then nurgle.
+
+Make possibility to recieve gift scale of psy sens aswell
