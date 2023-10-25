@@ -2,7 +2,6 @@
 using Genes40k;
 using RimWorld;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -169,15 +168,14 @@ namespace Mutations40k
                 }
                 if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
                 {
-                    if (faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                    if (acceptedChaos && faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
                     {
-                        goodwillChange = -100 + faction.GoodwillToMakeHostile(pawnFaction);
+                        goodwillChange = faction.GoodwillToMakeHostile(pawnFaction);
                     }
                     else if (!acceptedChaos)
                     {
                         goodwillChange *= -1;
                     }
-                    
                 }
                 else
                 {

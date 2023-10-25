@@ -43,6 +43,42 @@
                     </value>
                 </li>
 
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]/pawnGroupMakers</xpath>
+                    <value>
+                        <li>
+                            <kindDef>Settlement</kindDef>
+                            <options>
+                                <BEWH_ChaosCultistUndivided>10</BEWH_ChaosCultistUndivided>
+                                <BEWH_ChaosCultistKhorne>10</BEWH_ChaosCultistKhorne>
+                                <BEWH_ChaosCultistNurgle>10</BEWH_ChaosCultistNurgle>
+                                <BEWH_ChaosCultistSlaanesh>10</BEWH_ChaosCultistSlaanesh>
+                                <BEWH_ChaosCultistTzeentch>10</BEWH_ChaosCultistTzeentch>
+
+
+                                <BEWH_ChaosMarineUndivided>50</BEWH_ChaosMarineUndivided>
+                                <BEWH_ChaosMarineKhorne>50</BEWH_ChaosMarineKhorne>
+                                <BEWH_ChaosMarineNurgle>50</BEWH_ChaosMarineNurgle>
+                                <BEWH_ChaosMarineSlaanesh>50</BEWH_ChaosMarineSlaanesh>
+                                <BEWH_ChaosMarineTzeentch>50</BEWH_ChaosMarineTzeentch>
+
+
+                                <BEWH_ChaosMarineUndividedPsyker>10</BEWH_ChaosMarineUndividedPsyker>
+                                <BEWH_ChaosMarineNurglePsyker>10</BEWH_ChaosMarineNurglePsyker>
+                                <BEWH_ChaosMarineSlaaneshPsyker>10</BEWH_ChaosMarineSlaaneshPsyker>
+                                <BEWH_ChaosMarineTzeentchPsyker>50</BEWH_ChaosMarineTzeentchPsyker>
+
+
+                                <BEWH_DPUndivided>5</BEWH_DPUndivided>
+                                <BEWH_DPKhorne>5</BEWH_DPKhorne>
+                                <BEWH_DPNurgle>5</BEWH_DPNurgle>
+                                <BEWH_DPSlaanesh>5</BEWH_DPSlaanesh>
+                                <BEWH_DPTzeentch>5</BEWH_DPTzeentch>
+                            </options>
+                        </li>
+                    </value>
+                </li>
+
             </operations>
         </match>
     </Operation>

@@ -61,7 +61,7 @@ namespace Mutations40k
             }
 
             //If pawn is not colonis, do it autonomous.
-            if (!pawn.IsColonist)
+            if (!pawn.IsColonist && !pawn.IsSlaveOfColony)
             {
                 float nonColonistChance = 0;
                 if (pawn.Faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())

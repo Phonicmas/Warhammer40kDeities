@@ -78,6 +78,11 @@
     <Compile Include="CompProperties_UnfathomableGaze.cs" />
     <Compile Include="HarmonyPatch_BoilingBlood.cs" />
     <Compile Include="HarmonyPatch_MonsterousHands.cs" />
+    <Compile Include="DefModExtension_PreceptSpecificGod.cs" />
+    <Compile Include="ThoughtWorker_Precept_Mutation_Social.cs" />
+    <Compile Include="ThoughtWorker_Precept_Mutation_Social_SpecificGod.cs" />
+    <Compile Include="ThoughtWorker_Precept_Mutation_SpecificGod.cs" />
+    <Compile Include="ThoughtWorker_Precept_Mutation.cs" />
     <Compile Include="ThoughtWorker_SituationalThoughtMutation.cs" />
     <Compile Include="DefModExtension_SituationalThought.cs" />
     <Compile Include="DefModExtension_ChaosEnjoyer.cs" />
