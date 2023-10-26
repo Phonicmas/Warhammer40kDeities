@@ -13,7 +13,7 @@ namespace Mutations40k
 
         public ChaosGods chosenGod;
 
-        public bool acceptedChaos;
+        public bool? acceptedChaos;
 
         public override bool CanDismissWithRightClick => false;
 
@@ -32,13 +32,16 @@ namespace Mutations40k
                 DiaOption diaOption = new DiaOption("OkChaos".Translate());
                 diaOption.action = delegate
                 {
-                    if (acceptedChaos)
+                    if (acceptedChaos.HasValue)
                     {
-                        ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
-                    }
-                    else
-                    {
-                        ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
+                        if (acceptedChaos.Value)
+                        {
+                            ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
+                        }
+                        else
+                        {
+                            ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
+                        }
                     }
                     Find.LetterStack.RemoveLetter(this);
                 };

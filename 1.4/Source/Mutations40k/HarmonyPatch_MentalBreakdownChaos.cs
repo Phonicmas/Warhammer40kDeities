@@ -13,79 +13,49 @@ namespace Mutations40k
     {
         public static void Postfix(MentalStateDef stateDef, MentalStateHandler __instance, bool __result)
         {
-
+            //Mental state didn't start, skip
             if (!__result)
             {
                 return;
             }
 
-            Pawn pawn = __instance.CurState.pawn;
+            //If mental break does not have my def mod, then it is not considered
+            if (!stateDef.HasModExtension<DefModExtension_MentalBreakFavoredGod>())
+            {
+                return;
+            }
 
+            Pawn pawn = __instance.CurState.pawn;
+            //Pawn must have genes and traits
             if (pawn.genes == null || pawn.story == null)
             {
                 return;
             }
 
+            //Gets gene info, the boolean is whether the pawn is pure and will never recieve gift
             (Dictionary<ChaosGods, GeneAndTraitInfo>, bool) geneAndTraitInfo = GetGeneAndTraitInfo(pawn);
-
             if (geneAndTraitInfo.Item2)
             {
                 return;
             }
 
             Random rand = new Random();
-
             //Base chance for gift 
             if (rand.Next(0, 100) > Mutation40kUtils.ModSettings.baseChanceForGiftOffer)
             {
                 return;
             }
 
-            if (!stateDef.HasModExtension<DefModExtension_MentalBreakFavoredGod>())
-            {
-                return;
-            }
-
             ChaosGods chosenGod = GetGodForDealOffer(geneAndTraitInfo.Item1, stateDef, pawn);
-
-
-            if (chosenGod == ChaosGods.None)
+            List<Def> giftsToAdd = new List<Def>();
+            if (chosenGod != ChaosGods.None)
             {
-                return;
-            }
-
-            List<Def> giftsToAdd = Mutation40kUtils.GetGiftBasedOfGod(chosenGod, pawn, geneAndTraitInfo.Item1.TryGetValue(chosenGod).willGiveBeneficial);
-            if (giftsToAdd.NullOrEmpty())
-            {
-                return;
-            }
-
-            //If pawn is not colonis, do it autonomous.
-            if (!pawn.IsColonist && !pawn.IsSlaveOfColony)
-            {
-                float nonColonistChance = 0;
-                if (pawn.Faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
+                giftsToAdd = Mutation40kUtils.GetGiftBasedOfGod(chosenGod, pawn, geneAndTraitInfo.Item1.TryGetValue(chosenGod).willGiveBeneficial);
+                //No available gifts to give
+                if (giftsToAdd.NullOrEmpty())
                 {
-                    if (pawn.Faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
-                    {
-                        nonColonistChance = -60;
-                    }
-                    else
-                    {
-                        nonColonistChance = 15;
-                    }
+                    return;
                 }
-
-                if (Mutation40kUtils.WillPawnAcceptChaos(geneAndTraitInfo.Item1, Mutation40kUtils.ModSettings.baseChanceForGiftOffer + nonColonistChance, chosenGod, pawn))
-                {
-                    ModifyPawnForChaos.ModifyPawn(giftsToAdd, pawn, chosenGod);
-
-                }
-                else
-                {
-                    ModifyPawnForChaos.CurseAndSmitePawn(pawn, chosenGod);
-                }
-                return;
             }
 
             Mutation40kUtils.SendMutationLetter(pawn, giftsToAdd, chosenGod, geneAndTraitInfo.Item1);
@@ -140,9 +110,7 @@ namespace Mutations40k
             godSelection.AddEntry(ChaosGods.Nurgle, (double)(allGods.TryGetValue(ChaosGods.Nurgle) * nurgleMultiplier));
             godSelection.AddEntry(ChaosGods.Undivided, (double)(allGods.TryGetValue(ChaosGods.Undivided) * undividedMultiplier));
 
-            ChaosGods chosenGod = godSelection.GetRandom();
-
-            return chosenGod;
+            return godSelection.GetRandom();
         }
 
     }

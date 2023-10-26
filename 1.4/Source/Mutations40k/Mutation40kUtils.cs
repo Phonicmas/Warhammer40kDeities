@@ -25,8 +25,12 @@ namespace Mutations40k
             }
         }
 
-        public static bool WillPawnAcceptChaos(Dictionary<ChaosGods, GeneAndTraitInfo> opinion, float baseAcceptance, ChaosGods chosenGod, Pawn pawn)
+        public static bool? PawnAndGodAcceptance(Dictionary<ChaosGods, GeneAndTraitInfo> opinion, float baseAcceptance, ChaosGods chosenGod, Pawn pawn)
         {
+            if (chosenGod == ChaosGods.None)
+            {
+                return null;
+            }
             Core40kSettings modSettingsCore = LoadedModManager.GetMod<Core40kMod>().GetSettings<Core40kSettings>();
             Random rand = new Random();
             float chance = 0;
@@ -136,31 +140,54 @@ namespace Mutations40k
 
         public static void SendMutationLetter(Pawn pawn, List<Def> giftsToAdd, ChaosGods chosenGod, Dictionary<ChaosGods, GeneAndTraitInfo> opinion)
         {
-            string letterTitle = ChaosEnumUtils.GetLetterTitle(chosenGod);
-            string letterMessage = "ChaosAttraction".Translate(pawn.NameShortColored, ChaosEnumUtils.Convert(chosenGod));
+            string letterTitle = "MentalBreakLetterTitle".Translate();
+            string letterMessage = "MentalBreakLetterMessage".Translate(pawn.NameShortColored);
 
+            //If pawn is not colonist or slave, do it autonomous.
             if (!ModSettings.hasMutationChoice)
             {
-                bool acceptedChaos = WillPawnAcceptChaos(opinion, ModSettings.baseChanceForGiftAcceptance, chosenGod, pawn);
-                if (acceptedChaos)
+                float nonColonistChance = 0;
+                if (pawn.Faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
                 {
-                    letterMessage += "PawnAcceptedMutation".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
+                    if (pawn.Faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                    {
+                        nonColonistChance = -60;
+                    }
+                    else
+                    {
+                        nonColonistChance = 15;
+                    }
+                }
+                bool? acceptedChaosNullable = PawnAndGodAcceptance(opinion, ModSettings.baseChanceForGiftAcceptance + nonColonistChance, chosenGod, pawn);
+                bool acceptedChaos;
+                if (acceptedChaosNullable.HasValue)
+                {
+                    acceptedChaos = acceptedChaosNullable.Value;
+                    if (acceptedChaos)
+                    {
+                        letterMessage += "PawnPleadAccepted".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
+                    }
+                    else if (!acceptedChaos)
+                    {
+                        letterMessage += "PawnPleadRejected".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
+                    }
                 }
                 else
                 {
-                    letterMessage += "PawnRejectedMutation".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
+                    letterMessage += "PawnPleadUnanswered".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
                 }
-                ChoiceLetter_AcceptChaosNoChoice letter = new ChoiceLetter_AcceptChaosNoChoice() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, giftsToAdd = giftsToAdd, acceptedChaos = acceptedChaos, chosenGod = chosenGod };
+
+                ChoiceLetter_AcceptChaosNoChoice letter = new ChoiceLetter_AcceptChaosNoChoice() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, giftsToAdd = giftsToAdd, acceptedChaos = acceptedChaosNullable, chosenGod = chosenGod };
 
                 letter.OpenLetter();
             }
             else
             {
-                ChoiceLetter_AcceptChaos letter = new ChoiceLetter_AcceptChaos() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, giftsToAdd = giftsToAdd, chosenGod = chosenGod };
+                bool? acceptedChaosNullable = PawnAndGodAcceptance(opinion, ModSettings.baseChanceForGiftAcceptance, chosenGod, pawn);
+                ChoiceLetter_AcceptChaos letter = new ChoiceLetter_AcceptChaos() { title = letterTitle, Text = letterMessage, targetedPawn = pawn, giftsToAdd = giftsToAdd, chosenGod = chosenGod, acceptedByChaos = acceptedChaosNullable };
 
                 letter.OpenLetter();
             }
         }
-
     }
 }

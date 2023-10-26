@@ -35,7 +35,7 @@ namespace Mutations40k
                     case ChaosGods.Khorne:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_KhorneMark))
                         {
-                            pawn.genes.AddGene(Genes40kDefOf.BEWH_KhorneMark, true);
+                            giftToAdd.Add(Genes40kDefOf.BEWH_KhorneMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPKhorneIcon;
                         pawn.genes.xenotypeName = "Daemon prince of Khorne";
@@ -43,7 +43,7 @@ namespace Mutations40k
                     case ChaosGods.Tzeentch:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_TzeentchMark))
                         {
-                            pawn.genes.AddGene(Genes40kDefOf.BEWH_TzeentchMark, true);
+                            giftToAdd.Add(Genes40kDefOf.BEWH_TzeentchMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPTzeentchIcon;
                         pawn.genes.xenotypeName = "Daemon prince of Tzeentch";
@@ -51,7 +51,7 @@ namespace Mutations40k
                     case ChaosGods.Slaanesh:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_SlaaneshMark))
                         {
-                            pawn.genes.AddGene(Genes40kDefOf.BEWH_SlaaneshMark, true);
+                            giftToAdd.Add(Genes40kDefOf.BEWH_SlaaneshMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPSlaaneshIcon;
                         pawn.genes.xenotypeName = "Daemon prince of Slaanesh";
@@ -59,7 +59,7 @@ namespace Mutations40k
                     case ChaosGods.Nurgle:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_NurgleMark))
                         {
-                            pawn.genes.AddGene(Genes40kDefOf.BEWH_NurgleMark, true);
+                            giftToAdd.Add(Genes40kDefOf.BEWH_NurgleMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPNurgleIcon;
                         pawn.genes.xenotypeName = "Daemon prince of Nurgle";
@@ -67,7 +67,7 @@ namespace Mutations40k
                     case ChaosGods.Undivided:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_UndividedMark))
                         {
-                            pawn.genes.AddGene(Genes40kDefOf.BEWH_UndividedMark, true);
+                            giftToAdd.Add(Genes40kDefOf.BEWH_UndividedMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPUndividedIcon;
                         pawn.genes.xenotypeName = "Daemon prince of the Undivided";
@@ -110,8 +110,8 @@ namespace Mutations40k
                 return;
             }
 
-            string letterText = "MutationGivenLetter".Translate();
-            string messageText = "MutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + mutation;
+            string letterText = ChaosEnumUtils.GetLetterTitle(chosenGod).Translate();
+            string messageText = "GiftLetterMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + "GiftLetterMessageGiven".Translate(pawn.Named("PAWN")) + mutation;
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_GiftGiven);
             ChangeFactionOpinion(true, pawn);
         }
@@ -131,8 +131,8 @@ namespace Mutations40k
                 return;
             }
 
-            string letterText = "NoMutationGivenLetter".Translate();
-            string messageText = "NoMutationGivenMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod));
+            string letterText = ChaosEnumUtils.GetLetterTitle(chosenGod).Translate();
+            string messageText = "GiftLetterMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + "GiftLetterMessageNotGiven".Translate(ChaosEnumUtils.Convert(chosenGod));
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_NoGiftGiven);
             ChangeFactionOpinion(false ,pawn);
         }

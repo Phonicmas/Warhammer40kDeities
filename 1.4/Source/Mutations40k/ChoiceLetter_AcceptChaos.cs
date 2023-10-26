@@ -13,6 +13,8 @@ namespace Mutations40k
 
         public ChaosGods chosenGod;
 
+        public bool? acceptedByChaos;
+
         public override bool CanDismissWithRightClick => false;
 
         public override bool CanShowInLetterStack
@@ -27,17 +29,32 @@ namespace Mutations40k
         {
             get
             {
-                DiaOption diaOption = new DiaOption("AcceptMutation".Translate());
-                DiaOption optionReject = new DiaOption("RejectMutation".Translate());
+                DiaOption diaOption = new DiaOption("PleadToChaos".Translate());
+                DiaOption optionReject = new DiaOption("IgnoreWishpers".Translate());
                 diaOption.action = delegate
                 {
-                    ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
+                    if (acceptedByChaos.HasValue)
+                    {
+                        if (acceptedByChaos.Value)
+                        {
+                            ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
+                        }
+                        else
+                        {
+                            ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
+                        }
+                    }
+                    else
+                    {
+                        string letterText = ChaosEnumUtils.GetLetterTitle(ChaosGods.None).Translate();
+                        string messageText = "GiftLetterMessageUnanswered".Translate(targetedPawn.Named("PAWN"));
+                        Find.LetterStack.ReceiveLetter(letterText, messageText, LetterDefOf.NeutralEvent);
+                    }
                     Find.LetterStack.RemoveLetter(this);
                 };
                 diaOption.resolveTree = true;
                 optionReject.action = delegate
                 {
-                    ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 optionReject.resolveTree = true;
