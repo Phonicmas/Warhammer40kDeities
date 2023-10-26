@@ -43,6 +43,7 @@ namespace Mutations40k
                         {
                             ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                         }
+                        Mutation40kUtils.ChangeFactionOpinion(true, targetedPawn);
                     }
                     else
                     {
@@ -55,6 +56,7 @@ namespace Mutations40k
                 diaOption.resolveTree = true;
                 optionReject.action = delegate
                 {
+                    Mutation40kUtils.ChangeFactionOpinion(false, targetedPawn);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 optionReject.resolveTree = true;

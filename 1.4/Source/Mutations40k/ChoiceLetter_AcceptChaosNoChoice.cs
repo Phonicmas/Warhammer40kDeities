@@ -42,6 +42,11 @@ namespace Mutations40k
                         {
                             ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                         }
+                        Mutation40kUtils.ChangeFactionOpinion(true, targetedPawn);
+                    }
+                    else
+                    {
+                        Mutation40kUtils.ChangeFactionOpinion(false, targetedPawn);
                     }
                     Find.LetterStack.RemoveLetter(this);
                 };

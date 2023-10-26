@@ -113,7 +113,6 @@ namespace Mutations40k
             string letterText = ChaosEnumUtils.GetLetterTitle(chosenGod).Translate();
             string messageText = "GiftLetterMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + "GiftLetterMessageGiven".Translate(pawn.Named("PAWN")) + mutation;
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_GiftGiven);
-            ChangeFactionOpinion(true, pawn);
         }
 
         public static void CurseAndSmitePawn(Pawn pawn, ChaosGods chosenGod)
@@ -134,60 +133,6 @@ namespace Mutations40k
             string letterText = ChaosEnumUtils.GetLetterTitle(chosenGod).Translate();
             string messageText = "GiftLetterMessage".Translate(pawn.Named("PAWN"), ChaosEnumUtils.Convert(chosenGod)) + "GiftLetterMessageNotGiven".Translate(ChaosEnumUtils.Convert(chosenGod));
             Find.LetterStack.ReceiveLetter(letterText, messageText, Core40kDefOf.BEWH_NoGiftGiven);
-            ChangeFactionOpinion(false ,pawn);
-        }
-
-        private static void ChangeFactionOpinion(bool acceptedChaos, Pawn pawn)
-        {
-            Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
-
-            if (modSettings.opinionGainAndLossOnGift == 0)
-            {
-                return;
-            }
-            FactionManager factionManager = Find.FactionManager;
-            Faction pawnFaction = pawn.Faction;
-
-            if (pawnFaction == null)
-            {
-                return;
-            }
-
-            int goodwillChange = modSettings.opinionGainAndLossOnGift;
-            HistoryEventDef chaosHistory = Mutations40kDefOf.BEWH_RejectedChaos;
-            if (acceptedChaos)
-            {
-                chaosHistory = Mutations40kDefOf.BEWH_AcceptedChaos;
-            }
-
-            foreach (Faction faction in factionManager.AllFactionsVisible)
-            {
-                if (faction.Equals(pawnFaction) || faction.IsPlayer)
-                {
-                    continue;
-                }
-                if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
-                {
-                    if (acceptedChaos && faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
-                    {
-                        goodwillChange = faction.GoodwillToMakeHostile(pawnFaction);
-                    }
-                    else if (!acceptedChaos)
-                    {
-                        goodwillChange *= -1;
-                    }
-                }
-                else
-                {
-                    if (acceptedChaos)
-                    {
-                        goodwillChange *= -1;
-                    }
-                }
-                faction.TryAffectGoodwillWith(pawnFaction, goodwillChange, false, true, chaosHistory);
-                goodwillChange = modSettings.opinionGainAndLossOnGift;
-            }
-
         }
     
         private static List<GeneDef> AddDaemonParts(ChaosGods chosenGod, Pawn pawn)

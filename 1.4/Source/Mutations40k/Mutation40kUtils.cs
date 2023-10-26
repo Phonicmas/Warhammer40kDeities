@@ -159,15 +159,13 @@ namespace Mutations40k
                     }
                 }
                 bool? acceptedChaosNullable = PawnAndGodAcceptance(opinion, ModSettings.baseChanceForGiftAcceptance + nonColonistChance, chosenGod, pawn);
-                bool acceptedChaos;
                 if (acceptedChaosNullable.HasValue)
                 {
-                    acceptedChaos = acceptedChaosNullable.Value;
-                    if (acceptedChaos)
+                    if (acceptedChaosNullable.Value)
                     {
                         letterMessage += "PawnPleadAccepted".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
                     }
-                    else if (!acceptedChaos)
+                    else if (!acceptedChaosNullable.Value)
                     {
                         letterMessage += "PawnPleadRejected".Translate(pawn, ChaosEnumUtils.Convert(chosenGod));
                     }
@@ -189,5 +187,59 @@ namespace Mutations40k
                 letter.OpenLetter();
             }
         }
+
+        public static void ChangeFactionOpinion(bool acceptedChaos, Pawn pawn)
+        {
+            Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
+
+            if (modSettings.opinionGainAndLossOnGift == 0)
+            {
+                return;
+            }
+            FactionManager factionManager = Find.FactionManager;
+            Faction pawnFaction = pawn.Faction;
+
+            if (pawnFaction == null)
+            {
+                return;
+            }
+
+            int goodwillChange = modSettings.opinionGainAndLossOnGift;
+            HistoryEventDef chaosHistory = Mutations40kDefOf.BEWH_RejectedChaos;
+            if (acceptedChaos)
+            {
+                chaosHistory = Mutations40kDefOf.BEWH_AcceptedChaos;
+            }
+
+            foreach (Faction faction in factionManager.AllFactionsVisible)
+            {
+                if (faction.Equals(pawnFaction) || faction.IsPlayer)
+                {
+                    continue;
+                }
+                if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
+                {
+                    if (acceptedChaos && faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                    {
+                        goodwillChange = faction.GoodwillToMakeHostile(pawnFaction);
+                    }
+                    else if (!acceptedChaos)
+                    {
+                        goodwillChange *= -1;
+                    }
+                }
+                else
+                {
+                    if (acceptedChaos)
+                    {
+                        goodwillChange *= -1;
+                    }
+                }
+                faction.TryAffectGoodwillWith(pawnFaction, goodwillChange, false, true, chaosHistory);
+                goodwillChange = modSettings.opinionGainAndLossOnGift;
+            }
+
+        }
+
     }
 }
