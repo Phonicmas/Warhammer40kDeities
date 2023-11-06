@@ -6,11 +6,21 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using static Core40k.Core40kUtils;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Mutations40k
 {
     public class Mutation40kUtils
     {
+
+        public enum ChaosAcceptance
+        {
+            None,
+            Accepted,
+            //Rejected,
+            Ignore
+        }
+
         private static Mutations40kSettings modSettings = null;
 
         public static Mutations40kSettings ModSettings
@@ -188,7 +198,7 @@ namespace Mutations40k
             }
         }
 
-        public static void ChangeFactionOpinion(bool acceptedChaos, Pawn pawn)
+        public static void ChangeFactionOpinion(ChaosAcceptance chaosAcceptance, Pawn pawn)
         {
             Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
 
@@ -196,6 +206,7 @@ namespace Mutations40k
             {
                 return;
             }
+
             FactionManager factionManager = Find.FactionManager;
             Faction pawnFaction = pawn.Faction;
 
@@ -204,39 +215,42 @@ namespace Mutations40k
                 return;
             }
 
-            int goodwillChange = modSettings.opinionGainAndLossOnGift;
-            HistoryEventDef chaosHistory = Mutations40kDefOf.BEWH_RejectedChaos;
-            if (acceptedChaos)
-            {
-                chaosHistory = Mutations40kDefOf.BEWH_AcceptedChaos;
-            }
-
             foreach (Faction faction in factionManager.AllFactionsVisible)
             {
                 if (faction.Equals(pawnFaction) || faction.IsPlayer)
                 {
                     continue;
                 }
-                if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
+                HistoryEventDef chaosHistory;
+                int goodwillChange = modSettings.opinionGainAndLossOnGift;
+
+                switch (chaosAcceptance)
                 {
-                    if (acceptedChaos && faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
-                    {
-                        goodwillChange = faction.GoodwillToMakeHostile(pawnFaction);
-                    }
-                    else if (!acceptedChaos)
-                    {
-                        goodwillChange *= -1;
-                    }
+                    case ChaosAcceptance.Ignore:
+                        chaosHistory = Mutations40kDefOf.BEWH_IgnoredChaos;
+                        if (faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>() && !faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                        {
+                            goodwillChange *= -1;
+                        }
+                        break;
+                    case ChaosAcceptance.Accepted:
+                        chaosHistory = Mutations40kDefOf.BEWH_AcceptedChaos;
+                        //If accepted then chaos enjoyers get set opnion gain, non chaos enjoyer gets set opinion loss and chaosenjoyer enemies, become instant enemies.
+                        if (!faction.def.HasModExtension<DefModExtension_ChaosEnjoyer>())
+                        {
+                            goodwillChange *= -1;
+                        }
+                        else if (faction.def.GetModExtension<DefModExtension_ChaosEnjoyer>().makeEnemy)
+                        {
+                            goodwillChange = faction.GoodwillToMakeHostile(pawnFaction);
+                        }
+                        break;
+                    default:
+                        Log.Error("Error in ChangeFactionOption, chaosAcceptance was None or Null, report this to Phonicmas if you see it.");
+                        return;
                 }
-                else
-                {
-                    if (acceptedChaos)
-                    {
-                        goodwillChange *= -1;
-                    }
-                }
+
                 faction.TryAffectGoodwillWith(pawnFaction, goodwillChange, false, true, chaosHistory);
-                goodwillChange = modSettings.opinionGainAndLossOnGift;
             }
 
         }

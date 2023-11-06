@@ -7,7 +7,8 @@
   <baseChanceForGiftAcceptance>Base chance that any pawn will accept a gift upon having a mental break: {0} (Only relevant if above setting is disabled)</baseChanceForGiftAcceptance>
   <baseChanceForGiftOffer>Base chance that any god will offer a gift upon having a mental break: {0}</baseChanceForGiftOffer>
   <maxGiftsWhenGiven>Max amount of gift that can be given at once when pawns receives gift from gods, increasing this will give a chance to receive more gifts up to the set amount. Currently: {0}</maxGiftsWhenGiven>
-  <opinionGainAndLossOnGift>Goodwill loss and gain of other factions upon accepting chaos mutation (Set to 0 to disable): {0}</opinionGainAndLossOnGift>
+  <opinionGainAndLossOnGift>Goodwill loss and gain of other factions upon accepting chaos mutation (Set to 0 to disable opinion loss and gain): {0}</opinionGainAndLossOnGift>
+
 
   <OkChaos>Ok.</OkChaos>
 

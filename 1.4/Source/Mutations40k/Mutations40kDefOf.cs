@@ -28,6 +28,7 @@ namespace Mutations40k
 
         public static HistoryEventDef BEWH_AcceptedChaos;
         public static HistoryEventDef BEWH_RejectedChaos;
+        public static HistoryEventDef BEWH_IgnoredChaos;
 
         static Mutations40kDefOf()
         {

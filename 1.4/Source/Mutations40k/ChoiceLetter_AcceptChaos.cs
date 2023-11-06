@@ -37,13 +37,13 @@ namespace Mutations40k
                     {
                         if (acceptedByChaos.Value)
                         {
-                            ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);
+                            ModifyPawnForChaos.ModifyPawn(giftsToAdd, targetedPawn, chosenGod);       
                         }
                         else
                         {
                             ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                         }
-                        Mutation40kUtils.ChangeFactionOpinion(true, targetedPawn);
+                        Mutation40kUtils.ChangeFactionOpinion(Mutation40kUtils.ChaosAcceptance.Accepted, targetedPawn);
                     }
                     else
                     {
@@ -56,7 +56,7 @@ namespace Mutations40k
                 diaOption.resolveTree = true;
                 optionReject.action = delegate
                 {
-                    Mutation40kUtils.ChangeFactionOpinion(false, targetedPawn);
+                    Mutation40kUtils.ChangeFactionOpinion(Mutation40kUtils.ChaosAcceptance.Ignore, targetedPawn);
                     Find.LetterStack.RemoveLetter(this);
                 };
                 optionReject.resolveTree = true;

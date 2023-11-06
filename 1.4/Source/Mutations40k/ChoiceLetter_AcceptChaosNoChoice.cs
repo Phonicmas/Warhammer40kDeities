@@ -42,11 +42,11 @@ namespace Mutations40k
                         {
                             ModifyPawnForChaos.CurseAndSmitePawn(targetedPawn, chosenGod);
                         }
-                        Mutation40kUtils.ChangeFactionOpinion(true, targetedPawn);
+                        Mutation40kUtils.ChangeFactionOpinion(Mutation40kUtils.ChaosAcceptance.Accepted, targetedPawn);
                     }
                     else
                     {
-                        Mutation40kUtils.ChangeFactionOpinion(false, targetedPawn);
+                        Mutation40kUtils.ChangeFactionOpinion(Mutation40kUtils.ChaosAcceptance.Ignore, targetedPawn);
                     }
                     Find.LetterStack.RemoveLetter(this);
                 };

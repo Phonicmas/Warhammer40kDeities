@@ -11,4 +11,9 @@
         <label>rejected chaos</label>
     </HistoryEventDef>
 
+    <HistoryEventDef>
+        <defName>BEWH_IgnoredChaos</defName>
+        <label>ignored chaos</label>
+    </HistoryEventDef>
+
 </Defs>
