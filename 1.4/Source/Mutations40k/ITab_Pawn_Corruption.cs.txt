@@ -1,0 +1,45 @@
+﻿using RimWorld;
+using System;
+using UnityEngine;
+using Verse;
+
+namespace Mutations40k
+{
+    public class ITab_Pawn_Corruption : ITab
+    {
+
+        private Vector2 thoughtScrollPosition;
+
+        public override bool IsVisible
+        {
+            get
+            {
+                if (base.SelPawn != null)
+                {
+                    return base.SelPawn.RaceProps.IsFlesh;
+                }
+                if (base.SelThing is Corpse corpse)
+                {
+                    return corpse.InnerPawn.RaceProps.IsFlesh;
+                }
+                throw new InvalidOperationException("Social tab on non-pawn non-corpse " + base.SelThing);
+            }
+        }
+
+        public ITab_Pawn_Corruption()
+        {
+            labelKey = "TabCorruption";
+            tutorTag = "Corruption";
+        }
+
+        public override void OnOpen()
+        {
+            thoughtScrollPosition = default(Vector2);
+        }
+
+        protected override void FillTab()
+        {
+            NeedsCardUtility.DoNeedsMoodAndThoughts(new Rect(0f, 0f, size.x, size.y), base.SelPawn, ref thoughtScrollPosition);
+        }
+    }
+}

@@ -64,7 +64,7 @@
             <Intellectual>8</Intellectual>
         </aptitudes>
         <statFactors>
-            <GlobalLearningFactor>0.55</GlobalLearningFactor>
+            <GlobalLearningFactor>1.55</GlobalLearningFactor>
           </statFactors>
         <statOffsets>
             <MentalBreakThreshold>0.1</MentalBreakThreshold>

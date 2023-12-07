@@ -33,6 +33,12 @@
                         <settlementNameMaker>BEWH_ChaosSettlementNameMaker</settlementNameMaker>
                     </value>
                 </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]</xpath>
+                    <value>
+                        <settlementGenerationWeight>1</settlementGenerationWeight>
+                    </value>
+                </li>
 
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]</xpath>

@@ -59,6 +59,14 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="VFECore">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
       <Private>False</Private>
@@ -71,6 +79,7 @@
     <Compile Include="HediffCompProperties_EverchangingDeficiancies.cs" />
     <Compile Include="MentalState_KhornateHungerBerserk.cs" />
     <Compile Include="HarmonyPatch_KhornateHunger.cs" />
+    <Content Include="ITab_Pawn_Corruption.cs.txt" />
     <Compile Include="Need_KhornateHunger.cs" />
     <Compile Include="Gene_FoulStench.cs" />
     <Compile Include="CompAbilityEffect_UnfathomableGaze.cs" />
