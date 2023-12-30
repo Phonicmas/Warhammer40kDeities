@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using Verse;
+using static Mutations40k.Mutation40kUtils;
 
 namespace Mutations40k
 {
@@ -23,6 +24,8 @@ namespace Mutations40k
 
         //This should be used if the gene requires some sort of skill to be available.
         public List<WorkTags> requiredWorkTags;
+
+        public GodAcceptance requiredAcceptance;
     }
 
 }

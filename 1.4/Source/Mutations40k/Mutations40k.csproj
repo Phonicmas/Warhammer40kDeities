@@ -75,11 +75,18 @@
   <ItemGroup>
     <Compile Include="CompAbilityEffect_BileSpew.cs" />
     <Compile Include="CompProperties_BileSpew.cs" />
+    <Compile Include="FavourCompProperties.cs" />
+    <Compile Include="FavourTracker.cs" />
+    <Compile Include="FavourWorldTracker.cs" />
+    <Compile Include="HarmonyPatch_ChangedGenes.cs" />
+    <Compile Include="HarmonyPatch_MentalBreakdownChaos.cs" />
     <Compile Include="HediffComp_EverchangingDeficiancies.cs" />
     <Compile Include="HediffCompProperties_EverchangingDeficiancies.cs" />
+    <Compile Include="ITab_Pawn_Favour.cs" />
     <Compile Include="MentalState_KhornateHungerBerserk.cs" />
     <Compile Include="HarmonyPatch_KhornateHunger.cs" />
-    <Content Include="ITab_Pawn_Corruption.cs.txt" />
+    <Compile Include="FavourProgress.cs" />
+    <Compile Include="FavourComp.cs" />
     <Compile Include="Need_KhornateHunger.cs" />
     <Compile Include="Gene_FoulStench.cs" />
     <Compile Include="CompAbilityEffect_UnfathomableGaze.cs" />
@@ -88,6 +95,7 @@
     <Compile Include="HarmonyPatch_BoilingBlood.cs" />
     <Compile Include="HarmonyPatch_MonsterousHands.cs" />
     <Compile Include="DefModExtension_PreceptSpecificGod.cs" />
+    <Compile Include="RecipeWorkerClass_Purify.cs" />
     <Compile Include="ThoughtWorker_Precept_Mutation_Social.cs" />
     <Compile Include="ThoughtWorker_Precept_Mutation_Social_SpecificGod.cs" />
     <Compile Include="ThoughtWorker_Precept_Mutation_SpecificGod.cs" />
@@ -95,15 +103,11 @@
     <Compile Include="ThoughtWorker_SituationalThoughtMutation.cs" />
     <Compile Include="DefModExtension_SituationalThought.cs" />
     <Compile Include="DefModExtension_ChaosEnjoyer.cs" />
-    <Compile Include="ModifyPawnForChaos.cs" />
-    <Compile Include="ChoiceLetter_AcceptChaosNoChoice.cs" />
     <Compile Include="CompProperties_FlamingArmBlast.cs" />
     <Compile Include="Mutation40kUtils.cs" />
     <Compile Include="RecipeWorkerClass_Ritual.cs" />
     <Compile Include="Mutations40kModSettings.cs" />
-    <Compile Include="ChoiceLetter_AcceptChaos.cs" />
     <Compile Include="DefModExtension_MentalBreakFavoredGod.cs" />
-    <Compile Include="HarmonyPatch_MentalBreakdownChaos.cs" />
     <Compile Include="DefModExtension_ChaosMutation.cs" />
     <Compile Include="Mutations40kMod.cs" />
     <Compile Include="Mutations40kDefOf.cs" />

@@ -31,13 +31,10 @@
 		<li>brrainz.harmony</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 		<li>RedMattis.BetterPrerequisites</li>
-		<li>Dubwise.Rimatomics</li>
-		<li>dubwise.dubsbadhygiene</li>
-		<li>ceteam.combatextended</li>
-		<li>Katavrik.CrashLanding</li>
 		<li>Phonicmas.40kCore</li>
 		<li>Phonicmas.40kGenes</li>
 		<li>Phonicmas.40kFactions</li>
 		<li>Phonicmas.40kIdeology</li>
+		<li>Phonicmas.40kAbhumans</li>
 	</loadAfter>
 </ModMetaData>

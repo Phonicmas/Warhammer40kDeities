@@ -8,11 +8,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Berserk"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>99999</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>2</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -22,11 +39,28 @@
                 <xpath>Defs/MentalStateDef[defName = "FireStartingSpree"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>2</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>0.5</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -36,11 +70,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Binging_DrugExtreme"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>99999</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>2</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -50,11 +101,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Binging_DrugMajor"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>99999</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>2.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -64,11 +132,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Jailbreaker"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>10</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -78,11 +163,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Slaughterer"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>99999</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>2.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -92,11 +194,28 @@
                 <xpath>Defs/MentalStateDef[defName = "MurderousRage"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>99999</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>0</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>2.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -106,11 +225,28 @@
                 <xpath>Defs/MentalStateDef[defName = "GiveUpExit"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>99999</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -120,11 +256,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Wander_Psychotic"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>99999</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.2</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -134,11 +287,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Tantrum"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>5</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>5</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1.2</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -148,11 +318,28 @@
                 <xpath>Defs/MentalStateDef[defName = "TargetedTantrum"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>5</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>5</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1.2</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.2</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -162,11 +349,28 @@
                 <xpath>Defs/MentalStateDef[defName = "BedroomTantrum"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>5</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>5</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1.2</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.2</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -176,11 +380,28 @@
                 <xpath>Defs/MentalStateDef[defName = "SadisticRage"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>5</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -190,11 +411,28 @@
                 <xpath>Defs/MentalStateDef[defName = "CorpseObsession"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>0</khorneChance>
-                        <tzeentchChance>0</tzeentchChance>
-                        <nurgleChance>99999</nurgleChance>
-                        <slaaneshChance>0</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>2.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -204,11 +442,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Binging_Food"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>10</nurgleChance>
-                        <slaaneshChance>10</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -218,11 +473,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Wander_Sad"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>5</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -232,11 +504,28 @@
                 <xpath>Defs/MentalStateDef[defName = "Wander_OwnRoom"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>5</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -246,11 +535,28 @@
                 <xpath>Defs/MentalStateDef[defName = "InsultingSpree"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>5</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -260,11 +566,28 @@
                 <xpath>Defs/MentalStateDef[defName = "TargetedInsultingSpree"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>1</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>5</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>
@@ -274,11 +597,28 @@
                 <xpath>Defs/MentalStateDef[defName = "WanderConfused"]</xpath>
                 <value>
                     <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                        <khorneChance>1</khorneChance>
-                        <tzeentchChance>5</tzeentchChance>
-                        <nurgleChance>1</nurgleChance>
-                        <slaaneshChance>1</slaaneshChance>
-                        <undividedChance>1</undividedChance>
+                        <godsFavourMultiplier>
+                            <li>
+                                <key>Khorne</key>
+                                <value>0.5</value>
+                            </li>
+                            <li>
+                                <key>Nurgle</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Slaanesh</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>Tzeentch</key>
+                                <value>1.5</value>
+                            </li>
+                            <li>
+                                <key>Undivided</key>
+                                <value>1</value>
+                            </li>
+                        </godsFavourMultiplier>
                     </li>
                 </value>
             </li>

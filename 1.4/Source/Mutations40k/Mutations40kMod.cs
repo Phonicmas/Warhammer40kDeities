@@ -23,11 +23,6 @@ namespace Mutations40k
             Listing_Standard listingStandard = new Listing_Standard();
 
             listingStandard.Begin(inRect);
-            
-            listingStandard.CheckboxLabeled("HasMutationChoice".Translate(), ref settings.hasMutationChoice);
-
-            listingStandard.Label("baseChanceForGiftAcceptance".Translate(settings.baseChanceForGiftAcceptance));
-            settings.baseChanceForGiftAcceptance = (int)listingStandard.Slider(settings.baseChanceForGiftAcceptance, 0, 100);
 
             listingStandard.Label("baseChanceForGiftOffer".Translate(settings.baseChanceForGiftOffer));
             settings.baseChanceForGiftOffer = (int)listingStandard.Slider(settings.baseChanceForGiftOffer, 0, 100);

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Warhammer 40.000 - Abhumans</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/GeneDef[defName = "BEWH_NavigtorWarpClose"]</xpath>
+                    <value>
+                        <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                            <godOpinion>
+                                <li>
+                                    <god>Undivided</god>
+                                    <opinion>1</opinion>
+                                </li>
+                                <li>
+                                    <god>Khorne</god>
+                                    <opinion>1</opinion>
+                                </li>
+                                <li>
+                                    <god>Tzeentch</god>
+                                    <opinion>1</opinion>
+                                </li>
+                                <li>
+                                    <god>Nurgle</god>
+                                    <opinion>1</opinion>
+                                </li>
+                                <li>
+                                    <god>Slaanesh</god>
+                                    <opinion>1</opinion>
+                                </li>
+                            </godOpinion>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/GeneDef[defName = "BEWH_BeastmanChaosConnection"]</xpath>
+                    <value>
+                        <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
+                            <godOpinion>
+                                <li>
+                                    <god>Undivided</god>
+                                    <opinion>2</opinion>
+                                </li>
+                                <li>
+                                    <god>Khorne</god>
+                                    <opinion>2</opinion>
+                                </li>
+                                <li>
+                                    <god>Tzeentch</god>
+                                    <opinion>2</opinion>
+                                </li>
+                                <li>
+                                    <god>Nurgle</god>
+                                    <opinion>2</opinion>
+                                </li>
+                                <li>
+                                    <god>Slaanesh</god>
+                                    <opinion>2</opinion>
+                                </li>
+                            </godOpinion>
+                        </li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+
+</Patch>

@@ -2,13 +2,19 @@
 <Defs>
 
     <!-- Recipe Base -->
-    <RecipeDef Name="Mutation40kRitualRecipeBase" Abstract="True">
+    <RecipeDef Name="Mutation40kRecipeBase" Abstract="True">
         <jobString>Performing ritual.</jobString>
         <workerClass>Mutations40k.RecipeWorkerClass_Ritual</workerClass>
         <workAmount>1000</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <effectWorking>Cremate</effectWorking>
         <soundWorking>Recipe_Cremate</soundWorking>
+    </RecipeDef>
+    <RecipeDef Name="Mutation40kRitualRecipeBase" ParentName="Mutation40kRecipeBase" Abstract="True">
+        <workerClass>Mutations40k.RecipeWorkerClass_Ritual</workerClass>
+    </RecipeDef>
+    <RecipeDef Name="Mutation40kPurifyRecipeBase" ParentName="Mutation40kRecipeBase" Abstract="True">
+        <workerClass>Mutations40k.RecipeWorkerClass_Purify</workerClass>
     </RecipeDef>
 
     <!-- Undivided -->
@@ -62,15 +68,12 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>0.5</skillsScaleAmount>
-                <baseChance>5</baseChance>
                 <giftGiver>Undivided</giftGiver>
             </li>
         </modExtensions>
     </RecipeDef>
 
     <!-- Khorne -->
-
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_KhorneGeneralRitual</defName>
         <label>Khorne ritual</label>
@@ -97,15 +100,12 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>5</baseChance>
                 <giftGiver>Khorne</giftGiver>
             </li>
         </modExtensions>
     </RecipeDef>
 
     <!-- Tzeentch -->
-
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_TzeentchGeneralRitual</defName>
         <label>Tzeentch ritual</label>
@@ -132,15 +132,12 @@
                     <li>BEWH_NurgleMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>5</baseChance>
                 <giftGiver>Tzeentch</giftGiver>
             </li>
         </modExtensions>
     </RecipeDef>
 
     <!-- Nurgle -->
-
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_NurgleGeneralRitual</defName>
         <label>Nurgle ritual</label>
@@ -167,15 +164,12 @@
                     <li>BEWH_TzeentchMark</li>
                     <li>BEWH_SlaaneshMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>5</baseChance>
                 <giftGiver>Nurgle</giftGiver>
             </li>
         </modExtensions>
     </RecipeDef>
 
     <!-- Slaanesh -->
-
     <RecipeDef ParentName="Mutation40kRitualRecipeBase">
         <defName>BEWH_SlaaneshGeneralRitual</defName>
         <label>Slaanesh ritual</label>
@@ -202,8 +196,6 @@
                     <li>BEWH_TzeentchMark</li>
                     <li>BEWH_NurgleMark</li>
                 </forbiddenGenes>
-                <skillsScaleAmount>2</skillsScaleAmount>
-                <baseChance>5</baseChance>
                 <giftGiver>Slaanesh</giftGiver>
             </li>
         </modExtensions>

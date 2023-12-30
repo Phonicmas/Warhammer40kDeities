@@ -2,15 +2,10 @@
 <LanguageData>
 
   <ModSettingsNameMutations>Warhammer 40k - Mutations</ModSettingsNameMutations>
-
-  <HasMutationChoice>Disabling this removes the option to select whether a pawn should accept the deal, instead it is calculated internally whether the pawn will accept.</HasMutationChoice>
-  <baseChanceForGiftAcceptance>Base chance that any pawn will accept a gift upon having a mental break: {0} (Only relevant if above setting is disabled)</baseChanceForGiftAcceptance>
+  
   <baseChanceForGiftOffer>Base chance that any god will offer a gift upon having a mental break: {0}</baseChanceForGiftOffer>
   <maxGiftsWhenGiven>Max amount of gift that can be given at once when pawns receives gift from gods, increasing this will give a chance to receive more gifts up to the set amount. Currently: {0}</maxGiftsWhenGiven>
-  <opinionGainAndLossOnGift>Goodwill loss and gain of other factions upon accepting chaos mutation (Set to 0 to disable opinion loss and gain): {0}</opinionGainAndLossOnGift>
-
-
-  <OkChaos>Ok.</OkChaos>
+  <opinionGainAndLossOnGift>Goodwill loss and gain of other factions upon accepting chaos mutation (Set to 0 to disable opinion loss and gain): {0}</opinionGainAndLossOnGift>  <OkChaos>Ok.</OkChaos>
 
   <ChaosAttraction>{0}'s mental breakdown have attracted {1} attention.
       \n{1} have offered {0} 'solutions' to their problems in exchange for their acceptance of Chaos.</ChaosAttraction>
@@ -26,23 +21,21 @@
 
   <GiftLetterMessage>{0} feel the presence of {1} and realize someone heard their plead.</GiftLetterMessage>
 
-  <GiftLetterMessageGiven>\n\n{0} feels their mental stress relieved and feel oddly empowered. This feeling is quickly forgotten as they realize something else about them has change.\n\n{0} has granted the following gifts:</GiftLetterMessageGiven>
-  <GiftLetterMessageNotGiven>\n\nSomething feels very wrong however, {0} is not there to grant you a boon but rather to curse you. {0} does not grant their gifts freely.</GiftLetterMessageNotGiven>
-  <GiftLetterMessageUnanswered>{0} tried to plead with the entities, but none answered.</GiftLetterMessageUnanswered>
-
-  <MentalBreakLetterTitle>The enticement of chaos</MentalBreakLetterTitle>
-  <MentalBreakLetterMessage>{0}'s mental stability have broken down, so much so that they hear whispers from entities, luring them to something...\nShould {0} try and plead with the entities for the betterment of themselves, unknowing of what cost might come later?</MentalBreakLetterMessage>
-
-  <PawnPleadAccepted>\n\n{0} pleaded with the entities.</PawnPleadAccepted>
-  <PawnPleadRejected>\n\n{0} ignored the whispers of the entities.</PawnPleadRejected>
-  <PawnPleadUnanswered>\n\n{0} tried to plead with the entities, but none answered.</PawnPleadUnanswered>
-
-  <PleadToChaos>Plead with entities for help</PleadToChaos>
-  <IgnoreWishpers>Ignore the whispers</IgnoreWishpers>
-
-  <GodGiftedPawn>{0} accepted {1}'s deal, and was granted the following gifts:</GodGiftedPawn>
-  <GodNotGiftedPawn>{0} accepted {1}'s deal, and was granted the following gifts:</GodNotGiftedPawn>
+  <GiftLetterMessageGiven>\n\nSomething surges through {0}'s body and {0} feels oddly empowered. This feeling is quickly forgotten as they realize something else about them has change.\n\n{0} has been granted the following gifts:</GiftLetterMessageGiven>
 
   <MonstrousHands>{0} has monstrous hands</MonstrousHands>
+
+  <Favour>Favour</Favour>
+  <TabFavour>Favour</TabFavour>
+  <Level>Level</Level>
+  <NextLevel>Next level</NextLevel>
+
+  <WorshipStandingIgnored>Ignored</WorshipStandingIgnored>
+  <WorshipStandingSeen>Seen</WorshipStandingSeen>
+  <WorshipStandingAcknowledged>Acknowledged</WorshipStandingAcknowledged>
+  <WorshipStandingFavoured>Favoured</WorshipStandingFavoured>
+  <WorshipStandingBlessed>Blessed</WorshipStandingBlessed>
+
+  <GodFavour>God Favour</GodFavour>
 
 </LanguageData>

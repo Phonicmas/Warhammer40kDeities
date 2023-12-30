@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Purify -->
+    <RecipeDef ParentName="Mutation40kPurifyRecipeBase">
+        <defName>BEWH_ImperiumPurficationRitual</defName>
+        <label>Purification ritual</label>
+        <description>Pufiry yourself of chaos taint.</description>
+        <uiIconThing>BEWH_ImperiumRitualSpot</uiIconThing>
+        <recipeUsers>
+            <li>BEWH_ImperiumRitualSpot</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BEWH_KhorneItem</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_Ritual">
+                <forbiddenGenes>
+                    <li>BEWH_UndividedMark</li>
+                    <li>BEWH_TzeentchMark</li>
+                    <li>BEWH_NurgleMark</li>
+                    <li>BEWH_SlaaneshMark</li>
+                    <li>BEWH_KhorneMark</li>
+                </forbiddenGenes>
+                <giftGiver>None</giftGiver>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

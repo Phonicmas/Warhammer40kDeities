@@ -1,10 +1,6 @@
-﻿using Core40k;
-using HarmonyLib;
-using System;
-using System.Collections.Generic;
+﻿using HarmonyLib;
 using Verse;
 using Verse.AI;
-using static Core40k.Core40kUtils;
 
 namespace Mutations40k
 {
@@ -19,7 +15,7 @@ namespace Mutations40k
                 return;
             }
 
-            //If mental break does not have my def mod, then it is not considered
+            //If theres no defMod it wont give favour.
             if (!stateDef.HasModExtension<DefModExtension_MentalBreakFavoredGod>())
             {
                 return;
@@ -32,86 +28,30 @@ namespace Mutations40k
                 return;
             }
 
-            //Gets gene info, the boolean is whether the pawn is pure and will never recieve gift
-            (Dictionary<ChaosGods, GeneAndTraitInfo>, bool) geneAndTraitInfo = GetGeneAndTraitInfo(pawn);
-            if (geneAndTraitInfo.Item2)
+            FavourComp favourComp = pawn.TryGetComp<FavourComp>();
+            //If pawn cannot gain corruption, skip
+            if (favourComp == null)
             {
                 return;
             }
 
-            Random rand = new Random();
-            //Base chance for gift 
-            if (rand.Next(0, 100) > Mutation40kUtils.ModSettings.baseChanceForGiftOffer)
+            //If uncorruptable, skip
+            if (favourComp.uncorruptable)
             {
                 return;
             }
 
-            ChaosGods chosenGod = GetGodForDealOffer(geneAndTraitInfo.Item1, stateDef, pawn);
-            List<Def> giftsToAdd = new List<Def>();
-            if (chosenGod != ChaosGods.None)
+            //Increases favor for each god
+            DefModExtension_MentalBreakFavoredGod defMod = stateDef.GetModExtension<DefModExtension_MentalBreakFavoredGod>();
+
+            foreach (FavourProgress item in favourComp.favourTracker.AllFavoursSorted())
             {
-                giftsToAdd = Mutation40kUtils.GetGiftBasedOfGod(chosenGod, pawn, geneAndTraitInfo.Item1.TryGetValue(chosenGod).willGiveBeneficial);
-                //No available gifts to give
-                if (giftsToAdd.NullOrEmpty())
+                float multiplier = defMod.godsFavourMultiplier.TryGetValue(item.God);
+                if (multiplier > 0)
                 {
-                    return;
+                    item.TryAddProgress(100, multiplier, pawn);
                 }
             }
-
-            Mutation40kUtils.SendMutationLetter(pawn, giftsToAdd, chosenGod, geneAndTraitInfo.Item1);
         }
-
-        private static ChaosGods GetGodForDealOffer(Dictionary<ChaosGods, GeneAndTraitInfo> opinion, MentalStateDef stateDef, Pawn pawn)
-        {
-            //Standard assignment of values are 0, this way i don't have to patch every MentalStateDef, only those i want to be able to cause god attraction.
-            DefModExtension_MentalBreakFavoredGod defModExtension = stateDef?.GetModExtension<DefModExtension_MentalBreakFavoredGod>();
-
-            float? khorneMultiplier = defModExtension.khorneChance ?? 0;
-            float? slaaneshMultiplier = defModExtension.slaaneshChance ?? 0;
-            float? tzeentchMultiplier = defModExtension.tzeentchChance ?? 0;
-            float? nurgleMultiplier = defModExtension.nurgleChance ?? 0;
-            float? undividedMultiplier = defModExtension.undividedChance ?? 0;
-
-            if (khorneMultiplier + slaaneshMultiplier + tzeentchMultiplier + nurgleMultiplier + undividedMultiplier == 0)
-            {
-                return ChaosGods.None;
-            }
-
-            Dictionary<ChaosGods, float> allGods = new Dictionary<ChaosGods, float>
-            {
-                { ChaosGods.Khorne, 1 },
-                { ChaosGods.Tzeentch, 1 },
-                { ChaosGods.Nurgle, 1 },
-                { ChaosGods.Slaanesh, 1 },
-                { ChaosGods.Undivided, 1 }
-            };
-
-            foreach (KeyValuePair<ChaosGods, GeneAndTraitInfo> dict in opinion)
-            {
-                if (dict.Value.wontGiveGift)
-                {
-                    allGods.SetOrAdd(dict.Key, -99999);
-                }
-                else
-                {
-                    int combinedOpinion = dict.Value.opinionTrait + dict.Value.opinionGene;
-
-                    combinedOpinion = (int)GetOpinionBasedOnSkills(combinedOpinion, pawn, ChaosEnumUtils.GetGodAssociatedSkills(dict.Key), 1);
-
-                    allGods.SetOrAdd(dict.Key, combinedOpinion);
-                }
-            }
-
-            WeightedSelection<ChaosGods> godSelection = new WeightedSelection<ChaosGods>();
-
-            godSelection.AddEntry(ChaosGods.Khorne, (double)(allGods.TryGetValue(ChaosGods.Khorne) * khorneMultiplier));
-            godSelection.AddEntry(ChaosGods.Slaanesh, (double)(allGods.TryGetValue(ChaosGods.Slaanesh) * slaaneshMultiplier));
-            godSelection.AddEntry(ChaosGods.Tzeentch, (double)(allGods.TryGetValue(ChaosGods.Tzeentch) * tzeentchMultiplier));
-            godSelection.AddEntry(ChaosGods.Nurgle, (double)(allGods.TryGetValue(ChaosGods.Nurgle) * nurgleMultiplier));
-            godSelection.AddEntry(ChaosGods.Undivided, (double)(allGods.TryGetValue(ChaosGods.Undivided) * undividedMultiplier));
-
-            return godSelection.GetRandom();
-        }
-
     }
 }

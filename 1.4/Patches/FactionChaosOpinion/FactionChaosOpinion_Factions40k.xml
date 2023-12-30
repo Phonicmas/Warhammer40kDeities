@@ -8,16 +8,6 @@
         <match Class="PatchOperationSequence">
             <operations>
 
-                <!-- Imperium - Hates Chaos -->
-                <li Class="PatchOperationAddModExtension">
-                    <xpath>Defs/FactionDef[defName = "BEWH_ImperiumFaction"]</xpath>
-                    <value>
-                        <li Class="Mutations40k.DefModExtension_ChaosEnjoyer">
-                            <makeEnemy>True</makeEnemy>
-                        </li>
-                    </value>
-                </li>
-
                 <!-- Chaos - Loves Chaos -->
                 <li Class="PatchOperationAddModExtension">
                     <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]</xpath>

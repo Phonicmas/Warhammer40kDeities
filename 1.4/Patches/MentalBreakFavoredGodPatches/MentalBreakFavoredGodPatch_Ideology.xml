@@ -12,11 +12,28 @@
                     <xpath>Defs/MentalStateDef[defName = "IdeoChange"]</xpath>
                     <value>
                         <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                            <khorneChance>0</khorneChance>
-                            <tzeentchChance>99999</tzeentchChance>
-                            <nurgleChance>0</nurgleChance>
-                            <slaaneshChance>0</slaaneshChance>
-                            <undividedChance>1</undividedChance>
+                            <godsFavourMultiplier>
+                                <li>
+                                    <key>Khorne</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Nurgle</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Slaanesh</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Tzeentch</key>
+                                    <value>3</value>
+                                </li>
+                                <li>
+                                    <key>Undivided</key>
+                                    <value>1</value>
+                                </li>
+                            </godsFavourMultiplier>
                         </li>
                     </value>
                 </li>
@@ -26,11 +43,28 @@
                     <xpath>Defs/MentalStateDef[defName = "Rebellion"]</xpath>
                     <value>
                         <li Class="Mutations40k.DefModExtension_MentalBreakFavoredGod">
-                            <khorneChance>0</khorneChance>
-                            <tzeentchChance>99999</tzeentchChance>
-                            <nurgleChance>0</nurgleChance>
-                            <slaaneshChance>0</slaaneshChance>
-                            <undividedChance>1</undividedChance>
+                            <godsFavourMultiplier>
+                                <li>
+                                    <key>Khorne</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Nurgle</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Slaanesh</key>
+                                    <value>1</value>
+                                </li>
+                                <li>
+                                    <key>Tzeentch</key>
+                                    <value>3</value>
+                                </li>
+                                <li>
+                                    <key>Undivided</key>
+                                    <value>1</value>
+                                </li>
+                            </godsFavourMultiplier>
                         </li>
                     </value>
                 </li>
