@@ -2,12 +2,28 @@
 using System;
 using System.Collections.Generic;
 using Verse;
+using Random = System.Random;
 
 namespace Mutations40k
 {
 	public class FavourComp : ThingComp
 	{
-		public Pawn Pawn => parent as Pawn;
+		private Pawn pawn = null;
+
+		public Pawn Pawn
+		{
+			get
+			{
+				if (pawn == null)
+				{
+                    if (parent is Pawn pawn2)
+                    {
+                        pawn = pawn2;
+                    }
+                }
+				return pawn;
+			}
+		}
 
 		public bool uncorruptable = false;
 
@@ -15,7 +31,21 @@ namespace Mutations40k
 
 		private int tickInterval = 60000;
 
-		public FavourCompProperties Props => props as FavourCompProperties;
+		private Mutations40kSettings modsettings;
+
+		private Mutations40kSettings Modsettings
+        {
+			get
+			{
+				if (modsettings == null)
+				{
+                    modsettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
+                }
+				return modsettings;
+			}
+		}
+
+        public FavourCompProperties Props => props as FavourCompProperties;
 
 		public FavourComp()
 		{
@@ -25,36 +55,52 @@ namespace Mutations40k
 		public override void Initialize(CompProperties props)
 		{
 			base.Initialize(props);
-			List<ChaosGods> godsToAdd = new List<ChaosGods>
-			{
-				ChaosGods.Khorne,
-				ChaosGods.Tzeentch,
-				ChaosGods.Nurgle,
-				ChaosGods.Slaanesh,
-				ChaosGods.Undivided
-			};
-			favourTracker.TryAddGods(godsToAdd);
+            InitializeFavourTracker();
         }
 
 		public void UpdateGeneAndTraitInfo()
 		{
-			foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
+			if (Pawn == null)
 			{
-				favourProgress.UpdateGeneAndTraitInfo(Pawn);
+				return;
+			}
+            if (favourTracker == null)
+            {
+                InitializeFavourTracker();
+            }
+            foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
+			{
+				favourProgress.UpdateGeneAndTraitInfo();
 			}
 		}
 
 		public override void CompTick()
 		{
+			if (Modsettings.disableRandomMutations)
+			{
+				return;
+			}
+			if (Pawn == null)
+			{
+				return;
+			}
 			TryGiveGift();
 			PassivelyLoseFavor();
 		}
 
 		private void PassivelyLoseFavor()
 		{
+			if (Pawn == null)
+			{
+				return;
+			}
             if (!Pawn.IsHashIntervalTick(60000))
             {
                 return;
+            }
+            if (favourTracker == null)
+            {
+                InitializeFavourTracker();
             }
             foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
             {
@@ -64,12 +110,20 @@ namespace Mutations40k
 
 		private void TryGiveGift()
 		{
+			if (Pawn == null)
+			{
+				return;
+			}
             if (!Pawn.IsHashIntervalTick(tickInterval))
             {
                 return;
             }
+            if (favourTracker == null)
+            {
+				InitializeFavourTracker();
+            }
             Random rand = new Random();
-            tickInterval = rand.Next(90000, 180000);
+            tickInterval = rand.Next(Mutation40kUtils.ModSettings.ticksBetweenGifts.min, Mutation40kUtils.ModSettings.ticksBetweenGifts.max);
             foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
             {
                 favourProgress.TryGiveGift();
@@ -80,6 +134,21 @@ namespace Mutations40k
 		{
 			base.PostExposeData();
 			Scribe_Deep.Look(ref favourTracker, "favourTracker", this);
-		}
+            Scribe_Values.Look(ref uncorruptable, "uncorruptable", false);
+        }
+
+		private void InitializeFavourTracker()
+		{
+            favourTracker = new FavourTracker(this);
+            List<ChaosGods> godsToAdd = new List<ChaosGods>
+                            {
+                                ChaosGods.Khorne,
+                                ChaosGods.Tzeentch,
+                                ChaosGods.Nurgle,
+                                ChaosGods.Slaanesh,
+                                ChaosGods.Undivided
+                            };
+            favourTracker.TryAddGods(godsToAdd);
+        }
 	}
 }

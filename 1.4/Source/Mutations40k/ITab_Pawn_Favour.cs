@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using Verse;
+using Verse.Noise;
 using static Mutations40k.Mutation40kUtils;
 
 namespace Mutations40k
@@ -14,6 +15,11 @@ namespace Mutations40k
         {
             get
             {
+                Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
+                if (modSettings.disableRandomMutations)
+                {
+                    return false;
+                }
                 if (SelPawn.genes != null)
                 {
                     foreach (Gene gene in SelPawn.genes.GenesListForReading)

@@ -166,7 +166,7 @@ namespace Mutations40k
 
         public static void ModifyPawn(List<Def> giftToAdd, Pawn pawn, ChaosGods chosenGod)
         {
-            if (pawn.genes == null || pawn.story == null)
+            if (pawn.genes == null || pawn.story == null || pawn.story.traits == null)
             {
                 return;
             }
@@ -176,7 +176,10 @@ namespace Mutations40k
                 pawn.MentalState.RecoverFromState();
             }
 
-            pawn.health.AddHediff(Mutations40kDefOf.BEWH_GodsTemporaryPower, null);
+            if (pawn.health != null)
+            {
+                pawn.health.AddHediff(Mutations40kDefOf.BEWH_GodsTemporaryPower, null);
+            }
 
             string mutation = "\n\n";
 
@@ -226,7 +229,8 @@ namespace Mutations40k
                         pawn.genes.xenotypeName = "Daemon prince of the Undivided";
                         break;
                     default:
-                        break;
+                        Log.Error("Non determined god trying to give gift? - Show this to Phonicmas in his discord if encountered");
+                        return;
                 }
             }
 
@@ -252,9 +256,12 @@ namespace Mutations40k
             if (removeDetrimentalAfter)
             {
                 List<Gene> genesToRemove = pawn.genes.GenesListForReading.FindAll(x => x.def.HasModExtension<DefModExtension_ChaosMutation>() && !x.def.GetModExtension<DefModExtension_ChaosMutation>().isBeneficial);
-                foreach (Gene gene in genesToRemove)
+                if (!genesToRemove.NullOrEmpty())
                 {
-                    pawn.genes.RemoveGene(gene);
+                    foreach (Gene gene in genesToRemove)
+                    {
+                        pawn.genes.RemoveGene(gene);
+                    }
                 }
             }
 
@@ -324,13 +331,22 @@ namespace Mutations40k
 
         public static int GetOpinionBasedOnPsysens(Pawn pawn)
         {
-            return (int)(pawn.GetStatValue(StatDefOf.PsychicSensitivity) / 50);
+            if (pawn == null)
+            {
+                return 0;
+            }
+            else
+            {
+                int val = (int)pawn.GetStatValue(StatDefOf.PsychicSensitivity);
+                val /= 50;
+                return val;
+            }
         }
 
         public static int GetOpinionBasedOnSkills(Pawn pawn, List<SkillDef> skillsScale, float skillsScaleAmount = 0.25f)
         {
             float opinion = 0;
-            if (!skillsScale.NullOrEmpty())
+            if (!skillsScale.NullOrEmpty() && pawn != null)
             {
                 SkillRecord skillRecord;
                 foreach (SkillDef skill in skillsScale)

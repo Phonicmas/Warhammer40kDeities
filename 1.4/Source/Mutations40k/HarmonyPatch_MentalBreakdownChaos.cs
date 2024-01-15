@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using Genes40k;
+using HarmonyLib;
 using Verse;
 using Verse.AI;
 
@@ -9,6 +10,11 @@ namespace Mutations40k
     {
         public static void Postfix(MentalStateDef stateDef, MentalStateHandler __instance, bool __result)
         {
+            Mutations40kSettings modSettings = LoadedModManager.GetMod<Mutations40kMod>().GetSettings<Mutations40kSettings>();
+            if (modSettings.disableRandomMutations)
+            {
+                return;
+            }
             //Mental state didn't start, skip
             if (!__result)
             {
@@ -49,7 +55,7 @@ namespace Mutations40k
                 float multiplier = defMod.godsFavourMultiplier.TryGetValue(item.God);
                 if (multiplier > 0)
                 {
-                    item.TryAddProgress(100, multiplier, pawn);
+                    item.TryAddProgress(100, multiplier);
                 }
             }
         }

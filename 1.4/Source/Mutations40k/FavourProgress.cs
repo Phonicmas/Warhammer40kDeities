@@ -36,17 +36,37 @@ namespace Mutations40k
 
         private float favourValue;
 
+        private FavourTracker favourTracker;
+
         public GeneAndTraitInfo geneAndTraitInfo;
 
         public Pawn OwnerPawn
         {
-            get => geneAndTraitInfo.ownerPawn;
+            get
+            {
+                if (favourTracker == null)
+                {
+                    return null;
+                }
+                else if (favourTracker.FavourComp == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return favourTracker.FavourComp.Pawn;
+                }
+            }
         }
 
         public int OverallOpinion
         {
             get
             {
+                if (OwnerPawn == null)
+                {
+                    return 0;
+                }
                 int opinion = GetOpinionBasedOnTraitsAndGenes(geneAndTraitInfo) + GetOpinionBasedOnPsysens(OwnerPawn);
                 if (God == ChaosGods.Undivided)
                 {
@@ -139,15 +159,22 @@ namespace Mutations40k
         {
         }
 
-        public FavourProgress(ChaosGods god)
+        public FavourProgress(FavourTracker favourTracker)
         {
-            God = god;
+            this.favourTracker = favourTracker;
         }
 
-        public FavourProgress(ChaosGods god, float value)
+        public FavourProgress(ChaosGods god, FavourTracker favourTracker)
+        {
+            God = god;
+            this.favourTracker = favourTracker;
+        }
+
+        public FavourProgress(ChaosGods god, float value, FavourTracker favourTracker)
         {
             God = god;
             favourValue = value;
+            this.favourTracker = favourTracker;
         }
 
         public void ExposeData()
@@ -196,12 +223,17 @@ namespace Mutations40k
         //Tries to give gift
         public bool TryGiveGift()
         {
+            if (OwnerPawn == null)
+            {
+                return false;
+            }
             if (!WillGiveGift())
             {
                 return false;
             }
+            UpdateGeneAndTraitInfo();
             List<Def> gifts = GetGiftBasedOfGod(God, OwnerPawn, geneAndTraitInfo.willGiveBeneficial);
-            if (gifts == null)
+            if (gifts.NullOrEmpty())
             {
                 return false;
             }
@@ -211,9 +243,9 @@ namespace Mutations40k
         }
 
         //Tries to add progress to the god
-        public bool TryAddProgress(float change, float multiplier, Pawn pawn)
+        public bool TryAddProgress(float change, float multiplier)
         {
-            UpdateGeneAndTraitInfo(pawn);
+            UpdateGeneAndTraitInfo();
             float num = ((change > 0f) ? (change * ProgressProgression.Evaluate(favourValue)) : change);
             favourValue = ProgressRange.ClampToRange((favourValue + num + OverallOpinion)*multiplier);
             return true;
@@ -230,9 +262,13 @@ namespace Mutations40k
             Favour -= change;
         }
 
-        public void UpdateGeneAndTraitInfo(Pawn pawn)
+        public void UpdateGeneAndTraitInfo()
         {
-            geneAndTraitInfo = GetGeneAndTraitInfo(pawn, God);
+            if (OwnerPawn == null)
+            {
+                return;
+            }
+            geneAndTraitInfo = GetGeneAndTraitInfo(OwnerPawn, God);
         }
     }
 }

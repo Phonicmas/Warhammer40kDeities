@@ -26,6 +26,8 @@ namespace Mutations40k
         public List<WorkTags> requiredWorkTags;
 
         public GodAcceptance requiredAcceptance;
+
+        public bool isConsideredMutation;
     }
 
 }

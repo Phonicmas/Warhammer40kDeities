@@ -35,7 +35,7 @@ namespace Mutations40k
 			{
 				if (favourProgress.God == giftGiver)
 				{
-					favourProgress.TryAddProgress(50, 1, billDoer);
+					favourProgress.TryAddProgress(50, 1);
 				}
 			}
 

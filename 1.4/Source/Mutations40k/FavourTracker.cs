@@ -13,7 +13,12 @@ namespace Mutations40k
         private List<FavourProgress> FavourOfGods;
 
         //Comp that is attached to the pawn to allow all this.
-        private FavourComp favourComp;
+        private readonly FavourComp favourComp;
+
+        public FavourComp FavourComp
+        {
+            get { return favourComp; }
+        }
 
         //God which have the highest favour
         public FavourProgress HighestFavour => FavourOfGods.MaxBy((FavourProgress x) => x.Favour);
@@ -53,7 +58,7 @@ namespace Mutations40k
             IEnumerable<ChaosGods> enumerable = gods.Where((ChaosGods x) => !FavourOfGods.Any((FavourProgress w) => w.God == x));
             foreach (ChaosGods item in enumerable)
             {
-                FavourOfGods.Add(new FavourProgress(item, startingRange.RandomInRange));
+                FavourOfGods.Add(new FavourProgress(item, startingRange.RandomInRange, this));
             }
         }
 

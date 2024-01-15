@@ -77,6 +77,7 @@
     <Compile Include="CompProperties_BileSpew.cs" />
     <Compile Include="FavourCompProperties.cs" />
     <Compile Include="FavourTracker.cs" />
+    <Compile Include="FixPawnFavourTEMP.cs" />
     <Compile Include="FavourWorldTracker.cs" />
     <Compile Include="HarmonyPatch_ChangedGenes.cs" />
     <Compile Include="HarmonyPatch_MentalBreakdownChaos.cs" />

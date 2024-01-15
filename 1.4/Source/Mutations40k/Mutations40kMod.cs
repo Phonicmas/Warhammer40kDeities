@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 using Verse;
+using RimWorld;
 
 
 namespace Mutations40k
@@ -32,6 +33,12 @@ namespace Mutations40k
 
             listingStandard.Label("opinionGainAndLossOnGift".Translate(settings.opinionGainAndLossOnGift));
             settings.opinionGainAndLossOnGift = (int)listingStandard.Slider(settings.opinionGainAndLossOnGift, 0, 100);
+
+            listingStandard.Label("ticksBetweenGifts".Translate(settings.opinionGainAndLossOnGift));
+            listingStandard.Label(settings.ticksBetweenGifts.min.ToStringTicksToPeriodVerbose(allowHours: false) + " - " + settings.ticksBetweenGifts.max.ToStringTicksToPeriodVerbose(allowHours: false));
+            listingStandard.IntRange(ref settings.ticksBetweenGifts, 60000, 3600000);
+
+            listingStandard.CheckboxLabeled("disableRandomMutations".Translate(), ref settings.disableRandomMutations);
 
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);

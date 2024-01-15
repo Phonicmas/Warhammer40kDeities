@@ -10,16 +10,6 @@
         <recipeUsers>
             <li>BEWH_ImperiumRitualSpot</li>
         </recipeUsers>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>BEWH_KhorneItem</li>
-                    </thingDefs>
-                </filter>
-                <count>20</count>
-            </li>
-        </ingredients>
         <modExtensions>
             <li Class="Core40k.DefModExtension_Ritual">
                 <forbiddenGenes>

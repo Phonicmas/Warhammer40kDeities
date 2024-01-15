@@ -1,4 +1,5 @@
-﻿using RimWorld.Planet;
+﻿using Genes40k;
+using RimWorld.Planet;
 using System.Linq;
 using Verse;
 
