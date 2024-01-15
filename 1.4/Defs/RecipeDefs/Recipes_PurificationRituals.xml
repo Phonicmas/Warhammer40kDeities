@@ -5,7 +5,7 @@
     <RecipeDef ParentName="Mutation40kPurifyRecipeBase">
         <defName>BEWH_ImperiumPurficationRitual</defName>
         <label>Purification ritual</label>
-        <description>Pufiry yourself of chaos taint.</description>
+        <description>Purify yourself of chaos taint.</description>
         <uiIconThing>BEWH_ImperiumRitualSpot</uiIconThing>
         <recipeUsers>
             <li>BEWH_ImperiumRitualSpot</li>

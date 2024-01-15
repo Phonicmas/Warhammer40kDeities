@@ -4,7 +4,7 @@
     <!-- Imperium -->
     <ThingDef ParentName="RitualBase">
         <defName>BEWH_ImperiumRitualSpot</defName>
-        <label>imperium purification spot</label>
+        <label>Imperium purification spot</label>
         <description>A place for cleansing yourself of the taint of chaos.</description>
         <graphicData>
             <texPath>Things/Building/Production/ImperiumIcon</texPath>
