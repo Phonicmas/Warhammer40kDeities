@@ -67,3 +67,22 @@ At "Seen" or higher every 1.5 - 3 days you might be given a gift. The higher fav
 
 
 Make mod settings for different things like deterioation amount, gift interval, purification and base ritual amount or multiplier?
+
+
+
+
+
+
+
+Rework mod, make a new def type for the gifting which contains all the info about the gift
+
+Make sure the favour comp can be attached to all kinds of humanlike pawn and make it able to be extended properly
+
+Include more gift in the form of genes, traits and maybe weapons.
+
+Maybe change the favour comp so that you select your god to focus on, so they gain 100% of favour gained frmo actions where the others maybe gain 25% or atleast reduced
+The comp should then also show what the god dislikes and like on the current character
+
+Make stat to influence favour gain, make as def.
+
+Make a def for each god, that should contain fields for how much favour is gained when actively praying and when not.

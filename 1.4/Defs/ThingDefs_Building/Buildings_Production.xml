@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Imperium -->
-    <ThingDef ParentName="RitualBase">
+    <ThingDef ParentName="BEWH_RitualBase">
         <defName>BEWH_ImperiumRitualSpot</defName>
         <label>imperium purification spot</label>
         <description>A place for cleansing yourself of the taint of chaos.</description>

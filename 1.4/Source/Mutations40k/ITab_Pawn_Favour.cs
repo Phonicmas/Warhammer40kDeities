@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using Verse;
-using Verse.Noise;
 using static Mutations40k.Mutation40kUtils;
 
 namespace Mutations40k
@@ -27,7 +26,7 @@ namespace Mutations40k
                 }
 
                 FavourComp f = SelPawn.TryGetComp<FavourComp>();
-                if (f == null || f.uncorruptable)
+                if (f == null || f.uncorruptable || f.favourTracker == null || f.favourTracker.AllFavoursSorted().EnumerableNullOrEmpty())
                 {
                     return false;
                 }

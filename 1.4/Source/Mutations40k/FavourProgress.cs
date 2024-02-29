@@ -1,7 +1,6 @@
 ﻿using Core40k;
 using System;
 using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using Verse;
 using static Core40k.Core40kUtils;
 using static Mutations40k.Mutation40kUtils;
@@ -37,7 +36,7 @@ namespace Mutations40k
 
         private float favourValue;
 
-        private readonly FavourTracker favourTracker;
+        private FavourTracker favourTracker;
 
         private GeneAndTraitInfo geneAndTraitInfo;
 
@@ -203,8 +202,8 @@ namespace Mutations40k
         {
             Scribe_Values.Look(ref God, "God");
             Scribe_References.Look(ref ownerPawn, "ownerPawn");
-            Scribe_Deep.Look(ref additionalInfoExtension, "additionalInfoExtension", this);
             Scribe_Values.Look(ref favourValue, "value", 0f);
+            Scribe_Deep.Look(ref additionalInfoExtension, "additionalInfoExtension", ownerPawn);
         }
 
         //Chance of god giving gift
@@ -251,6 +250,11 @@ namespace Mutations40k
             if (OwnerPawn == null)
             {
                 Log.Error("Mutation 40k - Could not give gift, Null Pawn");
+                return false;
+            }
+            if (GeneAndTraitInfoGet == null)
+            {
+                Log.Error("Mutation 40k - Could not give gift, Null GeneAndTraitInfo");
                 return false;
             }
             UpdateGeneAndTraitInfo();

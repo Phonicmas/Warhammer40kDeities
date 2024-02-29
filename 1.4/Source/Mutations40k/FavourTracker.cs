@@ -13,7 +13,7 @@ namespace Mutations40k
         private List<FavourProgress> FavourOfGods;
 
         //Comp that is attached to the pawn to allow all this.
-        private readonly FavourComp favourComp;
+        private FavourComp favourComp;
 
         public FavourComp FavourComp
         {
@@ -22,6 +22,11 @@ namespace Mutations40k
 
         //God which have the highest favour
         public FavourProgress HighestFavour => FavourOfGods.MaxBy((FavourProgress x) => x.Favour);
+
+        public FavourTracker()
+        {
+            FavourOfGods = new List<FavourProgress>();
+        }
 
         //Constructor
         public FavourTracker(FavourComp favourComp)
