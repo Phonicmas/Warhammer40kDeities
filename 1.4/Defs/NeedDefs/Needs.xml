@@ -5,7 +5,7 @@
     <defName>BEWH_KhornateHunger</defName>
     <needClass>Mutations40k.Need_KhornateHunger</needClass>
     <label>khornate satiety</label>
-    <description>Khornate satiety fulfills a built-in desire to do violence at close range to human victims. If it isn't satiated, the person will go berserk.</description>
+    <description>Khornate satiety fulfills a built-in desire to do violence at close range on human victims. If not satiated, the person will go berserk.</description>
     <baseLevel>0</baseLevel>
     <minIntelligence>ToolUser</minIntelligence>
     <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>

@@ -48,7 +48,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_MutationAnimalisticLegs</defName>
         <label>mutation: Animalistic legs</label>
-        <description>The pawn's legs has mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs, be it flesh or metal.</description>
+        <description>The pawn's legs have mutated, undergoing a startling transformation and assuming the look and feel of a deer's hind legs. These animalistic legs merge with existing legs, be it flesh or metal.</description>
         <iconPath>UI/Icons/Genes/AnimalisticLegs</iconPath>
         <displayOrderInCategory>140</displayOrderInCategory>
         <statFactors>

@@ -5,7 +5,7 @@
     <GeneDef ParentName="BEWH_BeneficialMutationBase">
         <defName>BEWH_TzeentchFlamingArm</defName>
         <label>mutation: Flaming arm</label>
-        <description>The pawn's arm has been mutated with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
+        <description>The pawn's arm has been mutated with the flaming arm of a Flamer of Tzeentch, and is able to project fiery blasts and scorch nearby enemies upon contact.</description>
         <iconPath>UI/Icons/Genes/FlamingArm</iconPath>        <!-- Make icon of flaming arm shooting flame thingy -->
         <displayOrderInCategory>540</displayOrderInCategory>
         <abilities>

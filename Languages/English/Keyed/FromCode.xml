@@ -22,7 +22,7 @@
 
   <GiftLetterMessage>{0} feel the presence of {1} and realize someone heard their plead.</GiftLetterMessage>
 
-  <GiftLetterMessageGiven>\n\nSomething surges through {0}'s body and {0} feels oddly empowered. This feeling is quickly forgotten as they realize something else about them has change.\n\n{0} has been granted the following gifts:</GiftLetterMessageGiven>
+  <GiftLetterMessageGiven>\n\nSomething surges through {0}'s body and {0} feels oddly empowered. This feeling is quickly forgotten as they realize something else about them has changed.\n\n{0} has been granted the following gifts:</GiftLetterMessageGiven>
 
   <MonstrousHands>{0} has monstrous hands</MonstrousHands>
 

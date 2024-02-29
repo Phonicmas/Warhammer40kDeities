@@ -5,7 +5,7 @@
     <HediffDef>
         <defName>BEWH_NurgleBitingTongueAttack</defName>
         <label>biting tongue attack</label>
-        <description>The tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
+        <description>The tongue grows to be thick and cylindrical with a maw of biting teeth, much like that of a Great Unclean One.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <everCurableByItem>false</everCurableByItem>
@@ -46,7 +46,7 @@
     <HediffDef ParentName="ImplantHediffBase">
         <defName>BEWH_BitingTongue</defName>
         <label>biting tongue</label>
-        <description>The tongue grows to be thick and cylindrical, with a maw of biting teeth - much like that of a Great Unclean One.</description>
+        <description>The tongue grows to be thick and cylindrical with a maw of biting teeth, much like that of a Great Unclean One.</description>
         <defaultLabelColor>(0.55, 0.55, 0.05)</defaultLabelColor>
         <addedPartProps>
             <solid>true</solid>

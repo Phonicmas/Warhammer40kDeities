@@ -5,7 +5,7 @@
     <HediffDef>
         <defName>BEWH_TzeentchFlamingArmAttack</defName>
         <label>flaming arm</label>
-        <description>The arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
+        <description>The arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project fiery blasts and scorch nearby enemies upon contact.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <everCurableByItem>false</everCurableByItem>
