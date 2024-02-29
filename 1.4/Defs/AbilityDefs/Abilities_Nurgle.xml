@@ -5,7 +5,7 @@
   <AbilityDef>
     <defName>BEWH_BileSpewBlast</defName>
     <label>bile spew</label>
-    <description>...</description>
+    <description>Spew forth a grotesque amount of vomit, anyone caught in this barrage of vomit, instantly starts vomiting</description>
     <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
     <category>Chaos</category>
     <cooldownTicksRange>10000</cooldownTicksRange>

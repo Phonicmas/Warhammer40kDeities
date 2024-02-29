@@ -43,6 +43,8 @@
                         <selectionWeight>0.01</selectionWeight>
                         <removesDetrimentalGifts>True</removesDetrimentalGifts>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Blessed</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>

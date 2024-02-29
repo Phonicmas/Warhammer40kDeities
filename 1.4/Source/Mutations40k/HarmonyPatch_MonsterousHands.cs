@@ -9,18 +9,18 @@ namespace Mutations40k
     public class MonsterousHandsPatch
     {
         [HarmonyPatch(typeof(EquipmentUtility), nameof(EquipmentUtility.CanEquip), new Type[]
-{
-    typeof(Thing),
-    typeof(Pawn),
-    typeof(string),
-    typeof(bool)
-}, new ArgumentType[]
-{
-    ArgumentType.Normal,
-    ArgumentType.Normal,
-    ArgumentType.Out,
-    ArgumentType.Normal
-})]
+        {
+            typeof(Thing),
+            typeof(Pawn),
+            typeof(string),
+            typeof(bool)
+        }, new ArgumentType[]
+        {
+            ArgumentType.Normal,
+            ArgumentType.Normal,
+            ArgumentType.Out,
+            ArgumentType.Normal
+        })]
         [HarmonyPostfix]
         public static bool CanEquip_Postfix(bool __result, Thing thing, Pawn pawn, ref string cantReason)
         {

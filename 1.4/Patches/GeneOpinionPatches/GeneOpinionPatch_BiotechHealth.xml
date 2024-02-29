@@ -107,6 +107,7 @@
                         </givenBy>
                         <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.05</selectionWeight>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
                     </li>
                 </value>
             </li>

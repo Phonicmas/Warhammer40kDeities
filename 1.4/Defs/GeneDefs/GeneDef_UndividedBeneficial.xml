@@ -25,6 +25,8 @@
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
                 <isBeneficial>True</isBeneficial>
+                <requiredAcceptance>Acknowledged</requiredAcceptance>
+                <isConsideredMutation>true</isConsideredMutation>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
@@ -63,6 +65,7 @@
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
                 <isBeneficial>True</isBeneficial>
+                <isConsideredMutation>true</isConsideredMutation>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
@@ -104,6 +107,7 @@
                 </givenBy>
                 <selectionWeight>0.85</selectionWeight>
                 <isBeneficial>True</isBeneficial>
+                <isConsideredMutation>true</isConsideredMutation>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>

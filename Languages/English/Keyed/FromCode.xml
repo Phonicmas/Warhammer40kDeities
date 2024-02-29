@@ -31,8 +31,11 @@
   <Level>Level</Level>
   <NextLevel>Next level</NextLevel>
 
+  <Forsaken>{0} has forsaken you</Forsaken>
+  <Unknown>{0} doesn't care about you</Unknown>
+
   <WorshipStandingIgnored>Ignored</WorshipStandingIgnored>
-  <WorshipStandingSeen>Seen</WorshipStandingSeen>
+  <WorshipStandingSeen>Interested</WorshipStandingSeen>
   <WorshipStandingAcknowledged>Acknowledged</WorshipStandingAcknowledged>
   <WorshipStandingFavoured>Favoured</WorshipStandingFavoured>
   <WorshipStandingBlessed>Blessed</WorshipStandingBlessed>

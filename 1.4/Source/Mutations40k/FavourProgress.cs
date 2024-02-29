@@ -1,6 +1,7 @@
 ﻿using Core40k;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using Verse;
 using static Core40k.Core40kUtils;
 using static Mutations40k.Mutation40kUtils;
@@ -36,26 +37,46 @@ namespace Mutations40k
 
         private float favourValue;
 
-        private FavourTracker favourTracker;
+        private readonly FavourTracker favourTracker;
 
-        public GeneAndTraitInfo geneAndTraitInfo;
+        private GeneAndTraitInfo geneAndTraitInfo;
+
+        private AdditionalInfoExtension additionalInfoExtension;
+
+        public AdditionalInfoExtension GeneAndTraitInfoGet
+        {
+            get
+            {
+                if (additionalInfoExtension == null)
+                {
+                    UpdateGeneAndTraitInfo();
+                }
+                return additionalInfoExtension;
+            }
+            set
+            {
+                additionalInfoExtension = value;
+            }
+        }
+
+        private Pawn ownerPawn;
 
         public Pawn OwnerPawn
         {
             get
             {
-                if (favourTracker == null)
+                if (ownerPawn == null)
                 {
-                    return null;
+                    if (favourTracker != null && favourTracker.FavourComp != null)
+                    {
+                        ownerPawn = favourTracker.FavourComp.Pawn;
+                    }
+                    else if (GeneAndTraitInfoGet != null)
+                    {
+                        ownerPawn = GeneAndTraitInfoGet.ownerPawn;
+                    }
                 }
-                else if (favourTracker.FavourComp == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return favourTracker.FavourComp.Pawn;
-                }
+                return ownerPawn;
             }
         }
 
@@ -65,9 +86,10 @@ namespace Mutations40k
             {
                 if (OwnerPawn == null)
                 {
+                    Log.Error("Mutation 40k - Could not get god opinion, Null Pawn");
                     return 0;
                 }
-                int opinion = GetOpinionBasedOnTraitsAndGenes(geneAndTraitInfo) + GetOpinionBasedOnPsysens(OwnerPawn);
+                int opinion = GetOpinionBasedOnTraitsAndGenes(GeneAndTraitInfoGet) + GetOpinionBasedOnPsysens(OwnerPawn);
                 if (God == ChaosGods.Undivided)
                 {
                      opinion += GetOpinionBasedOnSkills(OwnerPawn, ChaosEnumUtils.GetGodAssociatedSkills(God), 0.0625f);
@@ -180,13 +202,15 @@ namespace Mutations40k
         public void ExposeData()
         {
             Scribe_Values.Look(ref God, "God");
+            Scribe_References.Look(ref ownerPawn, "ownerPawn");
+            Scribe_Deep.Look(ref additionalInfoExtension, "additionalInfoExtension", this);
             Scribe_Values.Look(ref favourValue, "value", 0f);
         }
 
         //Chance of god giving gift
         public bool WillGiveGift()
         {
-            if (geneAndTraitInfo.wontGiveGift)
+            if (GeneAndTraitInfoGet.wontGiveGift)
             {
                 return false;
             }
@@ -213,7 +237,8 @@ namespace Mutations40k
                 default:
                     break;
             }
-            if (rand.Next(0, 100) < chance)
+            int t = rand.Next(0, 100);
+            if (t < chance)
             {
                 return true;
             }
@@ -225,14 +250,15 @@ namespace Mutations40k
         {
             if (OwnerPawn == null)
             {
+                Log.Error("Mutation 40k - Could not give gift, Null Pawn");
                 return false;
             }
+            UpdateGeneAndTraitInfo();
             if (!WillGiveGift())
             {
                 return false;
             }
-            UpdateGeneAndTraitInfo();
-            List<Def> gifts = GetGiftBasedOfGod(God, OwnerPawn, geneAndTraitInfo.willGiveBeneficial);
+            List<Def> gifts = GetGiftBasedOfGod(God, OwnerPawn, GeneAndTraitInfoGet.willGiveBeneficial);
             if (gifts.NullOrEmpty())
             {
                 return false;
@@ -266,9 +292,10 @@ namespace Mutations40k
         {
             if (OwnerPawn == null)
             {
+                Log.Warning("Mutation 40k - Could not update Gene and Trait info, Null Pawn");
                 return;
             }
-            geneAndTraitInfo = GetGeneAndTraitInfo(OwnerPawn, God);
+            GeneAndTraitInfoGet = GetGeneAndTraitInfo(OwnerPawn, God);
         }
     }
 }

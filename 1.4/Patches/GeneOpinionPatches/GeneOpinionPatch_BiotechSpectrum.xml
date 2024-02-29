@@ -129,6 +129,7 @@
                         </givenBy>
                         <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.1</selectionWeight>
+                        <requiredAcceptance>Acknowledged</requiredAcceptance>
                     </li>
                 </value>
             </li>
@@ -472,6 +473,7 @@
                         </requiredWorkTags>
                         <isBeneficial>True</isBeneficial>
                         <selectionWeight>0.1</selectionWeight>
+                        <requiredAcceptance>Acknowledged</requiredAcceptance>
                     </li>
                 </value>
             </li>

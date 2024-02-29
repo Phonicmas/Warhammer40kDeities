@@ -25,9 +25,9 @@ namespace Mutations40k
         //This should be used if the gene requires some sort of skill to be available.
         public List<WorkTags> requiredWorkTags;
 
-        public GodAcceptance requiredAcceptance;
+        public GodAcceptance requiredAcceptance = GodAcceptance.Seen;
 
-        public bool isConsideredMutation;
+        public bool isConsideredMutation = false;
     }
 
 }

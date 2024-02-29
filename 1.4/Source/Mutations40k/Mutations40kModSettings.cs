@@ -17,7 +17,7 @@ namespace Mutations40k
 
         public bool disableRandomMutations = false;
 
-        public IntRange ticksBetweenGifts = new IntRange(120000, 240000);
+        public IntRange ticksBetweenGifts = new IntRange(600000, 1080000);
 
         public override void ExposeData()
         {
@@ -29,8 +29,8 @@ namespace Mutations40k
             Scribe_Values.Look(ref disableRandomMutations, "disableRandomMutations", false);
             int value = ticksBetweenGifts.max;
             int value2 = ticksBetweenGifts.min;
-            Scribe_Values.Look(ref value, "ticksBetweenGiftsMax", 240000);
-            Scribe_Values.Look(ref value2, "ticksBetweenGiftsMin", 120000);
+            Scribe_Values.Look(ref value, "ticksBetweenGiftsMax", 1080000);
+            Scribe_Values.Look(ref value2, "ticksBetweenGiftsMin", 600000);
             ticksBetweenGifts = new IntRange(value2, value);
             base.ExposeData();
         }
