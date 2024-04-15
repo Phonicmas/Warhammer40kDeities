@@ -20,49 +20,63 @@ namespace Mutations40k
                 {
                     return false;
                 }
-                if (SelPawn.genes != null)
+
+                if (SelPawn.IsHashIntervalTick(30000))
                 {
-                    foreach (Gene gene in SelPawn.genes.GenesListForReading)
-                    {
-                        if (gene.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                        {
-                            if (gene.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>().purity)
-                            {
-                                ChangeUncorruptable(true);
-                                return false;
-                            }
-                        }
-                    }
+                    ChangeUncorruptable();
                 }
-                List<Trait> pawnTraits = SelPawn.story.traits.allTraits;
-                foreach (Trait trait in pawnTraits)
+
+                FavourComp f = SelPawn.TryGetComp<FavourComp>();
+                if (f == null || f.uncorruptable)
                 {
-                    if (trait.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
-                    {
-                        if (trait.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>().purity)
-                        {
-                            ChangeUncorruptable(true);
-                            return false;
-                        }
-                    }
-                }
-                if (SelPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
-                {
-                    ChangeUncorruptable(true);
                     return false;
                 }
-                ChangeUncorruptable(false);
+
                 return true;
             }
         }
 
-        private void ChangeUncorruptable(bool changeTo)
+        private void ChangeUncorruptable()
         {
             FavourComp f = SelPawn.TryGetComp<FavourComp>();
-            if (f != null)
+            if (f == null)
             {
-                f.uncorruptable = changeTo;
+                return;
             }
+
+            if (SelPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
+            {
+                f.uncorruptable = true;
+                return;
+            }
+
+            if (SelPawn.genes != null)
+            {
+                foreach (Gene gene in SelPawn.genes.GenesListForReading)
+                {
+                    if (gene.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
+                    {
+                        if (gene.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>().purity)
+                        {
+                            f.uncorruptable = true;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            foreach (Trait trait in SelPawn.story.traits.allTraits)
+            {
+                if (trait.def.HasModExtension<DefModExtension_TraitAndGeneOpinion>())
+                {
+                    if (trait.def.GetModExtension<DefModExtension_TraitAndGeneOpinion>().purity)
+                    {
+                        f.uncorruptable = true;
+                        return;
+                    }
+                }
+            }
+
         }
 
         public ITab_Pawn_Favour()
@@ -94,13 +108,23 @@ namespace Mutations40k
             foreach (FavourProgress godProgress in SelPawn.GetComp<FavourComp>().favourTracker.AllFavoursSorted())
             {
                 Rect rect = new Rect(0f, num, inRect.width, (inRect.height/5)-disBe);
-                if (!(godProgress.FavourLevel >= GodAcceptance.Seen))
+                if (godProgress.GeneAndTraitInfoGet != null && godProgress.GeneAndTraitInfoGet.wontGiveGift)
                 {
                     GUI.BeginGroup(rect);
                     Text.Anchor = TextAnchor.MiddleLeft;
                     GenUI.SetLabelAlign(TextAnchor.MiddleLeft);
                     Rect rectC2 = new Rect(0f, 0f, inRect.width, rect.height);
-                    Widgets.Label(rectC2, "Unknown".CapitalizeFirst());
+                    Widgets.Label(rectC2, "Forsaken".Translate(ChaosEnumUtils.Convert(godProgress.God)));
+                    GenUI.ResetLabelAlign();
+                    GUI.EndGroup();
+                }
+                else if (godProgress.FavourLevel < GodAcceptance.Seen)
+                {
+                    GUI.BeginGroup(rect);
+                    Text.Anchor = TextAnchor.MiddleLeft;
+                    GenUI.SetLabelAlign(TextAnchor.MiddleLeft);
+                    Rect rectC2 = new Rect(0f, 0f, inRect.width, rect.height);
+                    Widgets.Label(rectC2, "Unknown".Translate(ChaosEnumUtils.Convert(godProgress.God)));
                     GenUI.ResetLabelAlign();
                     GUI.EndGroup();
                 }

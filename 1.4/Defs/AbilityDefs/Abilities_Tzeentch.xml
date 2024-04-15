@@ -5,7 +5,7 @@
   <AbilityDef>
     <defName>BEWH_FlamingArmBlast</defName>
     <label>flaming arm blast</label>
-    <description>...</description>
+    <description>Shoot out warp flame and horribly burn anyone caught in this fire</description>
     <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
     <category>Chaos</category>
     <cooldownTicksRange>100000</cooldownTicksRange>

@@ -29,7 +29,7 @@ namespace Mutations40k
 
 		public FavourTracker favourTracker;
 
-		private int tickInterval = 60000;
+		private int tickInterval = 1;
 
 		private Mutations40kSettings modsettings;
 
@@ -84,6 +84,10 @@ namespace Mutations40k
 			{
 				return;
 			}
+			if (uncorruptable)
+			{
+				return;
+			}
 			TryGiveGift();
 			PassivelyLoseFavor();
 		}
@@ -105,6 +109,10 @@ namespace Mutations40k
             foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
             {
 				favourProgress.Deteriorate();
+				if (favourProgress.GeneAndTraitInfoGet.wontGiveGift && favourProgress.Favour > 0)
+				{
+					favourProgress.Favour = 0;
+				}
             }
         }
 
@@ -123,7 +131,7 @@ namespace Mutations40k
 				InitializeFavourTracker();
             }
             Random rand = new Random();
-            tickInterval = rand.Next(Mutation40kUtils.ModSettings.ticksBetweenGifts.min, Mutation40kUtils.ModSettings.ticksBetweenGifts.max);
+            tickInterval = rand.Next(Mutation40kUtils.ModSettings.ticksBetweenGifts.min, Mutation40kUtils.ModSettings.ticksBetweenGifts.max+1);
             foreach (FavourProgress favourProgress in favourTracker.AllFavoursSorted())
             {
                 favourProgress.TryGiveGift();
@@ -134,7 +142,9 @@ namespace Mutations40k
 		{
 			base.PostExposeData();
 			Scribe_Deep.Look(ref favourTracker, "favourTracker", this);
+            Scribe_References.Look(ref pawn, "pawn");
             Scribe_Values.Look(ref uncorruptable, "uncorruptable", false);
+            Scribe_Values.Look(ref tickInterval, "tickInterval", 30000);
         }
 
 		private void InitializeFavourTracker()

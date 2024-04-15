@@ -20,6 +20,7 @@
                 <givenBy>
                     <li>Tzeentch</li>
                 </givenBy>
+                <isConsideredMutation>true</isConsideredMutation>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>
@@ -64,6 +65,7 @@
                 <givenBy>
                     <li>Tzeentch</li>
                 </givenBy>
+                <isConsideredMutation>true</isConsideredMutation>
             </li>
             <li Class="Core40k.DefModExtension_TraitAndGeneOpinion">
                 <godOpinion>

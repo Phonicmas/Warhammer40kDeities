@@ -12,7 +12,7 @@ namespace Mutations40k
                 int count = 0;
                 foreach (Gene gene in p.genes.GenesListForReading)
                 {
-                    if (gene.def.HasModExtension<DefModExtension_ChaosMutation>())
+                    if (gene.def.HasModExtension<DefModExtension_ChaosMutation>() && gene.def.GetModExtension<DefModExtension_ChaosMutation>().isConsideredMutation)
                     {
                         count += 1;
                     }

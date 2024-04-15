@@ -36,7 +36,7 @@ namespace Mutations40k
 
             listingStandard.Label("ticksBetweenGifts".Translate(settings.opinionGainAndLossOnGift));
             listingStandard.Label(settings.ticksBetweenGifts.min.ToStringTicksToPeriodVerbose(allowHours: false) + " - " + settings.ticksBetweenGifts.max.ToStringTicksToPeriodVerbose(allowHours: false));
-            listingStandard.IntRange(ref settings.ticksBetweenGifts, 60000, 3600000);
+            listingStandard.IntRange(ref settings.ticksBetweenGifts, 2500, 7200000);
 
             listingStandard.CheckboxLabeled("disableRandomMutations".Translate(), ref settings.disableRandomMutations);
 

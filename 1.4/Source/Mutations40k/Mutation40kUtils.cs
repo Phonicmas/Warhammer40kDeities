@@ -168,6 +168,7 @@ namespace Mutations40k
         {
             if (pawn.genes == null || pawn.story == null || pawn.story.traits == null)
             {
+                Log.Message("Tried to modify a pawn whom cannot be modified - Mutations 40k - Show to phonicmas in his discord if it shows");
                 return;
             }
 
@@ -194,7 +195,7 @@ namespace Mutations40k
                             giftToAdd.Add(Genes40kDefOf.BEWH_KhorneMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPKhorneIcon;
-                        pawn.genes.xenotypeName = "Daemon prince of Khorne";
+                        pawn.genes.xenotypeName = "Daemon Prince of Khorne";
                         break;
                     case ChaosGods.Tzeentch:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_TzeentchMark))
@@ -202,7 +203,7 @@ namespace Mutations40k
                             giftToAdd.Add(Genes40kDefOf.BEWH_TzeentchMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPTzeentchIcon;
-                        pawn.genes.xenotypeName = "Daemon prince of Tzeentch";
+                        pawn.genes.xenotypeName = "Daemon Prince of Tzeentch";
                         break;
                     case ChaosGods.Slaanesh:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_SlaaneshMark))
@@ -210,7 +211,7 @@ namespace Mutations40k
                             giftToAdd.Add(Genes40kDefOf.BEWH_SlaaneshMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPSlaaneshIcon;
-                        pawn.genes.xenotypeName = "Daemon prince of Slaanesh";
+                        pawn.genes.xenotypeName = "Daemon Prince of Slaanesh";
                         break;
                     case ChaosGods.Nurgle:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_NurgleMark))
@@ -218,7 +219,7 @@ namespace Mutations40k
                             giftToAdd.Add(Genes40kDefOf.BEWH_NurgleMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPNurgleIcon;
-                        pawn.genes.xenotypeName = "Daemon prince of Nurgle";
+                        pawn.genes.xenotypeName = "Daemon Prince of Nurgle";
                         break;
                     case ChaosGods.Undivided:
                         if (!pawn.genes.HasGene(Genes40kDefOf.BEWH_UndividedMark))
@@ -226,7 +227,7 @@ namespace Mutations40k
                             giftToAdd.Add(Genes40kDefOf.BEWH_UndividedMark);
                         }
                         pawn.genes.iconDef = Genes40kDefOf.BEWH_DPUndividedIcon;
-                        pawn.genes.xenotypeName = "Daemon prince of the Undivided";
+                        pawn.genes.xenotypeName = "Daemon Prince of the Undivided";
                         break;
                     default:
                         Log.Error("Non determined god trying to give gift? - Show this to Phonicmas in his discord if encountered");
@@ -320,7 +321,7 @@ namespace Mutations40k
             return daemonMutationsResult;
         }
 
-        public static int GetOpinionBasedOnTraitsAndGenes(GeneAndTraitInfo geneAndTraitInfo)
+        public static int GetOpinionBasedOnTraitsAndGenes(AdditionalInfoExtension geneAndTraitInfo)
         {
             int opinion = 0;
             opinion += geneAndTraitInfo.opinionTrait * ModSettings.offsetPerHatedOrLovedTrait;

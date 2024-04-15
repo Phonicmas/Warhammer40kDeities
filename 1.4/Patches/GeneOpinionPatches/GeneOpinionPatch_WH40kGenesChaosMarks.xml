@@ -25,6 +25,8 @@
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>
@@ -56,6 +58,8 @@
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>
@@ -87,6 +91,8 @@
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>
@@ -118,6 +124,8 @@
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>
@@ -149,6 +157,8 @@
                         </givenBy>
                         <selectionWeight>0.1</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
                     </li>
                 </value>
             </li>

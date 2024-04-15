@@ -28,7 +28,7 @@ namespace Mutations40k
 
                 foreach (Gene gene in otherPawn.genes.GenesListForReading)
                 {
-                    if (gene.def.HasModExtension<DefModExtension_ChaosMutation>())
+                    if (gene.def.HasModExtension<DefModExtension_ChaosMutation>() && gene.def.GetModExtension<DefModExtension_ChaosMutation>().isConsideredMutation)
                     {
                         if (gene.def.GetModExtension<DefModExtension_ChaosMutation>().givenBy.Contains(specificGod))
                         {

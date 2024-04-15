@@ -13,7 +13,7 @@ namespace Mutations40k
 		{
 		}
 
-        public override void FinalizeInit()
+        /*public override void FinalizeInit()
 		{
 			foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where((ThingDef x) => x.race != null && x.race.Humanlike))
 			{
@@ -40,6 +40,6 @@ namespace Mutations40k
                 }
 				def.ResolveReferences();
 			}
-		}
+		}*/
 	}
 }

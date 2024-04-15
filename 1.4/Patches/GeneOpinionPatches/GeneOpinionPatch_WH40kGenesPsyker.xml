@@ -56,6 +56,7 @@
                         </givenBy>
                         <selectionWeight>0.05</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Acknowledged</requiredAcceptance>
                     </li>
                 </value>
             </li>
@@ -84,6 +85,7 @@
                         </givenBy>
                         <selectionWeight>0.025</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
                     </li>
                 </value>
             </li>
@@ -112,6 +114,7 @@
                         </givenBy>
                         <selectionWeight>0.005</selectionWeight>
                         <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Blessed</requiredAcceptance>
                     </li>
                 </value>
             </li>

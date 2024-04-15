@@ -5,7 +5,7 @@
   <AbilityDef>
     <defName>BEWH_UnfathomableGaze</defName>
     <label>unfathomable gaze</label>
-    <description>...</description>
+    <description>Mesmerize anyone caught looking at you, stunning them in place for a moment.</description>
     <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
     <category>Chaos</category>
     <cooldownTicksRange>100000</cooldownTicksRange>
