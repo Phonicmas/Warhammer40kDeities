@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!-- Tribe Savage Impid - Likes Chaos -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/FactionDef[defName = "TribeSavageImpid"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_FactionDeity">
+                        <followsDeities>
+                            <li>BEWH_DeityKhorne</li>
+                            <li>BEWH_DeityUndivided</li>
+                        </followsDeities>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

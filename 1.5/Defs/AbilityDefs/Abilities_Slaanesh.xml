@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Unfathomable Gaze -->
+  <AbilityDef>
+    <defName>BEWH_UnfathomableGaze</defName>
+    <label>unfathomable gaze</label>
+    <description>Mesmerize anyone caught looking at you, stunning them in place for a moment.</description>
+    <iconPath>UI/Abilities/FlamingArmBlast</iconPath>
+    <category>Chaos</category>
+    <cooldownTicksRange>100000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>9.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Deities40k.CompProperties_UnfathomableGaze">
+        <range>9.9</range>
+        <lineWidthEnd>14</lineWidthEnd>
+        <stunTicks>1000</stunTicks>
+        <effecterDef>BEWH_UnfathomableGaze</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

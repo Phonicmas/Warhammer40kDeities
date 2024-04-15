@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeityKhorne</defName>
+    <label>Khorne</label>
+    <description>Khorne.</description>
+    <genesGiftable>
+      <li>BEWH_KhorneBronzeSkin</li>
+      <li>BEWH_KhorneBoilingBlood</li>
+      <li>BEWH_KhorneMonstrousHands</li>
+      <li>BEWH_KhornateHunger</li>
+      <li>BEWH_MutationAnimalisticLegs</li>
+      <li>BEWH_MutationExtraLeg</li>
+      <li>BEWH_MutationExtraArm</li>
+      <!-- GENES 40K -->
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_DaemonMutation</li>
+      <li>BEWH_KhorneColor</li>
+      <!-- BIOTECH GENES -->
+      <li>Superclotting</li>
+      <li>KillThirst</li>
+      <li>Unstoppable</li>
+      <li>PsychicAbility_Dull</li>
+      <li>Pain_Reduced</li>
+      <li>Pain_Extra</li>
+      <li>Aggression_Aggressive</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>MeleeDamage_Strong</li>
+    </genesGiftable>
+    <traitsGiftable>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>Brawler</li>
+      <li>Tough</li>
+    </traitsGiftable>
+    <genesForcesBeneficial>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_DaemonMutation</li>
+    </genesForcesBeneficial>
+    <traitsForcesBeneficial>
+      <li>BEWH_BlessingOfKhorne</li>
+    </traitsForcesBeneficial>
+    <genesForsaken>
+      <!-- GENES 40K -->
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+      <li>BEWH_BetaPsyker</li>
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_TzeentchMark</li>
+      <li>BEWH_SlaaneshMark</li>
+      <!-- BIOTECH GENES -->
+      <li>ViolenceDisabled</li>
+      <li>PsychicAbility_Deaf</li>
+    </genesForsaken>
+    <traitsForsaken>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>BEWH_BlessingOfSlaanesh</li>
+      <li>BEWH_BlessingOfTzeentch</li>
+    </traitsForsaken>
+    <traitsDislike>
+      <li>Delicate</li>
+      <li>Kind</li>
+      <li>Wimp</li>
+    </traitsDislike>
+    <genesDislike>
+      <li>PsychicAbility_Enhanced</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>Immunity_Weak</li>
+      <li>Aggression_DeadCalm</li>
+      <li>MeleeDamage_Weak</li>
+    </genesDislike>
+    <genesLike>
+      <li>Ageless</li>
+    </genesLike>
+    <traitsLike>
+      <li>Bloodlust</li>
+      <li>Psychopath</li>
+    </traitsLike>
+  </Deities40k.DeityDef>
+
+</Defs>

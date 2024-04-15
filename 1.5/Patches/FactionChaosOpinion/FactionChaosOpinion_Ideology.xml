@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Cannibal Tribe -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "TribeCannibal"]</xpath>
+                    <value>
+                        <li Class="Deities40k.DefModExtension_FactionDeity">
+                            <followsDeities>
+                                <li>BEWH_DeitySlaanesh</li>
+                                <li>BEWH_DeityUndivided</li>
+                            </followsDeities>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- Nudist Tribe -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "NudistTribe"]</xpath>
+                    <value>
+                        <li Class="Deities40k.DefModExtension_FactionDeity">
+                            <followsDeities>
+                                <li>BEWH_DeitySlaanesh</li>
+                                <li>BEWH_DeityUndivided</li>
+                            </followsDeities>
+                        </li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

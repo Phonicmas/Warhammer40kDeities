@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeityUndivided</defName>
+    <label>Chaos Undivided</label>
+    <description>Chaos Undivided.</description>
+    <genesGiftable>
+      <li>BEWH_MutationAdditionalEye</li>
+      <li>BEWH_MutationAnimalisticLegs</li>
+      <li>BEWH_MutationPrehensileTail</li>
+      <li>BEWH_MutationExtraLeg</li>
+      <li>BEWH_MutationExtraArm</li>
+      <li>BEWH_MutationTentacles</li>
+      <li>BEWH_MutationRottingFlesh</li>
+      <!-- GENES 40K -->
+      <li>BEWH_UndividedMark</li>
+      <li>BEWH_DaemonMutation</li>
+      <li>BEWH_UndividedColor</li>
+      <!-- BIOTECH GENES -->
+      <li>Superclotting</li>
+      <li>KillThirst</li>
+      <li>Instability_Mild</li>
+      <li>Instability_Major</li>
+      <li>Unstoppable</li>
+      <li>PsychicAbility_Dull</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>Aggression_Aggressive</li>
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+      <li>BEWH_BetaPsyker</li>
+    </genesGiftable>
+    <traitsGiftable>
+      <li>BEWH_Everchosen</li>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>BEWH_BlessingOfSlaanesh</li>
+      <li>BEWH_BlessingOfTzeentch</li>
+      <li>Nimble</li>
+      <li>FastLearner</li>
+    </traitsGiftable>
+    <genesForcesBeneficial>
+      <li>BEWH_UndividedMark</li>
+      <li>BEWH_DaemonMutation</li>
+    </genesForcesBeneficial>
+    <traitsForcesBeneficial>
+      <li>BEWH_Everchosen</li>
+    </traitsForcesBeneficial>
+    <genesForsaken>
+      <!-- GENES 40K -->
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_SlaaneshMark</li>
+      <li>BEWH_KhorneMark</li>
+      <!-- BIOTECH GENES -->
+      <li>ViolenceDisabled</li>
+      <li>PsychicAbility_Deaf</li>
+    </genesForsaken>
+    <genesLike>
+      <li>Ageless</li>
+    </genesLike>
+    <traitsLike>
+      <li>Psychopath</li>
+      <li>Abrasive</li>
+    </traitsLike>
+  </Deities40k.DeityDef>
+
+</Defs>

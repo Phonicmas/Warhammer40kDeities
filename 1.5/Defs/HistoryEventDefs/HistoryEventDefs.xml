@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HistoryEventDef>
+        <defName>BEWH_FactionDeityMatch</defName>
+        <label>gift from shared deity</label>
+    </HistoryEventDef>
+
+</Defs>

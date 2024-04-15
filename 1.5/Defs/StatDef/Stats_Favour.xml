@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatCategoryDef>
+    <defName>BEWH_Favour</defName>
+    <label>favour</label>
+    <displayOrder>400</displayOrder>
+  </StatCategoryDef>
+
+  <StatDef>
+    <defName>BEWH_FavourGainFactor</defName>
+    <label>favour gain factor</label>
+    <description>The factor of gained favour.</description>
+    <category>BEWH_Favour</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>FloatTwoOrThree</toStringStyle>
+    <formatString>{0}</formatString>
+    <displayPriorityInCategory>1</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>BEWH_FavourLossFactor</defName>
+    <label>favour loss factor</label>
+    <description>The factor of loss favour.</description>
+    <category>BEWH_Favour</category>
+    <defaultBaseValue>2</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>FloatTwoOrThree</toStringStyle>
+    <formatString>{0}</formatString>
+    <displayPriorityInCategory>1</displayPriorityInCategory>
+  </StatDef>
+
+</Defs>

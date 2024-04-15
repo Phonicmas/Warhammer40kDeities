@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Warhammer 40.000 - Factions</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Chaos -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ChaosFactionHidden"]</xpath>
+                    <value>
+                        <li Class="Deities40k.DefModExtension_FactionDeity">
+                            <followsDeities>
+                                <li>BEWH_DeityKhorne</li>
+                                <li>BEWH_DeityNurgle</li>
+                                <li>BEWH_DeitySlaanesh</li>
+                                <li>BEWH_DeityTzeentch</li>
+                                <li>BEWH_DeityUndivided</li>
+                            </followsDeities>
+                        </li>
+                    </value>
+                </li>
+
+                <!-- Imperium -->
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/FactionDef[defName = "BEWH_ImperiumFaction"]</xpath>
+                    <value>
+                        <li Class="Deities40k.DefModExtension_FactionDeity">
+                            <followsDeities>
+                                <li>BEWH_ImperiumFaction</li>
+                            </followsDeities>
+                        </li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

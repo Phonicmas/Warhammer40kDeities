@@ -5,7 +5,11 @@
 
   <baseChanceForGiftOffer>Added chance for pawn being given gift when pawn would recieve a gift: {0}</baseChanceForGiftOffer>
   <maxGiftsWhenGiven>Max amount of gift that can be given at once when pawns receives gift from gods, increasing this will give a chance to receive more gifts up to the set amount. Currently: {0}</maxGiftsWhenGiven>
-  <opinionGainAndLossOnGift>Goodwill gain of chaos factions upon accepting chaos mutation (Set to 0 to disable opinion loss and gain): {0}</opinionGainAndLossOnGift>
+  <disableDeities>Disables the deity system, this means that you have to find or add the added content yourself.</disableDeities>
+  <ticksBetweenGifts>Time range between attempted gift giving</ticksBetweenGifts>
+  <mentalBreakMultiplier>Multiplier for favour gained when pawn has a mental breakdown</mentalBreakMultiplier>
+  <opinionGainOnGift>Opinion gained with faction upon getting gift from gods which they follow.</opinionGainOnGift>
+
   <OkChaos>Ok.</OkChaos>
 
   <ChaosAttraction>{0}'s mental breakdown have attracted {1} attention.
@@ -42,10 +46,6 @@
 
   <GodFavour>God Favour</GodFavour>
 
-  <FavourFix>Fixes pawns not having a favour tab.</FavourFix>
-
-  <disableRandomMutations>Disables the random mutation system, this means that you have to find or add the mutations yourself.</disableRandomMutations>
-
-  <ticksBetweenGifts>Time range between attempted gift giving</ticksBetweenGifts>
+  <FavourLevel>Current Favour:</FavourLevel>
 
 </LanguageData>

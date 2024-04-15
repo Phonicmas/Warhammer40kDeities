@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Warhammer 40.000 - Mutations</name>
+	<name>Warhammer 40.000 - Deities</name>
 	<author>Phonicmas</author>
 	<supportedVersions>
-		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Phonicmas.40kMutations</packageId>
+	<packageId>Phonicmas.40kDeities</packageId>
 	<description>
-		Warhammer 40k - Mutations module.
+		Warhammer 40k - Deities module.
 	</description>
 	<modDependencies>
 		<li>

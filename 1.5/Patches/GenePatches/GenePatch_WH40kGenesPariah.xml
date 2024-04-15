@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== SIGMA PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_SigmaPariah"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.3</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== UPSILON PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UpsilonPariah"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.2</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== OMEGA PARIAH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_OmegaPariah"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+
+        </operations>
+    </Operation>
+
+</Patch>

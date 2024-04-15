@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== BLESSING OF NURGLE =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfNurgle</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Plants</li>
+            <li>Cooking</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Nurgle</label>
+                <description>{PAWN_nameDef} is blessed by Nurgle.</description>
+                <statOffsets>
+                    <StaggerDurationFactor>-0.1</StaggerDurationFactor>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+                <skillGains>
+                    <li>
+                        <key>Plants</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Cooking</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

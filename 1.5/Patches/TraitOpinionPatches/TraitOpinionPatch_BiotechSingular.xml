@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== DELICATE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Delicate"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

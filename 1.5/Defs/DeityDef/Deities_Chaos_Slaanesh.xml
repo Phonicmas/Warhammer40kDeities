@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeitySlaanesh</defName>
+    <label>Slaanesh</label>
+    <description>Slaanesh.</description>
+    <genesGiftable>
+      <li>BEWH_SlaaneshUnfathomableGaze</li>
+      <li>BEWH_SlaaneshAlluringPresence</li>
+      <li>BEWH_SlaaneshJealousVisage</li>
+      <li>BEWH_SlaaneshDeadenedSenses</li>
+      <li>BEWH_MutationPrehensileTail</li>
+      <li>BEWH_MutationExtraLeg</li>
+      <li>BEWH_MutationExtraArm</li>
+      <!-- GENES 40K -->
+      <li>BEWH_SlaaneshMark</li>
+      <li>BEWH_DaemonMutation</li>
+      <li>BEWH_SlaaneshColor</li>
+      <!-- BIOTECH GENES -->
+      <li>Fertile</li>
+      <li>Superclotting</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>MoveSpeed_Quick</li>
+      <li>MoveSpeed_VeryQuick</li>
+      <li>Beauty_Pretty</li>
+      <li>Beauty_Beautiful</li>
+      <li>Mood_Depressive</li>
+      <li>Mood_Pessimist</li>
+      <li>Mood_Optimist</li>
+      <li>Mood_Sanguine</li>
+      <li>Pain_Extra</li>
+      <li>Libido_High</li>
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+    </genesGiftable>
+    <traitsGiftable>
+      <li>BEWH_BlessingOfSlaanesh</li>
+      <li>Bisexual</li>
+      <li>Nimble</li>
+    </traitsGiftable>
+    <genesForcesBeneficial>
+      <li>BEWH_SlaaneshMark</li>
+      <li>BEWH_DaemonMutation</li>
+    </genesForcesBeneficial>
+    <traitsForcesBeneficial>
+      <li>BEWH_BlessingOfSlaanesh</li>
+    </traitsForcesBeneficial>
+    <genesForsaken>
+      <!-- GENES 40K -->
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_TzeentchMark</li>
+      <!-- BIOTECH GENES -->
+      <li>PsychicAbility_Deaf</li>
+    </genesForsaken>
+    <traitsForsaken>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>BEWH_BlessingOfTzeentch</li>
+    </traitsForsaken>
+    <genesDislike>
+      <li>MoveSpeed_Slow</li>
+      <li>Beauty_VeryUgly</li>
+      <li>Beauty_Ugly</li>
+      <li>Pain_Reduced</li>
+      <li>Libido_Low</li>
+    </genesDislike>
+    <traitsDislike>
+      <li>Asexual</li>
+    </traitsDislike>
+    <genesLike>
+      <li>Ageless</li>
+    </genesLike>
+    <traitsLike>
+      <li>Jealous</li>
+      <li>Nudist</li>
+      <li>Greedy</li>
+      <li>Masochist</li>
+      <li>Cannibal</li>
+      <li>Psychopath</li>
+    </traitsLike>
+  </Deities40k.DeityDef>
+
+</Defs>

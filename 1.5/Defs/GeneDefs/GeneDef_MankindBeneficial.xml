@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Living Saint -->
+    <GeneDef>
+        <defName>BEWH_MankindLivingSaint</defName>
+        <label>Living Saint</label>
+        <description>A Living Saint is an extraordinarily devout servant of the Emperor of Mankind, who displays seemingly miraculous, supernatural abilities derived from potent faith in the God-Emperor during his or her lifetime.</description>
+        <iconPath>UI/Icons/Genes/LivingSaint</iconPath>
+        <displayCategory>BEWHMankindsFinest</displayCategory>
+        <marketValueFactor>10</marketValueFactor>
+        <biostatCpx>20</biostatCpx>
+        <biostatMet>-4</biostatMet>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <displayOrderInCategory>500</displayOrderInCategory>
+        <statOffsets>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <MeleeDodgeChance>4</MeleeDodgeChance>
+            <MeleeHitChance>4</MeleeHitChance>
+            <MentalBreakThreshold>0.2</MentalBreakThreshold>
+            <ToxicEnvironmentResistance>3</ToxicEnvironmentResistance>
+            <ToxicResistance>3</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.5</IncomingDamageFactor>
+            <MoveSpeed>1.2</MoveSpeed>
+            <MeleeDamageFactor>1.75</MeleeDamageFactor>
+            <RestFallRateFactor>0.4</RestFallRateFactor>
+            <ImmunityGainSpeed>6</ImmunityGainSpeed>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.5</postFactor>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.8</postFactor>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <requiredAcceptance>Blessed</requiredAcceptance>
+                <selectionWeight>0.01</selectionWeight>
+                <removesDetrimentalGifts>True</removesDetrimentalGifts>
+                <newXenoName>Living Saint</newXenoName>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+</Defs>

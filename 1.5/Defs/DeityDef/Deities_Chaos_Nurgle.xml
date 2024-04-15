@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeityNurgle</defName>
+    <label>Nurgle</label>
+    <description>Nurgle.</description>
+    <genesGiftable>
+      <li>BEWH_NurgleBitingTongue</li>
+      <li>BEWH_NurgleBileSpew</li>
+      <li>BEWH_NurgleGrosslyFat</li>
+      <li>BEWH_NurgleFoulStench</li>
+      <li>BEWH_MutationExtraLeg</li>
+      <li>BEWH_MutationExtraArm</li>
+      <li>BEWH_MutationRottingFlesh</li>
+      <!-- GENES 40K -->
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_DaemonMutation</li>
+      <li>BEWH_NurgleColor</li>
+      <!-- BIOTECH GENES -->
+      <li>Immunity_Weak</li>
+      <li>Immunity_Strong</li>
+      <li>Immunity_SuperStrong</li>
+      <li>Superclotting</li>
+      <li>StrongStomach</li>
+      <li>Unstoppable</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>Beauty_VeryUgly</li>
+      <li>Beauty_Ugly</li>
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+    </genesGiftable>
+    <traitsGiftable>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>Tough</li>
+    </traitsGiftable>
+    <genesForcesBeneficial>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_DaemonMutation</li>
+    </genesForcesBeneficial>
+    <traitsForcesBeneficial>
+      <li>BEWH_BlessingOfNurgle</li>
+    </traitsForcesBeneficial>
+    <genesForsaken>
+      <!-- GENES 40K -->
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_TzeentchMark</li>
+      <li>BEWH_SlaaneshMark</li>
+      <!-- BIOTECH GENES -->
+      <li>PsychicAbility_Deaf</li>
+    </genesForsaken>
+    <traitsForsaken>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>BEWH_BlessingOfSlaanesh</li>
+      <li>BEWH_BlessingOfTzeentch</li>
+    </traitsForsaken>
+    <genesDislike>
+      <li>Mood_Depressive</li>
+      <li>Mood_Pessimist</li>
+      <li>Beauty_Pretty</li>
+      <li>Beauty_Beautiful</li>
+    </genesDislike>
+    <genesLike>
+      <li>Ageless</li>
+    </genesLike>
+    <traitsLike>
+      <li>Psychopath</li>
+      <li>Gourmand</li>
+    </traitsLike>
+  </Deities40k.DeityDef>
+
+</Defs>

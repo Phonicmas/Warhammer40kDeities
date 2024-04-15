@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--===== Extra Leg =====-->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_MutationExtraLeg</defName>
+        <label>mutation: Extra leg</label>
+        <description>The pawn has mutated an extra leg. It always seems to be a hindrance.</description>
+        <iconPath>UI/Icons/Genes/ExtraLeg</iconPath>
+        <displayOrderInCategory>140</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>0.8</MoveSpeed>
+        </statFactors>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!--===== Extra Arm =====-->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_MutationExtraArm</defName>
+        <label>mutation: Extra arm</label>
+        <description>The pawn has mutated an extra Arm. It always seems to be a hindrance.</description>
+        <iconPath>UI/Icons/Genes/ExtraArm</iconPath>
+        <displayOrderInCategory>140</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>0.8</postFactor>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+    <!--===== Tentacle on Whole Body =====-->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_MutationTentacles</defName>
+        <label>mutation: Tentacles</label>
+        <description>The pawn has mutated useless tentacles on their body, which always get in the way.</description>
+        <iconPath>UI/Icons/Genes/TentaclesWholeBody</iconPath>
+        <displayOrderInCategory>140</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.3</offset>
+            </li>
+        </capMods>
+        <statOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </statOffsets>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Tzeentch</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tentacles/TentaclesWholeBody</graphicPath>
+            <drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+            <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+            <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+            <drawScale>1.7  </drawScale>
+            <drawLoc>Tailbone</drawLoc>
+            <colorType>Skin</colorType>
+        </graphicData>
+    </GeneDef>
+
+    <!--===== Rotting Flesh =====-->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_MutationRottingFlesh</defName>
+        <label>mutation: Rotting flesh</label>
+        <description>The pawn's body has mutated, every now and then, rancid meat sloughs from their body, exposing newly rotting areas beneath.</description>
+        <iconPath>UI/Icons/Genes/RottingBody</iconPath>
+        <displayOrderInCategory>140</displayOrderInCategory>
+        <statFactors>
+            <IncomingDamageFactor>1.9</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
+            <ArmorRating_Sharp>-0.3</ArmorRating_Sharp>
+            <ArmorRating_Heat>-0.3</ArmorRating_Heat>
+            <PawnBeauty>-2</PawnBeauty>
+            <SocialImpact>-0.5</SocialImpact>
+            <NegotiationAbility>-0.5</NegotiationAbility>
+        </statOffsets>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Undivided-Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+        </modExtensions>
+        <!--<graphicData>
+            <layer>PostTattoo</layer>
+            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/KhorneMark/KhorneMark</graphicPath>
+            <drawOffsetSouth>(0, -0.02, -0.45)</drawOffsetSouth>
+        </graphicData>-->
+    </GeneDef>
+
+</Defs>

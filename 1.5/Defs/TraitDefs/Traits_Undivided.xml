@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== EVERCHOSEN =====-->
+    <TraitDef>
+        <defName>BEWH_Everchosen</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>the vessel</label>
+                <description>{PAWN_nameDef} is the Everchosen of the gods, blessed by each of the four gods to carry out their will and invade the mortal world on behalf of chaos.</description>
+                <statOffsets>
+                    <GlobalLearningFactor>0.666</GlobalLearningFactor>
+                    <ArmorRating_Blunt>0.666</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.666</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.666</ArmorRating_Heat>
+                    <IncomingDamageFactor>-0.666</IncomingDamageFactor>
+                </statOffsets>
+                <statFactors>
+                    <MentalBreakThreshold>0</MentalBreakThreshold>
+                </statFactors>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <removesDetrimentalGifts>True</removesDetrimentalGifts>
+                <selectionWeight>0.01</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

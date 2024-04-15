@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Flaming Arm Attack -->
+    <HediffDef>
+        <defName>BEWH_TzeentchFlamingArmAttack</defName>
+        <label>flaming arm</label>
+        <description>The arm is replaced with the flaming arm of a Flamer of Tzeentch, and is able to project blasts of flame and burn foes nearby by touch.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.28, 0.32, 0.76)</defaultLabelColor>        <!-- Tzeentch Color -->
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>flaming arm</label>
+                        <capacities>
+                            <li>BEWH_FlamingArmBurn</li>
+                        </capacities>
+                        <power>8</power>
+                        <cooldownTime>1.2</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+
+    <!-- Everchanging Deficiancies -->
+    <HediffDef>
+        <defName>BEWH_TzeentchEverchangingDeficiancies</defName>
+        <label>Everchanging deficiencies</label>
+        <description>This pawns body constantly undergo small mutations.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <maxSeverity>10.0</maxSeverity>
+        <isBad>false</isBad>
+        <defaultLabelColor>(0.28, 0.32, 0.76)</defaultLabelColor>
+        <comps>
+            <li Class="Deities40k.HediffCompProperties_EverchangingDeficiancies" />
+        </comps>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>7</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>8</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>9</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Eating</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

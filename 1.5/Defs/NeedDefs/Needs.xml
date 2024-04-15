@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <NeedDef>
+    <defName>BEWH_KhornateHunger</defName>
+    <needClass>Deities40k.Need_KhornateHunger</needClass>
+    <label>khornate satiety</label>
+    <description>Khornate satiety fulfills a built-in desire to do violence at close range to human victims. If it isn't satiated, the person will go berserk.</description>
+    <baseLevel>0</baseLevel>
+    <minIntelligence>ToolUser</minIntelligence>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+    <onlyIfCausedByGene>true</onlyIfCausedByGene>
+  </NeedDef>
+
+</Defs>

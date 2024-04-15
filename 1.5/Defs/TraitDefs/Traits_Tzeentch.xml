@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== BLESSING OF TZEENTCH =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfTzeentch</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Intellectual</li>
+            <li>Crafting</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Tzeentch</label>
+                <description>{PAWN_nameDef} is blessed by Tzeentch.</description>
+                <statOffsets>
+                    <PsychicSensitivity>0.3</PsychicSensitivity>
+                    <MeditationFocusGain>0.15</MeditationFocusGain>
+                    <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Intellectual</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Crafting</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

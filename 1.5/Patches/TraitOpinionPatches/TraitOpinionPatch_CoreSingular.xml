@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== NUDIST =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Nudist"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== BLOODLUST =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Bloodlust"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== KIND =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Kind"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== PSYCHOPATH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Psychopath"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== CANNIBAL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Cannibal"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== ABRASIVE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Abrasive"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TOO SMART =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "TooSmart"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== Brawler =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Brawler"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <requiredWorkTags>
+                            <li>Violent</li>
+                        </requiredWorkTags>
+                        <selectionWeight>0.3</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== MASOCHIST =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Masochist"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== GREEDY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Greedy"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== JEALOUS =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Jealous"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== BISEXUAL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Bisexual"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== ASEXUAL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Asexual"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== WIMP =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Wimp"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== NIMBLE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Nimble"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== FAST LEARNER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "FastLearner"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SLOW LEARNER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "SlowLearner"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TOUGH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Tough"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== GOURMAND =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/TraitDef[defName = "Gourmand"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

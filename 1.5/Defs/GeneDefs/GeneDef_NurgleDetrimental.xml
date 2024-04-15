@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Grossly Fat -->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_NurgleGrosslyFat</defName>
+        <label>mutation: Grossly fat</label>
+        <description>The pawn's body have mutated lumps of excess fat all over the body, severely hindering their movement.</description>
+        <iconPath>UI/Icons/Genes/GrosslyFat</iconPath>
+        <displayOrderInCategory>340</displayOrderInCategory>
+        <statFactors>
+            <MoveSpeed>0.5</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+            <PawnBeauty>-2</PawnBeauty>
+        </statOffsets>
+        <bodyType>Fat</bodyType>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Foul Stench -->
+    <GeneDef ParentName="BEWH_DetrimentalMutationBase">
+        <defName>BEWH_NurgleFoulStench</defName>
+        <label>mutation: Foul stench</label>
+        <description>The pawn's body has mutated to emit a foul stench. It is so foul that other nearby pawns may vomit if they get too close.</description>
+        <iconPath>UI/Icons/Genes/FoulStench</iconPath>
+        <displayOrderInCategory>340</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Other pawns think less of carriers of this gene.</li>
+        </customEffectDescriptions>
+        <geneClass>Deities40k.Gene_FoulStench</geneClass>
+        <aptitudes>
+            <Social>-5</Social>
+        </aptitudes>
+        <modExtensions>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+                <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Nurgle</backgroundPathXenogenes>
+            </li>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isConsideredMutation>true</isConsideredMutation>
+            </li>
+            <li Class="Deities40k.DefModExtension_SituationalThought" />
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

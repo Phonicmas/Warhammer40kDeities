@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== DAEMON MUTATION =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonMutation"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.01</selectionWeight>
+                        <removesDetrimentalGifts>True</removesDetrimentalGifts>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Blessed</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== UNDIVIDED COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UndividedColor"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== KHORNE COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_KhorneColor"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== NURGLE COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_NurgleColor"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TZEENTCH COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_TzeencthColor"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SLAANESH COLOR =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshColor"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== BLESSING OF SLAANESH =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfSlaanesh</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Social</li>
+            <li>Artistic</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Slaanesh</label>
+                <description>{PAWN_nameDef} is blessed by Slaanesh.</description>
+                <statOffsets>
+                    <MeleeDodgeChance>5</MeleeDodgeChance>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                    <MoveSpeed>0.2</MoveSpeed>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Social</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Artistic</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

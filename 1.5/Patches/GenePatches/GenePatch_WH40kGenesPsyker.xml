@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== IOTA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_IotaPsyker"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== EPSILON PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_Psyker"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.05</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Acknowledged</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== DELTA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DeltaPsyker"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.025</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== BETA PSYKER =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_BetaPsyker"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.005</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Blessed</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

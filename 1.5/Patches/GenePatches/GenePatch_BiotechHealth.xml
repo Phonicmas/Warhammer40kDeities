@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== IMMUNITY =====-->
+            <!--===== WEAK IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_Weak"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== STRONG IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_Strong"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SUPER IMMUNITY =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Immunity_SuperStrong"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <requiredAcceptance>Acknowledged</requiredAcceptance>
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== REPRODUCTION =====-->
+            <!--===== STERILE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Sterile"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                    </li>
+                </value>
+            </li>
+
+            <!--===== FERTILE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Fertile"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                    </li>
+                </value>
+            </li>
+
+
+            <!--===== SUPERCLOTTING =====-->
+            <!--===== SUPERCLOTTING =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "Superclotting"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <isBeneficial>True</isBeneficial>
+                        <selectionWeight>0.05</selectionWeight>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

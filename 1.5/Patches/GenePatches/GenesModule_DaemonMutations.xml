@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== HIDE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonHide"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DaemonMutation">
+                        <daemonPart>Hide</daemonPart>
+                        <godGiver>
+                            <li>BEWH_DeityUndivided</li>
+                            <li>BEWH_DeityKhorne</li>
+                            <li>BEWH_DeityTzeentch</li>
+                            <li>BEWH_DeityNurgle</li>
+                            <li>BEWH_DeitySlaanesh</li>
+                        </godGiver>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== WINGS =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonWings"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DaemonMutation">
+                        <daemonPart>Wings</daemonPart>
+                        <godGiver>
+                            <li>BEWH_DeityUndivided</li>
+                            <li>BEWH_DeityKhorne</li>
+                            <li>BEWH_DeityTzeentch</li>
+                            <li>BEWH_DeityNurgle</li>
+                            <li>BEWH_DeitySlaanesh</li>
+                        </godGiver>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TAIL =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonTail"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DaemonMutation">
+                        <daemonPart>Tail</daemonPart>
+                        <godGiver>
+                            <li>BEWH_DeityUndivided</li>
+                            <li>BEWH_DeityKhorne</li>
+                            <li>BEWH_DeityTzeentch</li>
+                            <li>BEWH_DeityNurgle</li>
+                            <li>BEWH_DeitySlaanesh</li>
+                        </godGiver>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== HORNS =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_DaemonHorns"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DaemonMutation">
+                        <daemonPart>Horns</daemonPart>
+                        <godGiver>
+                            <li>BEWH_DeityUndivided</li>
+                            <li>BEWH_DeityKhorne</li>
+                            <li>BEWH_DeityTzeentch</li>
+                            <li>BEWH_DeityNurgle</li>
+                            <li>BEWH_DeitySlaanesh</li>
+                        </godGiver>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

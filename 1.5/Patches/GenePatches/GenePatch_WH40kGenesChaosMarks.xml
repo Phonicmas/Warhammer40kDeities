@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <!--===== UNDIVIDED =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_UndividedMark"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== KHORNE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_KhorneMark"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== NURGLE =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_NurgleMark"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== TZEENTCH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_TzeentchMark"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+            <!--===== SLAANESH =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshMark"]</xpath>
+                <value>
+                    <li Class="Deities40k.DefModExtension_DeityGift">
+                        <selectionWeight>0.1</selectionWeight>
+                        <isBeneficial>True</isBeneficial>
+                        <requiredAcceptance>Favoured</requiredAcceptance>
+                        <isConsideredMutation>true</isConsideredMutation>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+</Patch>

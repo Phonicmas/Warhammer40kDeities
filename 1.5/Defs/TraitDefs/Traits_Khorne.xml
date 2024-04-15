@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--===== BLESSING OF KHORNE =====-->
+    <TraitDef>
+        <defName>BEWH_BlessingOfKhorne</defName>
+        <commonality>0</commonality>
+        <forcedPassions>
+            <li>Shooting</li>
+            <li>Melee</li>
+        </forcedPassions>
+        <degreeDatas>
+            <li>
+                <label>blessing of Khorne</label>
+                <description>{PAWN_nameDef} is blessed by Khorne.</description>
+                <statOffsets>
+                    <MeleeHitChance>0.15</MeleeHitChance>
+                    <MeleeWeapon_CooldownMultiplier>-0.05</MeleeWeapon_CooldownMultiplier>
+                    <RangedCooldownFactor>-0.05</RangedCooldownFactor>
+                    <AimingDelayFactor>-0.05</AimingDelayFactor>
+                    <MeleeDamageFactor>0.05</MeleeDamageFactor>
+                </statOffsets>
+                <skillGains>
+                    <li>
+                        <key>Shooting</key>
+                        <value>2</value>
+                    </li>
+                    <li>
+                        <key>Melee</key>
+                        <value>2</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+        <modExtensions>
+            <li Class="Deities40k.DefModExtension_DeityGift">
+                <isBeneficial>True</isBeneficial>
+                <selectionWeight>0.3</selectionWeight>
+            </li>
+        </modExtensions>
+    </TraitDef>
+
+</Defs>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeityTzeentch</defName>
+    <label>Tzeentch</label>
+    <description>Tzeentch.</description>
+    <genesGiftable>
+      <li>BEWH_TzeentchFlamingArm</li>
+      <li>BEWH_TzeentchMassiveIntellect</li>
+      <li>BEWH_TzeentchEverchangingDeficiencies</li>
+      <li>BEWH_TzeentchNeuronOverload</li>
+      <li>BEWH_MutationAdditionalEye</li>
+      <li>BEWH_MutationExtraLeg</li>
+      <li>BEWH_MutationExtraArm</li>
+      <li>BEWH_MutationTentacles</li>
+      <!-- GENES 40K -->
+      <li>BEWH_TzeentchMark</li>
+      <li>BEWH_DaemonMutation</li>
+      <li>BEWH_TzeencthColor</li>
+      <!-- BIOTECH GENES -->
+      <li>Superclotting</li>
+      <li>Instability_Mild</li>
+      <li>Instability_Major</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>Learning_Fast</li>
+      <li>Learning_Slow</li>
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+      <li>BEWH_BetaPsyker</li>
+    </genesGiftable>
+    <traitsGiftable>
+      <li>BEWH_BlessingOfTzeentch</li>
+      <li>FastLearner</li>
+    </traitsGiftable>
+    <genesForcesBeneficial>
+      <li>BEWH_TzeentchMark</li>
+      <li>BEWH_DaemonMutation</li>
+    </genesForcesBeneficial>
+    <traitsForcesBeneficial>
+      <li>BEWH_BlessingOfTzeentch</li>
+    </traitsForcesBeneficial>
+    <genesForsaken>
+      <!-- GENES 40K -->
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_SlaaneshMark</li>
+      <!-- BIOTECH GENES -->
+      <li>PsychicAbility_Deaf</li>
+    </genesForsaken>
+    <traitsForsaken>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>BEWH_BlessingOfSlaanesh</li>
+    </traitsForsaken>
+    <traitsDislike>
+      <li>SlowLearner</li>
+    </traitsDislike>
+    <genesLike>
+      <li>Ageless</li>
+    </genesLike>
+    <traitsLike>
+      <li>Psychopath</li>
+      <li>TooSmart</li>
+    </traitsLike>
+  </Deities40k.DeityDef>
+
+</Defs>

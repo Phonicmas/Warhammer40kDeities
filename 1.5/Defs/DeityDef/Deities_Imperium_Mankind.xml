@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Deities40k.DeityDef>
+    <defName>BEWH_DeityEmperorOfMankind</defName>
+    <label>Emperor of Mankind</label>
+    <description>Emperor of Mankind.</description>
+    <genesGiftable>
+      <li>BEWH_MankindLivingSaint</li>
+      <!-- GENES 40K -->
+      <li>BEWH_SigmaPariah</li>
+      <li>BEWH_UpsilonPariah</li>
+      <li>BEWH_OmegaPariah</li>
+
+      <li>BEWH_IotaPsyker</li>
+      <li>BEWH_Psyker</li>
+      <li>BEWH_DeltaPsyker</li>
+      <li>BEWH_BetaPsyker</li>
+      <!-- BIOTECH GENES -->
+      <li>Superclotting</li>
+      <li>PsychicAbility_Deaf</li>
+    </genesGiftable>
+    <hediffGiftable>
+      <li>BEWH_MankindBlessingWorkPower</li>
+    </hediffGiftable>
+    <genesForsaken>
+      <li>BEWH_UndividedMark</li>
+      <li>BEWH_KhorneMark</li>
+      <li>BEWH_NurgleMark</li>
+      <li>BEWH_SlaaneshMark</li>
+      <li>BEWH_KhorneMark</li>
+    </genesForsaken>
+    <traitsForsaken>
+      <li>BEWH_BlessingOfKhorne</li>
+      <li>BEWH_BlessingOfNurgle</li>
+      <li>BEWH_BlessingOfSlaanesh</li>
+      <li>BEWH_BlessingOfTzeentch</li>
+    </traitsForsaken>
+  </Deities40k.DeityDef>
+
+</Defs>
