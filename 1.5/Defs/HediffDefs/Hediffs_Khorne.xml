@@ -5,7 +5,7 @@
     <HediffDef>
         <defName>BEWH_KhorneMonstrousHandsAttack</defName>
         <label>monstrous hands</label>
-        <description>The hands are replaced with large monstrous hands, which are capable of ravaging but unable to do fine manipulation.</description>
+        <description>The hands are replaced with large monstrous hands, capable of ravaging, but unsuitable for fine manipulation.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
         <everCurableByItem>false</everCurableByItem>
