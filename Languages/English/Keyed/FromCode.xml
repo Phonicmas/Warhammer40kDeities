@@ -38,6 +38,8 @@
   <Forsaken>{0} has forsaken you</Forsaken>
   <Unknown>{0} doesn't care about you</Unknown>
 
+  <CurrentStanding>Current standing: {0}</CurrentStanding>
+
   <WorshipStandingIgnored>Ignored</WorshipStandingIgnored>
   <WorshipStandingSeen>Interested</WorshipStandingSeen>
   <WorshipStandingAcknowledged>Acknowledged</WorshipStandingAcknowledged>
@@ -47,5 +49,11 @@
   <GodFavour>God Favour</GodFavour>
 
   <FavourLevel>Current Favour:</FavourLevel>
+
+  <SwitchDeity>Follow {0}</SwitchDeity>
+  <StayWithDeity>Keep following {0}</StayWithDeity>
+
+  <SwitchLetterTitle>A shift in religion</SwitchLetterTitle>
+  <SwitchLetterMessage>Switching from one deity to another will half your pawns favour with their current god.\n\nDo you wish to follow this new god?</SwitchLetterMessage>
 
 </LanguageData>

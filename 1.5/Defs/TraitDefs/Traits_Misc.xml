@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <TraitDef>
+        <defName>BEWH_Zealous</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>zealous</label>
+                <description>{PAWN_nameDef} is zealous, doing everything they can to devout themselves to their deity.</description>
+                <statOffsets>
+                    <BEWH_FavourGainFactor>1</BEWH_FavourGainFactor>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+</Defs>

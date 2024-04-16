@@ -105,6 +105,10 @@ namespace Deities40k
 			}
 		}
 
+		public void DevProgressGainLoss(float change)
+		{
+			deityTracker.currentlySelected.DevProgressGainLoss(change);
+		}
 
         public override void PostExposeData()
 		{

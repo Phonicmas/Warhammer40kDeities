@@ -5,3 +5,7 @@ C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.4\Source\Mutations
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.4\Source\Dieties40k\obj\Debug\Deities40k.csproj.AssemblyReference.cache
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.4\Source\Dieties40k\obj\Debug\Deities40k.csproj.CoreCompileInputs.cache
 C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.4\Source\Dieties40k\obj\Debug\Deities40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.5\Assemblies\Deities40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.5\Source\Dieties40k\obj\Debug\Deities40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.5\Source\Dieties40k\obj\Debug\Deities40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kDieties\1.5\Source\Dieties40k\obj\Debug\Deities40k.dll

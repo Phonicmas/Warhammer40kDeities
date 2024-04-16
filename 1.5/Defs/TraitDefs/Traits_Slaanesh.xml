@@ -19,14 +19,8 @@
                     <MoveSpeed>0.2</MoveSpeed>
                 </statOffsets>
                 <skillGains>
-                    <li>
-                        <key>Social</key>
-                        <value>2</value>
-                    </li>
-                    <li>
-                        <key>Artistic</key>
-                        <value>2</value>
-                    </li>
+                    <Social>2</Social>
+                    <Artistic>2</Artistic>
                 </skillGains>
             </li>
         </degreeDatas>

@@ -21,14 +21,8 @@
                     <MeleeDamageFactor>0.05</MeleeDamageFactor>
                 </statOffsets>
                 <skillGains>
-                    <li>
-                        <key>Shooting</key>
-                        <value>2</value>
-                    </li>
-                    <li>
-                        <key>Melee</key>
-                        <value>2</value>
-                    </li>
+                    <Shooting>2</Shooting>
+                    <Melee>2</Melee>
                 </skillGains>
             </li>
         </degreeDatas>

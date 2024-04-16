@@ -86,7 +86,7 @@ namespace Deities40k
                 }
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Widgets.FillableBar(inRect1, god.FavourPercentage, BarTex, null, doBorder: false);
-                Widgets.Label(inRect1, ("WorshipStanding" + god.FavourLevel).Translate());
+                Widgets.Label(inRect1, "CurrentStanding".Translate(("WorshipStanding" + god.FavourLevel).Translate()));
                 if (Mouse.IsOver(inRect1))
                 {
                     string progressDescription = GetProgressDescription(god);
@@ -185,7 +185,7 @@ namespace Deities40k
 
             if (flag1)
             {
-                stringBuilder.Append("None...");
+                stringBuilder.Append("None");
             }
 
             return stringBuilder.ToString();
@@ -253,7 +253,7 @@ namespace Deities40k
 
             if (flag1)
             {
-                stringBuilder.AppendLine("None...");
+                stringBuilder.AppendLine("None");
             }
 
             return stringBuilder.ToString();
@@ -294,8 +294,16 @@ namespace Deities40k
         private void ChangeSelectedGod(DeityProgress deityP)
         {
             //Make prompt to ask if user really wishes to and warn that they will lose some favour
-            Deity.deityTracker.currentlySelected.Deteriorate(Deity.deityTracker.currentlySelected.Favour*0.25f);
-            Deity.deityTracker.currentlySelected = deityP;
+            ChoiceLetter_SwitchDeity letter = new ChoiceLetter_SwitchDeity
+            {
+                title = "SwitchLetterTitle".Translate(),
+                newGod = deityP,
+                currentGod = Deity.deityTracker.currentlySelected,
+                pawn = SelPawn,
+                Text = "SwitchLetterMessage".Translate(),
+                def = LetterDefOf.NeutralEvent,
+            };
+            Find.LetterStack.ReceiveLetter(letter);
         }
     }
 }

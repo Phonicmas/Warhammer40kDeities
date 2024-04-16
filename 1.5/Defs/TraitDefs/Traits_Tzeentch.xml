@@ -19,14 +19,8 @@
                     <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
                 </statOffsets>
                 <skillGains>
-                    <li>
-                        <key>Intellectual</key>
-                        <value>2</value>
-                    </li>
-                    <li>
-                        <key>Crafting</key>
-                        <value>2</value>
-                    </li>
+                    <Intellectual>2</Intellectual>
+                    <Crafting>2</Crafting>
                 </skillGains>
             </li>
         </degreeDatas>

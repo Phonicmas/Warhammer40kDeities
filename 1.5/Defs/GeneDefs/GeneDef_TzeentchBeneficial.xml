@@ -6,7 +6,7 @@
         <defName>BEWH_TzeentchFlamingArm</defName>
         <label>mutation: Flaming arm</label>
         <description>The pawn's arm has been mutated with the flaming arm of a Flamer of Tzeentch, and is able to project fiery blasts and scorch nearby enemies upon contact.</description>
-        <iconPath>UI/Icons/Genes/FlamingArm</iconPath>        <!-- Make icon of flaming arm shooting flame thingy -->
+        <iconPath>UI/Icons/Genes/FlamingArm</iconPath>
         <displayOrderInCategory>540</displayOrderInCategory>
         <abilities>
             <li>BEWH_FlamingArmBlast</li>

@@ -71,13 +71,35 @@
                 <isConsideredMutation>true</isConsideredMutation>
             </li>
         </modExtensions>
-        <graphicData>
-            <drawLoc>Tailbone</drawLoc>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/PrehensileTail/PrehensileTail</graphicPath>
-            <colorType>Skin</colorType>
-            <drawOffsetNorth>(0.05, 0.2, -0.2)</drawOffsetNorth>
-            <drawOffsetEast>(-0.5, -0.11, -0.05)</drawOffsetEast>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/PrehensileTail/PrehensileTail</texPath>
+                <colorType>Skin</colorType>
+                <overrideMeshSize>(1, 1)</overrideMeshSize>
+                <parentTagDef>Body</parentTagDef>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <defaultData>
+                        <layer>-2</layer>
+                    </defaultData>
+                    <dataNorth>
+                        <layer>90</layer>
+                        <offset>(0.05, 0.2, -0.2)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(-0.1, 0, -0.25)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(-0.5, -0.11, -0.05)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <offset>(0.5, -0.11, -0.05)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
     </GeneDef>
 
 

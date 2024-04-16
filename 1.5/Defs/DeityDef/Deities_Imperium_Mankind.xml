@@ -20,9 +20,9 @@
       <li>Superclotting</li>
       <li>PsychicAbility_Deaf</li>
     </genesGiftable>
-    <hediffGiftable>
+    <hediffsGiftable>
       <li>BEWH_MankindBlessingWorkPower</li>
-    </hediffGiftable>
+    </hediffsGiftable>
     <genesForsaken>
       <li>BEWH_UndividedMark</li>
       <li>BEWH_KhorneMark</li>

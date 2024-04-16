@@ -75,6 +75,9 @@
   <ItemGroup>
     <Compile Include="Comps\CompAbilityEffect_BileSpew.cs" />
     <Compile Include="Comps\CompProperties_BileSpew.cs" />
+    <Compile Include="DebugActionsDeities.cs" />
+    <Compile Include="ChoiceLetter_SwitchDeity.cs" />
+    <Compile Include="WorkGiver_DoBill_Pray.cs" />
     <Compile Include="CustomDefs\DeityDef.cs" />
     <Compile Include="DefModExtensions\DefModExtension_DaemonMutation.cs" />
     <Compile Include="DefModExtensions\DefModExtension_FactionDeity.cs" />

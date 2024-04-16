@@ -23,14 +23,8 @@
                     <IncomingDamageFactor>0.9</IncomingDamageFactor>
                 </statFactors>
                 <skillGains>
-                    <li>
-                        <key>Plants</key>
-                        <value>2</value>
-                    </li>
-                    <li>
-                        <key>Cooking</key>
-                        <value>2</value>
-                    </li>
+                    <Plants>2</Plants>
+                    <Cooking>2</Cooking>
                 </skillGains>
             </li>
         </degreeDatas>

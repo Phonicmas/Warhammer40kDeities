@@ -70,15 +70,24 @@
                 <isConsideredMutation>true</isConsideredMutation>
             </li>
         </modExtensions>
-        <graphicData>
-            <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tentacles/TentaclesWholeBody</graphicPath>
-            <drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
-            <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-            <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-            <drawScale>1.7  </drawScale>
-            <drawLoc>Tailbone</drawLoc>
-            <colorType>Skin</colorType>
-        </graphicData>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/Tentacles/TentaclesWholeBody</texPath>
+                <drawSize>1.7</drawSize>
+                <colorType>Skin</colorType>
+                <parentTagDef>Body</parentTagDef>
+                <drawData>
+                    <defaultData>
+                        <layer>90</layer>
+                    </defaultData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <dataNorth>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataNorth>
+                </drawData>
+            </li>
+        </renderNodeProperties>
     </GeneDef>
 
     <!--===== Rotting Flesh =====-->

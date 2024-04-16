@@ -203,6 +203,11 @@ namespace Deities40k
             return true;
         }
 
+        public void DevProgressGainLoss(float change)
+        {
+            Favour += change;
+        }
+
         //Tries to add progress to the god
         public bool TryAddProgress(float change, float multiplier)
         {
