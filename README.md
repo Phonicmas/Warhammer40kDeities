@@ -1,4 +1,4 @@
-# Warhammer40kMutations
+# Warhammer40kDeities
 
 ## Rework content
 1. Should be able to select 1 god to focus on, all other gods does not gain any favour.
